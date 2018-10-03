@@ -11,7 +11,7 @@ Once you are logged into Lawrence, the module commands will be available to you.
 | module avail | show all modules that are available on the system |
 | module load SOME.APP | load the listed applciation \(as long as it is available\) |
 | module unload SOME.APP | unload a previosuly loaded module |
-| moduel list | list the modeuls you have loaded |
+| module list | list the modeuls you have loaded |
 | module help | gives you information regarding the module command |
 
 The following example uses module commands to load R version 3.4.1 and then open R for command line use on Lawrence:
