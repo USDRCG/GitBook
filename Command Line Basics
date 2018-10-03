@@ -1,19 +1,5 @@
 # Home Directory & Intro to the Command Line
 
-| _Command_ | _Description_ |
-| pwd | print working directory (current location) |
-| ls | list directories & files in current directory |
-| cd .. | back up one directory |
-| cd | back up to the home directory |
-| cd myDirectory/ | open myDirectory | 
-| mkdir exp1 | makes a directory-exp1 |
-| nano file1 | opens file1 in nano editor |
-| cp file1 /home/User.name/exp2 | copies file to exp2 (current location must be the original location of file1) |
-| mv file1 /home/User.name/exp2 | copies file to exp2 (current location must be the original location of file1) |
-| mv file1 ./exp1 ./exp2 | moves file1 from exp1 to exp2 (exp1 & exp2 are both in the current directory (denoted by period (.)) |
-| rm file1 | removes file1 from current directory |
-
-
 ### Command Line Basics \(with examples\)
 
 First, we will use the pwd \(print working directory\) command to show our current location.
