@@ -12,5 +12,3 @@ If you only wish to request 24GB of ram, use:`qlogin -l mem_free=24G`
 
 To exit your interactive session type`logout`.
 
-
-

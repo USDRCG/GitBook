@@ -8,27 +8,27 @@ Legacy runs the CentOS Linux operating system and is made up of 680 AMD Opteron 
 
 The hardwear specifications for Legacy vary by node and are as follows:
 
-### Overview
+## Overview
 
 680 Processing cores, 29 compute nodes, 1 login node, 1 management node
 
-### Processors
+## Processors
 
 4-core, 12-core, and 16-core AMD Opteron
 
-### RAM
+## RAM
 
 32GB - 128GB per node
 
-### Storage
+## Storage
 
 133GB -890GB local scratch disk per node 70TB centrally-shared network storage
 
-### Network
+## Network
 
 Dedicated gigabit Ethernet compute and storage networks
 
-### Details
+## Details
 
 **Compute nodes 16 through 23**
 

@@ -1,32 +1,74 @@
-# Slurm
+# Submitting Jobs
 
-The Slurm Workload Manager is the job scheduler used by the Lawrence HPC. For a comprehensive overview of Slurm commands, visit the slurm webpage:[https://slurm.schedmd.com/quickstart.html](https://slurm.schedmd.com/quickstart.html)
+## Slurm
+
+The Slurm Workload Manager is the job scheduler used by the Lawrence HPC. For a comprehensive overview of Slurm commands, visit the Slurm webpage:[https://slurm.schedmd.com/quickstart.html](https://slurm.schedmd.com/quickstart.html)
 
 For the commonly used Slurm commands on the Lawrence HPC, we have provided quick-start documentation with examples within the Wiki.
 
-# Interactive Jobs
+### Partitions
 
-##### General Compute
+There are five Slurm partitions to be aware of when submitting jobs on Lawrence, the default partition \(nodes\), preemptible partition, high memory partition, graphics processing partition, and visualization partition. For an in-depth overview of Slurm preemption, please visit the corresponding Slurm [webpage](https://slurm.schedmd.com/preempt.html).
+
+#### Nodes \(default\) Partition
+
+The default Slurm partition is called “nodes” and will run a job for up to two days on a general compute node/s. When running the sbatch or srun command without passing  " -p preemptible" or "--partition preemptible", your job will be scheduled on the “nodes” partition.
+
+#### Preemptible Partition
+
+To accommodate longer running jobs, users also have the option of using the preemptible partition \(using the "-p preemptible" or --partition preemptible" flag\). This partition will allow a job to run for up to 90 days on a general compute node/s. However, if the general compute node/s is needed for a new job in the "nodes" partition, the preemptible job will be canceled \(preempted\) to allow the regular job to run.
+
+#### High Memory Partition
+
+Tasks that require a large memory \(RAM\) may be run on a high-memory \(himem\) node using the "-p himem" flag.  
+
+```text
+[user.name@usd.local@login ~]$ srun --pty -p himem bash
+[user.name@usd.local@himem01 ~]$
+```
+
+#### Graphics Processing Unit \(GPU\) Partition
+
+To use the graphics processing unit \(GPU\) partition, use the "-p gpu" flag. 
+
+```text
+[user.name@usd.local@login ~]$ srun --pty -p gpu bash
+[user.name@usd.local@gpu ~]
+```
+
+#### Visualization Partition
+
+For the visualization \(viz\) partition, use the "-p viz" flag.  
+
+```text
+[user.name@usd.local@login ~]$ srun --pty -p viz bash
+```
+
+#### To exit nodes: press Ctrl-D
+
+## Interactive Jobs
+
+#### General Compute
 
 Interactive sessions on compute nodes can be used with the Slurm command "srun". For the use of one node, this command can be used generally as demonstrated below:
 
-```
+```text
 [user.name@usd.local@login ~]$ srun --pty bash
 [user.name@usd.local@node37 ~]$
 ```
 
-##### HiMem
+#### HiMem
 
 The Lawrence high-memory \(himem\) partition has two nodes, each with 1.5 TB of RAM. This node is especially useful for jobs requiring a large amount of memory and can be accessed either interactively or with a batch script.
 
 For interactive jobs on the Lawrence himem nodes, use the srun command as follows:
 
-```
+```text
 [user.name@usd.local@login ~]$ srun --pty -p himem bash
 [user.name@usd.local@himem02 ~]$
 ```
 
-##### GPU
+#### GPU
 
 The GPU node must be specifically requested using the “--gres” parameter. GPU access is controlled by cgroups, which means the resource must be requested if it is to be used. This prevents use conflicts. The format for requesting the GPU node \(as specified in the contig file\) is TYPE:LABEL:NUMBER.
 
@@ -38,30 +80,30 @@ NUMBER is the amount of resources requested. For the GPU node, there are two log
 
 An example command would be as follows:
 
-```
+```text
 srun --pty -p gpu --gres=gpu:pascal:1 bash
 ```
 
 To see which GPUs are available use the following command:
 
-```
+```text
 nvidia-smi
 ```
 
 For interactive GPU sessions, the gpu node is requested as below:
 
-```
+```text
 [user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu:pascal:1 bash
 [user.name@usd.local@gpu01 ~]$
 ```
 
-# Batch Jobs
+## Batch Jobs
 
-##### General Compute
+#### General Compute
 
 Batch jobs can be submitted on the Lawrence cluster using Slurm commands. A variety of configurations can be used for formulating a batch script. A basic batch script will look like the one below:
 
-```
+```text
 #!/bin/bash
 
 #SBATCH -N 10
@@ -80,13 +122,13 @@ export OMP_PROC_BIND=spread
 srun -n 10 -c 48 --cpu_bind=cores /share/apps/someapp
 ```
 
-##### HiMem
+#### HiMem
 
 To use a high memory node within a batch job, add “--partition=himem” to your script.
 
 Below is an example batch script which calls the a high-memory node. This template can be followed when requesting the himem node on Lawrence:
 
-```
+```text
 #!/bin/bash
 
 # Example job submission script
@@ -117,11 +159,11 @@ echo "Hello, World!"
 sleep 5
 ```
 
-##### GPU
+#### GPU
 
 Below is an example batch script which calls the GPU node, this template can be followed when requesting a GPU node on Lawrence:
 
-```
+```text
 #!/bin/bash
 
 # template.slurm: Example job submission script
@@ -154,13 +196,13 @@ sleep 5
 nvidia-smi
 ```
 
-## Graphical User Interface Jobs \(VNC\)
+### Graphical User Interface Jobs \(VNC\)
 
-##### **General Compute**
+#### **General Compute**
 
 The example below demonstrates how to start a VNC session on a general purpose compute node:
 
-```
+```text
 [user.name@usd.local@login ~]$ # The vncpasswd command only needs to be run once
 [user.name@usd.local@login ~]$ vncpasswd
 Password:
@@ -197,23 +239,23 @@ Type ctrl-C to return to your terminal session.
 ### Output file is job-xxx.out
 ```
 
-##### HiMem
+#### HiMem
 
 To request a VNC session on the HiMem node, use the same commands as given under General Compute excepting the following command with sbatch:
 
-```
+```text
 [user.name@usd.local@login ~]$ sbatch -p himem /opt/examples/gui-job.sh
 ```
 
-##### GPU
+#### GPU
 
 To request a VNC session on the HiMem node, use the same commands as given under General Compute excepting the following command with sbatch:
 
-```
+```text
 [user.name@usd.local@login ~]$ sbatch --gres=gpu:pascal:1 -p gpu /opt/examples/gui-job.sh
 ```
 
-##### Viz
+#### Viz
 
 The Lawrence viz node is designed for users who wish to do advanced visualization. The viz node gives users access to accelerated 3D graphics \(one node with one GPU having a GTX logic unit\). A typical use case for the viz node is a virtual network computing \(VNC\) job coupled with a real-time graphical user interface \(GUI\). Please note that a graphical job can be run on any node on the cluster and is not solely limited to the viz node \(although the viz node will often have the best performance\).
 
@@ -227,21 +269,9 @@ NUMBER is the amount of resources requested. For the Vis node the only option is
 
 To request a VNC session on the HiMem node, use the same commands as given under General Compute excepting the following command with sbatch:
 
-```
+```text
 [user.name@usd.local@login ~]$ sbatch --gres=gpu:gtx -p viz /opt/examples/gui-job.sh
 ```
 
-## Partitions
-
-There are two slurm partitions to be aware of when submitting jobs on Lawrence, the default partition \(nodes\) and the preemptible partition. For an in-depth overview of slurm preemption, please visit the corresponding slurm [webpage](https://slurm.schedmd.com/preempt.html).
-
-##### Nodes \(default\) Partition
-
-The default slurm partition is called “nodes” and will run a job for up to two days on a general compute node/s. When running the sbatch or srun command without passing " -p preemptible" or "--partition preemptible", your job will be scheduled on the “nodes” partition.
-
-##### Preemptible Partition
-
-To accomodate longer running jobs, users also have the option of using the preemptible partition \(using the "-p preemptible" or --partition preemptible" flag\). This partition will allow a job to run for up to 90 days on a general compute node/s. However, if the general compute node/s is needed for a new job in the "nodes" partition, the preemptible job will be canceled \(preempted\) to allow the regular job to run.
-
-
+### 
 

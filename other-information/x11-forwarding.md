@@ -8,7 +8,7 @@ In order to use graphical interfaces on the HPC, you'll need to enable X11 forwa
 
 If you're using MobaXterm, there is no need to change the settings in the software. Simply log in and include a -X option.
 
-```
+```text
 ssh -X User.Name@hpc.usd.edu
 ```
 
@@ -16,9 +16,7 @@ ssh -X User.Name@hpc.usd.edu
 
 The terminal includes X11 forwarding. Type the following:
 
-```
+```text
 ssh -X User.Name@hpc.usd.edu
 ```
-
-
 

@@ -1,30 +1,28 @@
-# rclone: Configuration and usage for MS OneDrive
+# rclone for DropBox
 
-This software syncs your HPC directory with many popular cloud storage services. Here we will cover instructions for Microsoft's OneDrive.
-
----
+This software syncs your HPC directory with many popular cloud storage services. Here we will cover instructions for Dropbox.
 
 ## Set-up and Configuration
 
-First, we need to add rclone to your path. You can also check to make sure you're sourcing the correct file using the `which`_ _command.
+First, we need to add rclone to your path. You can also check to make sure you're sourcing the correct file using the `which`\_ \_command.
 
-```
+```text
  [Wendi.Sapp@login-0-0 ~]$ source /share/apps/rclone/env.sh
  [Wendi.Sapp@login-0-0 ~]$ which rclone
  /share/apps/rclone/rclone
 ```
 
-If you wish to have a separate directory which will contain your OneDrive, make it and navigate there before continuing. For example:
+If you wish to have a separate directory which will contain your DropBox, make it and navigate there before continuing. For example:
 
-```
-[Wendi.Sapp@login-0-0 ~]$ mkdir rclone_OneDrive
-[Wendi.Sapp@login-0-0 ~]$ cd rclone_OneDrive/
+```text
+[Wendi.Sapp@login-0-0 ~]$ mkdir rclone_Dropbox
+[Wendi.Sapp@login-0-0 ~]$ cd rclone_Dropbox/
 ```
 
-Next, run the rclone configuration. A prompt will notify you that no remote connections exist. To set up a new connection, type_n_.
+Next, run the rclone configuration. A prompt will notify you that no remote connections exist. To set up a new connection, type _n_.
 
-```
-[Wendi.Sapp@login-0-0 rclone_OneDrive]$ rclone config
+```text
+[Wendi.Sapp@login-0-0 rclone_Dropbox]$ rclone config
 2017/04/09 18:08:27 NOTICE: Config file "/home/Wendi.Sapp/.config/rclone/rclone.conf" not found - using defaults
 No remotes found - make a new one
 n) New remote
@@ -37,17 +35,17 @@ n/r/c/s/q
  n
 ```
 
-It will prompt you to enter a name. Enter the name, in this case, `remote`.
+It will prompt you to enter a name. Enter the name, in this case, _remote_.
 
-```
+```text
 name
 >
  remote
 ```
 
-A lot of information will populate the screen. The first will be a list of available services. In this section, we will choose \#10, OneDrive.
+A lot of information will populate the screen. The first will be a list of available services. In this section, we will choose \#4, Dropbox.
 
-```
+```text
 Type of storage to configure.
 Choose a number from below, or type in your own value
  1 / Amazon Drive
@@ -78,24 +76,24 @@ Choose a number from below, or type in your own value
    \ "yandex"
 Storage
 >
- 10
+ 4
 ```
 
-The next two prompts will need to be left blank. Simply press _Enter _to move to the next.
+The next two prompts will need to be left blank. Simply press \_Enter \_to move to the next.
 
-```
-OneDrive Application Client Id - leave blank normally.
+```text
+Dropbox Application Client Id - leave blank normally.
 client_id
 >
- 
-OneDrive Application Client Secret - leave blank normally.
+
+Dropbox Application Client Secret - leave blank normally.
 client_secret
 >
 ```
 
 The next step will ask if you would like to use an autoconfiguration. Since we access the HPC remotely, we must manually connect. Therefore, type _n_.
 
-```
+```text
 Remote config
 Use auto config?
  * Say Y if not sure
@@ -109,24 +107,24 @@ y/n
 
 The configuration will provide a web address for you to copy and paste into your browser. A browser window may automatically appear.
 
-```
-If your browser doesn't open automatically go to the following link: https://microsoft.accounts.com/o/oauth2/auth?client_id=20224.apps.Driveusercontent.com
+```text
+If your browser doesn't open automatically go to the following link: https://accounts.Dropbox.com/o/oauth2/auth?client_id=20224.apps.Dropbox.com
 &
 redirect_uri=urn%33Aoauth%3A2.0%3Aoob
 &
 response_type=code
 &
-scope=https%3A%2F%2Fwww.drive.com%2Fauth%2Fdrive
+scope=https%3A%2F%2Fwww.Dropbox.com%2Fauth%2Fdrive
 &
 state=e3e26d91623cce1977b57109
 Log in and authorize rclone for access
 ```
 
-In the browser window, either select the OneDrive account you wish to use or sign into one.
+In the browser window, either select the Google account you wish to use or sign into one.
 
-Microsoft will ask if you'd like to provide account access to rclone. Select _Allow_. Then, it will give you a code to copy and paste into your terminal window.
+Dropbox will ask if you'd like to provide account access to rclone. Select _Allow_. Then, it will give you a code to copy and paste into your terminal window.
 
-```
+```text
 Enter verification code
 >
  4/iBdkaFE_TQVDw1TdCKD1g1f4w7LHyrUYOj0nQ
@@ -134,7 +132,7 @@ Enter verification code
 
 Your terminal will ask you to verify your actions. If there are no errors, type _y_.
 
-```
+```text
 --------------------
 [remote]
 client_id =
@@ -152,7 +150,7 @@ y/e/d
 
 Finally, we'll need to exit the set-up. Do so by typing _q_.
 
-```
+```text
 Current remotes:
 
 Name                 Type
@@ -171,34 +169,28 @@ e/n/d/r/c/s/q
  q
 ```
 
-You have completed the set-up for Microsoft OneDrive.
-
----
+You have completed the set-up for Dropbox.
 
 ## Usage
 
-In this section, we'll cover a few basic commands to get your HPC directories and OneDrive folders synced.
+In this section, we'll cover a few basic commands to get your HPC directories and Dropbox folders synced.
 
-First, you can list files and directories in the remote drive \(OneDrive\). In this command, you start by using the rclone command, followed by the list command. Then, the name of the remote service is needed, here the name is_remote_. After the name, include a colon and then the path \(folder\). The following is the standard format, followed by an example.
+First, you can list files and directories in the remote drive \(Dropbox\). In this command, you start by using the rclone command, followed by the list command. Then, the name of the remote service is needed, here the name is_remote_. After the name, include a colon and then the path \(folder\). The following is the standard format, followed by an example.
 
-```
+```text
 rclone ls remote:path
 rclone ls remote:Miscellaneous/Scripts/
-
 ```
 
 Similarly, you can list the directories in your cloud storage.
 
-```
+```text
  rclone lsd remote:path
-
 ```
 
-If you'd like to sync two folders \(one on HPC and one on OneDrive\), you can use the following command:
+If you'd like to sync two folders \(one on HPC and one on Google Drive\), you can use the following command:
 
 `rclone sync source:path destination:path`
 
 > If dest:path doesn’t exist, it is created and the source:path contents go there.
-
-
 

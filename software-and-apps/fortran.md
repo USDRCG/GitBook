@@ -7,8 +7,6 @@
 | Description | Utility to load and manage apps and versions. |
 | Dependencies |  |
 
----
-
 ## User Guide
 
 USD's HPC has lots of available software and it isn't possible to keep all of them in every user's path all of the time. If you need access to a piece of software that is installed on the HPC, you can use the environment module utility to make the software available to you.

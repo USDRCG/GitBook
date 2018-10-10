@@ -1,4 +1,4 @@
-# Batch Jobs
+# Batch Compute Jobs
 
 A batch job runs a program or series of programs without manual intervention. This is useful when launching complex or time-consuming jobs. Unlike interactive qlogin sessions batch jobs continue to run even if you log out. All of their output is written to a file \(or files\) instead of to the screen.
 
@@ -6,11 +6,11 @@ You do not need to specify which compute nodes to run the job. The `qstat` comma
 
 ## Job Submission Scripts
 
-Batch jobs are defined in a _job submission script _and launched via the `qsub` command.
+Batch jobs are defined in a \_job submission script \_and launched via the `qsub` command.
 
 The file /share/apps/examples/template.qsub \(included below\) as a starting point for creating your own job scripts
 
-```
+```text
 # template.qsub: Example job submission script
 
 # This is a comment.
@@ -18,7 +18,7 @@ The file /share/apps/examples/template.qsub \(included below\) as a starting poi
 # the Job Scheduler.
 
 # Lines beginning with #$ are special commands to configure the job.
-		
+
 ### Job Configuration Starts Here #############################################
 # Run the job in the current working directory (Don't change this)
 #$ -cwd
@@ -46,14 +46,14 @@ cpu_cores
 #
 # In this example we request 1 CPU core on a single compute node
 #$ -pe threaded 1
-			
+
 # Job name - this will show up in the output of the qstat command
 # Don't use spaces or special characters
 #$ -N myjob
-					
+
 # Output file name - all regular output goes to this file instead of the screen
 #$ -o myjob-out.txt
-							
+
 # Error output file name - all Job Errors are written to this file
 #$ -e myjob-err.txt
 
@@ -66,7 +66,7 @@ cpu_cores
 #   'n'     No mail is sent.
 # Fill in your email address and uncomment the line below to enable email
 ##$ -M jsmith@email.com -m eas
-						
+
 ### Commands to run your program start here ####################################
 # Set up environment
 # Examples:
@@ -84,32 +84,32 @@ cpu_cores
 echo "Hello, World!"
 ```
 
-## Monitoring Batch Jobs 
+## Monitoring Batch Jobs
 
 All jobs are assigned a job ID and can be monitored with the `qstat` command which lists all of your running and scheduled jobs. Here is an example of user jsmith monitoring a job.
 
-```
+```text
 [jsmith@login-0-0 best]$ qstat
-job-ID  prior   name   	user     	state submit/start at 	queue              slots ja-task-ID
+job-ID  prior   name       user         state submit/start at     queue              slots ja-task-ID
 ---------------------------------------------------------------------------------------
-5842    0.00000 best-jsmi     jsmith          qw	12/14/2009 12:18:07                4
+5842    0.00000 best-jsmi     jsmith          qw    12/14/2009 12:18:07                4
 ```
 
 The output of the `qstat` command shows a list of your jobs and what state they’re in. In this case there is only one job \(job 5842\) running and it is in the `qw` or "queued, waiting" state. The `qstat` command will show an 'r' for jobs that are running, and an 'e' for jobs in an error state.
 
 To see a listing of all running and scheduled jobs for all users type
 
-```
+```text
 qstat -u '*'
 ```
 
 Once a job completes, it is no longer listed in the `qstat` output.
 
-## Canceling a Job 
+## Canceling a Job
 
 To cancel a running or waiting job use the qdel command and pass it the job id of the job you’d like to terminate. You can only cancel jobs for which you are the owner. Here’s an example:
 
-```
+```text
 [jsmith@login-0-0 ~]$ qdel 5842
 jsmith has registered the job 5842 for deletion
 ```
@@ -120,7 +120,7 @@ The directory /share/apps/examples contains example batch jobs.
 
 ### Elephant
 
-```
+```text
 djennewe@login-0-0 my_examples $ cp -r /share/apps/examples/elephant .
 djennewe@login-0-0 my_examples $ ls
 elephant
@@ -143,7 +143,7 @@ You can view the output file elephant.png by copying it to your computer and ope
 
 ### Parallel processor NWChem
 
-```
+```text
 djennewe@login-0-0 my_examples $ cp -r /share/apps/examples/nwchem .
 djennewe@login-0-0 my_examples $ ls
 nwchem
@@ -166,9 +166,5 @@ h2o_freq.b     h2o_freq.db          h2o_freq.hess    h2o_freq.nmode  nwchem-wate
 h2o_freq.b^-1  h2o_freq.drv.hess    h2o_freq.movecs  h2o_freq.p      nwchem-water-out.txt  water_molecule.nw
 h2o_freq.c     h2o_freq.fd_ddipole  h2o_freq.mp2nos  h2o_freq.zmat   nwchem-water.qsub
 djennewe@login-0-0 nwchem $
-
 ```
-
-  
-
 

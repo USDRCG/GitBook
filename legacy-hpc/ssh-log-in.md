@@ -1,4 +1,4 @@
-# How to connect to the HPC using SSH
+# SSH Log In
 
 To start you will need to open a terminal or command line interface. If you are using MobaXterm, use that. Otherwise open your terminal \(Linux, Mac\).
 
@@ -7,24 +7,24 @@ To start you will need to open a terminal or command line interface. If you are 
 Next, you will need to login via an ssh session through the login node.  
 You must be given access by the HPC administrator \(which can be requested by contacting the HelpDesk\). Login as so:
 
-```
+```text
 [userlocal ~]$
 [userlocal ~]$ ssh User.Name@hpc.usd.edu
 ```
 
 > Note: use hpc.usd.edu, not coyotes.usd.edu
 
-You will then be prompted for a password. Enter you regular USD credentials. If you have more than five failed attempts at logging in you will be locked out for one hour or until access is reinstated by the system administrator.
+You will then be prompted for a password. Enter your regular USD credentials. If you have more than five failed attempts at logging in you will be locked out for one hour or until access is reinstated by the system administrator.
 
 > The password you type will not show up on the screen.
 
-```
+```text
 User.Name@hpc.usd.edu's password:
 ```
 
 Once logged in successfully, all users should get the following message:
 
-```
+```text
 Last login: 
 Welcome to hpc.usd.edu, 
 The University of South Dakota's High-Performance Computing cluster
@@ -50,11 +50,7 @@ Phone: 605-658-6000
 
 You will also get the command line prompt on the HPC system.
 
-```
+```text
 [user@login-0-0 ~]$
 ```
-
----
-
-
 
