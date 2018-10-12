@@ -1,5 +1,13 @@
 # Submitting Jobs
 
+## Types of Jobs:
+
+Lawrence has two methods of job submission: **interactive** and **batch**. 
+
+**Interactive jobs**: An interactive job, as its name suggests, is the more **user-involved**. Users request a special node if needed, and then perform computations or analysis by **directly typing commands** into the command line.  Interactive jobs end if the user logs off of Lawrence.
+
+**Batch jobs:** Batch jobs are designed to run one or more scripts \(python, C, etc.\) on one or more files through a **pre-written script**. These **need no interaction** from the user once they have been ordered in the terminal \(either started, or put in Lawrence's queue if the desired node is in use\). Batch scripts **continue to run** if the user logs off of Lawrence.
+
 ## Slurm
 
 The Slurm Workload Manager is the job scheduler used by the Lawrence HPC. For a comprehensive overview of Slurm commands, visit the Slurm webpage:[https://slurm.schedmd.com/quickstart.html](https://slurm.schedmd.com/quickstart.html)

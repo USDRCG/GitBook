@@ -124,13 +124,13 @@ Next, we will make a text file in the exp1 directory. We first have to cd into t
 /home/Joseph.Madison/exp1
 ```
 
-Next, we will create a file using a text editor. Here we will use nano \(there are others including emacs and vi, but nano is simple\). We use the nano command followed by the name of what we want to call the new file.
+Next, we will create a file using a text editor. Here we will use nano \(there are others including emacs and vi, but nano is simple\). We use the nano command followed by the name of what we want to call the new file. \(Include a file extension if desired.\)
 
 ```text
 [Joseph.Madison@login-0-0 exp1]$ nano file1
 ```
 
-Once you press enter you will be moved into the text editor. A cursor at the top of the page is where your text will be entered as you type. This is a powerful tool with many applications but here I will type 'Hello World!'
+Once you press enter you will be moved into the text editor. A cursor at the top of the page is where text will be entered as you type. This is a powerful tool with many applications but here I will type 'Hello World!'
 
 ```text
 GNU nano 1.3.12             File: file1                       Modified  
@@ -146,7 +146,7 @@ I will then use ctrl-X to exit. This will give me a prompt for saving changes.
      N No           ^C Cancel
 ```
 
-Type in yes. You will then be prompted to verify the file name, hit enter or change the original name and hit enter.
+Type y for yes. You will then be prompted to verify the file name, hit enter or change the original name and hit enter.
 
 ```text
 File Name to Write:file1

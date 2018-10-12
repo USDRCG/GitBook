@@ -28,11 +28,11 @@ You will need to open a connection by clicking on the 'Open Connection' icon. Th
 
 ## ![](../.gitbook/assets/cyberduck_2.bin)
 
-After successfully connecting, you can upload files into your Lawrence folders on your home directory by dragging and dropping from your desktop, or by clicking the upload icon at the top of the Cyberduck display.
+After successfully connecting, you can upload files into your Lawrence folders on your home directory by dragging and dropping from your desktop... 
 
 ![](../.gitbook/assets/screenshot-14.png)
 
-### or....................
+or by clicking the upload icon at the top of the Cyberduck display.
 
 ![](../.gitbook/assets/screenshot-19.png)
 
@@ -56,15 +56,20 @@ Type the `scp` command as follows \(type the path you want your file transferred
 [local@xyz ~]$ scp file.name ./path/to/file/file.name user.name@lawrence.usd.edu:/home/user.name/some.folder
 user.name@lawrence.usd.edu's password: 
 file.name              100% 8893     8.7KB/s   00:00
-
-### Hint: if the above doesn't work, try adding usd.local after home 
-### (user.name@lawrence.usd.edu:/home/usd.local/user.name/some.folder)
 ```
+
+
+
+Hint: If an error "No such file or directory" appears, try adding usd.local after home \(user.name@lawrence.usd.edu:/home/usd.local/user.name/some.folder\)
+
+Don't forget the period \(.\) at the start of the initial path to the file: it refers to the current working directory \(the directory you are located in\).
+
+Open a second terminal and log in to Lawrence, then list directories.  The file file.name has been tr
 
 ```text
 [user.name@login@login some.folder]$ ls
 file.name
 ```
 
-The last line in the first command line gives stats on the transfer. You can also use scp for other data transfer applications including HPC to local PC, between HPCs, and between PCs. In a second terminal where I am logged into Lawrence, I can check that the file was transferred and put into some.folder.
+The last line in the first terminal gives stats on the transfer. You can also use scp for other data transfer applications including HPC to local PC, between HPCs, and between PCs. In a second terminal, where I am logged into Lawrence, I can check that the file was transferred and put into some.folder.
 

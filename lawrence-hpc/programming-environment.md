@@ -6,24 +6,32 @@ The Lawrence HPC programming environment has the choice of two compilers: Intel 
 
 ## OpenMP
 
-OpenMP Intel, Gnu
+Two options in Lawrence are available for OpenMP: OpenMP Intel and Gnu.
+
+To choose an OpenMP, add "/intel" or "/gcc" to the module command.
+
+```text
+# For the OpenMPI module with Gnu:
+[user.name@usd.local@login ~]$ module load openmpi-1.6/gcc
+
+############## or ################
+
+#For the OpenMPI module with OpenMP Intel:
+[user.name@usd.local@login ~]$ module load openmpi-1.6/intel
+
+```
 
 ## MPI
 
 MPI's available with Lawrence: open MPI, mpich \(ethernet\), and mvapich \(infinaband\), intel impi
 
-| **MPI modules** | Name for loading |
-| :--- | :--- |
-| Open MPI | openmpi-1.6/gcc |
-|  | openmpi-1.6/intel |
-|  | openmpi-1.8/gcc |
-|  | openmpi-1.8/intel |
-|  | openmpi-2.0/gcc |
-|  | openmpi-2.0/intel |
-| mpich | mpich/gcc |
-|  | mpich/intel |
-| mvapich | mvapich2-2.2/gcc |
-|  | mvapich2-2.2/intel |
+| **MPI Platform** | Module Name | Module Name |
+| :--- | :--- | :--- |
+| Open MPI | openmpi-1.6/gcc | openmpi-1.6/intel |
+|  | openmpi-1.8/gcc | openmpi-1.8/intel |
+|  | openmpi-2.0/gcc | openmpi-2.0/intel |
+| mpich | mpich/gcc | mpich/intel |
+| mvapich | mvapich2-2.2/gcc | mvapich2-2.2/intel |
 
 ```text
 [user.name@usd.local@login ~]$ module avail
@@ -39,16 +47,16 @@ impi               mpich/intel        openmpi-1.6/gcc    openmpi-1.8/intel
 
 
 
-#### To load a module:
+#### To load an MPI module:
 
 ```text
 [user.name@usd.local@login ~]$ module load openmpi-2.0/gcc
 ```
 
-#### To view the module version in use:
+#### To view the MPI in use:
 
 ```text
-[adison.kleinsasser@usd.local@login ~]$ mpirun --version
+[user.name@usd.local@login ~]$ mpirun --version
 mpirun (Open MPI) 2.0.1
 ```
 
