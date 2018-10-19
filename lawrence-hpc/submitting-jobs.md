@@ -4,13 +4,13 @@
 
 Lawrence has two methods of job submission: **interactive** and **batch**. 
 
-**Interactive jobs**: An interactive job, as its name suggests, is the more **user-involved**. Users request a special node if needed, and then perform computations or analysis by **directly typing commands** into the command line.  Interactive jobs end if the user logs off of Lawrence.
+**Interactive jobs**: An interactive job, as its name suggests, is the more **user-involved**. Users request a node \(please don't perform computations in the login node\), and then perform computations or analysis by **directly typing commands** into the command line.  Interactive jobs end if the user logs off of Lawrence.
 
-**Batch jobs:** Batch jobs are designed to run one or more scripts \(python, C, etc.\) on one or more files through a **pre-written script**. These **need no interaction** from the user once they have been ordered in the terminal \(either started, or put in Lawrence's queue if the desired node is in use\). Batch scripts **continue to run** if the user logs off of Lawrence.
+**Batch jobs:** Batch jobs are designed to run one or more scripts \(python, C, etc.\) on one or more files through a **pre-written script**. These **do not need interaction** with the user once they have been ordered in the terminal \(either started, or put in Lawrence's queue if the desired node is in use\). Batch scripts **continue to run** if the user logs off of Lawrence.
 
 ## Slurm
 
-The Slurm Workload Manager is the job scheduler used by the Lawrence HPC. For a comprehensive overview of Slurm commands, visit the Slurm webpage:[https://slurm.schedmd.com/quickstart.html](https://slurm.schedmd.com/quickstart.html)
+The Slurm Workload Manager is the job scheduler used by the Lawrence HPC. For a comprehensive overview of Slurm commands, visit the Slurm webpage: [https://slurm.schedmd.com/quickstart.html](https://slurm.schedmd.com/quickstart.html)
 
 For the commonly used Slurm commands on the Lawrence HPC, we have provided quick-start documentation with examples within the Wiki.
 
@@ -20,11 +20,25 @@ There are five Slurm partitions to be aware of when submitting jobs on Lawrence,
 
 #### Nodes \(default\) Partition
 
-The default Slurm partition is called “nodes” and will run a job for up to two days on a general compute node/s. When running the sbatch or srun command without passing  " -p preemptible" or "--partition preemptible", your job will be scheduled on the “nodes” partition.
+The default Slurm partition is called “nodes” and will run a job for up to two days on a general compute node/s. When running the sbatch or srun command without passing any -p arguments, your job will be scheduled on the “nodes” partition.
+
+```text
+[user.name@usd.local@login ~]$ srun --pty bash
+[user.name@usd.local@node23 ~]$
+```
+
+Press Ctrl+D to exit the node and return to the login node.
 
 #### Preemptible Partition
 
-To accommodate longer running jobs, users also have the option of using the preemptible partition \(using the "-p preemptible" or --partition preemptible" flag\). This partition will allow a job to run for up to 90 days on a general compute node/s. However, if the general compute node/s is needed for a new job in the "nodes" partition, the preemptible job will be canceled \(preempted\) to allow the regular job to run.
+To accommodate longer running jobs, users also have the option of using the preemptible partition \(using the "-p preemptible" flag\). This partition will allow a job to run for up to 90 days on a general compute node/s. However, if the general compute node/s is needed for a new job in the "nodes" partition, the preemptible job will be canceled \(preempted\) to allow the regular job to run.
+
+```text
+[user.name@usd.local@login ~]$ srun --pty -p preemptible bash
+[user.name@usd.local@node59 ~]$
+```
+
+Press Ctrl+D to exit the preemptible partition and return to the login node.
 
 #### High Memory Partition
 
@@ -35,6 +49,8 @@ Tasks that require a large memory \(RAM\) may be run on a high-memory \(himem\) 
 [user.name@usd.local@himem01 ~]$
 ```
 
+Press Ctrl+D to exit the high memory partition and return to the login node.
+
 #### Graphics Processing Unit \(GPU\) Partition
 
 To use the graphics processing unit \(GPU\) partition, use the "-p gpu" flag. 
@@ -44,15 +60,18 @@ To use the graphics processing unit \(GPU\) partition, use the "-p gpu" flag.
 [user.name@usd.local@gpu ~]
 ```
 
+Press Ctrl+D to exit the GPU partition and return to the login node.
+
 #### Visualization Partition
 
 For the visualization \(viz\) partition, use the "-p viz" flag.  
 
 ```text
 [user.name@usd.local@login ~]$ srun --pty -p viz bash
+[user.name@usd.local@viz01 ~]$
 ```
 
-#### To exit nodes: press Ctrl-D
+Press Ctrl+D to exit the visualization partition and return to the login node.
 
 ## Interactive Jobs
 
@@ -107,102 +126,53 @@ For interactive GPU sessions, the gpu node is requested as below:
 
 ## Batch Jobs
 
+To make submitting a batch job easier, there are a few templates available for the general nodes, the high memory nodes, and the GPU node.  There is also a template for setting up an MPI.  To use a template, copy the template directory into your home directory:
+
+```text
+[user.name@usd.local@login ~]$ cp -r /opt/examples/ $HOME
+```
+
+or
+
+```text
+[user.name@usd.local@login ~]$ cp -r /opt/examples/ $HOME/your/directoryPath/here
+```
+
+Open the desired template, and edit the contents as needed.
+
 #### General Compute
 
 Batch jobs can be submitted on the Lawrence cluster using Slurm commands. A variety of configurations can be used for formulating a batch script. A basic batch script will look like the one below:
 
-```text
-#!/bin/bash
+![](../.gitbook/assets/exampletemplate1.png)
 
-#SBATCH -N 10
-#SBATCH -q regular
-#SBATCH -J example1
-#SBATCH --mail-user=user.name@coyotes.usd.edu
-#SBATCH --mail-type=ALL
-#SBATCH -t 12:00:00
+#### Nodes
 
-#OpenMP settings:
-export OMP_NUM_THREADS=1
-export OMP_PLACES=threads
-export OMP_PROC_BIND=spread
+Below is an example batch script, called simple-template.sh in the example template directory. This template can be followed when requesting a node on Lawrence:
 
-#run the application after this line##########################
-srun -n 10 -c 48 --cpu_bind=cores /share/apps/someapp
-```
+![](../.gitbook/assets/node-batch-template3.png)
 
 #### HiMem
 
 To use a high memory node within a batch job, add “--partition=himem” to your script.
 
-Below is an example batch script which calls the a high-memory node. This template can be followed when requesting the himem node on Lawrence:
+Below is an example batch script which calls the a high-memory node. This template \(examples/himem-template.sh\) can be followed when requesting the himem node on Lawrence:
 
-```text
-#!/bin/bash
-
-# Example job submission script
-# This is a comment.
-# Lines beginning with the # symbol are comments and are not interpreted by
-# the Job Scheduler.
-# Lines beginning with #SBATCH are special commands to configure the job.
-
-### Job Configuration Starts Here #############################################
-# Export all current environment variables to the job (Don't change this)
-#SBATCH --get-user-env
-# The default is one task per node
-#SBATCH --ntasks=1
-#SBATCH --nodes=1
-# Request a high memory node
-#SBATCH --partition=himem
-# Request all memory on the node
-#SBATCH --mem=0
-#request 10 minutes of runtime - the job will be killed if it exceeds this
-#SBATCH --time=10:00
-# Change email@example.com to your real email address
-#SBATCH --mail-user=email@example.com
-#SBATCH --mail-type=ALL
-
-### Commands to run your program start here ####################################
-pwd
-echo "Hello, World!"
-sleep 5
-```
+![](../.gitbook/assets/himem-batch-template-4.png)
 
 #### GPU
 
-Below is an example batch script which calls the GPU node, this template can be followed when requesting a GPU node on Lawrence:
+Below is an example batch script which calls the GPU node, this template \(examples/gpu-template.sh\) can be followed when requesting a GPU node on Lawrence:
 
-```text
-#!/bin/bash
+![](../.gitbook/assets/gpubatchtemplate2.png)
 
-# template.slurm: Example job submission script
-# This is a comment.
-# Lines beginning with the # symbol are comments and are not interpreted by
-# the Job Scheduler.
-# Lines beginning with #SBATCH are special commands to configure the job.
+#### MPI
 
-### Job Configuration Starts Here #############################################
-# Export all current environment variables to the job (Don't change this)
-#SBATCH --get-user-env
-# The default is one task per node
-#SBATCH --ntasks=1
-#SBATCH --nodes=1
-# Request 1 GPU
-# Each gpu node has two logical GPUs, so up to 2 can be requested per node
-# To request 2 GPUs use --gres=gpu:pascal:2
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:pascal:1
-#request 10 minutes of runtime - the job will be killed if it exceeds this
-#SBATCH --time=10:00
-# Change email@example.com to your real email address
-#SBATCH --mail-user=email@example.com
-#SBATCH --mail-type=ALL
+MPI is used to divide work among multiple processors.  Below is a template script \(mpi-template.sh\) and template C file \(mpi\_hello\_world.c\).  There is a third script, mpi\_hello\_world, in use but not shown here.
 
-### Commands to run your program start here ####################################
-pwd
-echo "Hello, World!"
-sleep 5
-nvidia-smi
-```
+![](../.gitbook/assets/mpi-py-template4.png)
+
+![](../.gitbook/assets/mpi-c-template4b.png)
 
 ### Graphical User Interface Jobs \(VNC\)
 

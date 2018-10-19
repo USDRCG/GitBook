@@ -10,7 +10,7 @@ If you prefer to move files using the drag-and-drop method, it is possible using
 
 In MobaXterm, the file explorer/hierarchy is visible just to the left of the command line interface.
 
-![](../.gitbook/assets/screenshot-10.png)
+![](../.gitbook/assets/screenshot-10%20%281%29.png)
 
 From this section of the MobaXterm window, you can drag and drop files between either computer as you desire.
 
@@ -60,16 +60,16 @@ file.name              100% 8893     8.7KB/s   00:00
 
 
 
-Hint: If an error "No such file or directory" appears, try adding usd.local after home \(user.name@lawrence.usd.edu:/home/usd.local/user.name/some.folder\)
+Hint: If an error such as "No such file or directory" appears, look in the directory at the new location to make sure it failed.  If it did, try adding usd.local after home \(user.name@lawrence.usd.edu:/home/usd.local/user.name/some.folder\)
 
 Don't forget the period \(.\) at the start of the initial path to the file: it refers to the current working directory \(the directory you are located in\).
 
-Open a second terminal and log in to Lawrence, then list directories.  The file file.name has been tr
+Open a second terminal and log in to Lawrence, then list directories.  The file file.name has been transferred.
 
 ```text
 [user.name@login@login some.folder]$ ls
 file.name
 ```
 
-The last line in the first terminal gives stats on the transfer. You can also use scp for other data transfer applications including HPC to local PC, between HPCs, and between PCs. In a second terminal, where I am logged into Lawrence, I can check that the file was transferred and put into some.folder.
+The last line in the first terminal gives stats on the transfer. You can also use scp for other data transfer applications including HPC to local PC, between HPCs, and between PCs. In a second terminal, where you are logged into Lawrence, you can check that the file was transferred and put into some.folder.
 

@@ -8,7 +8,7 @@ The Lawrence HPC programming environment has the choice of two compilers: Intel 
 
 Two options in Lawrence are available for OpenMP: OpenMP Intel and Gnu.
 
-To choose an OpenMP, add "/intel" or "/gcc" to the module command.
+To choose a version of OpenMP, add the version number and "/intel" or "/gcc" to the module command.
 
 ```text
 # For the OpenMPI module with Gnu:
@@ -59,4 +59,6 @@ impi               mpich/intel        openmpi-1.6/gcc    openmpi-1.8/intel
 [user.name@usd.local@login ~]$ mpirun --version
 mpirun (Open MPI) 2.0.1
 ```
+
+
 

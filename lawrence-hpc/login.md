@@ -11,7 +11,7 @@ Next, you will need to login via an ssh session through the login node. You must
 [user@localhost ~]$ ssh User.Name@lawrence.usd.edu
 ```
 
-You will then be prompted for a password. Enter your regular USD credentials. \(Note: the password you type will not show up on the screen.\) If you have more than five failed attempts at logging in you will be locked out for one hour or until access is reinstated by the system administrator.
+You will then be prompted for a password. Enter your regular USD credentials. \(Note: the password you type will not show up on the screen.\) If you have more than five failed attempts at logging in, you will be locked out for one hour or until access is reinstated by the system administrator.
 
 ```text
 User.Name@lawrence.usd.edu's password:
@@ -35,14 +35,14 @@ Utilization of the Lawrence cluster by Windows users requires the use of the Mob
 
 [https://mobaxterm.mobatek.net/download.html](https://mobaxterm.mobatek.net/download.html)
 
-Once downloaded, you will open the Moba terminal and the command line prompt will appear:
+Once downloaded, you will open the MobaX terminal and the command line prompt will appear:
 
 ```text
 [2017-12-25 19:55.00]  ~
 [User.Name.NI11018] ➤
 ```
 
-You can then ssh onto the Lawrence cluster \(same command as Linux/Mac\). You will be prompted for a password which is your USD credentials \(Note: the password will not show when typing.\) If the user has more than three tries, they will be locked out until an admin override or the lockout expires.
+You can then ssh onto the Lawrence cluster \(same command as Linux/Mac\). You will be prompted for a password which is your USD credentials. \(Note: the password will not show when typing.\) As a security feature, three incorrect logins will result in your account being locked until the lockout expires or an administrator overrides it.
 
 ```text
 [User.Name.NI11018] ➤ ssh User.Name@lawrence.usd.edu
