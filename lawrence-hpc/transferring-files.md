@@ -53,7 +53,7 @@ The syntax of the `scp` command has four parts:
 Type the `scp` command as follows \(type the path you want your file transferred to on Lawrence; here I use ''some.folder'\):
 
 ```text
-[local@xyz ~]$ scp file.name ./pathT o/file/file.name user.name@lawrence.usd.edu:/home/user.name/some.folder
+[local@xyz ~]$ scp file.name ./pathTo/file/file.name user.name@lawrence.usd.edu:/home/user.name/some.folder
 user.name@lawrence.usd.edu's password: 
 file.name              100% 8893     8.7KB/s   00:00
 ```
@@ -67,8 +67,10 @@ Hints:
 * To transfer directories, add an -r flag
 
 ```text
-[user.name@login@login some.folder]$ scp -r ./pathTo/directory/ user.name@lawrence.usd.edu:/home/user.name/
-
+[user.name@login@login some.folder]$ scp -r myDirectory/ ./pathTo/myDirectory/ user.name@lawrence.usd.edu:/home/user.name/
+contents.c                                      100%  1KB    45KB/s    00:00
+of.c                                            100%  2KB    44KB/s    00:00
+directory.c                                     100%  2KB    43KB/s    00:00
 ```
 
 Open a second terminal and log in to Lawrence, then list directories.  The file file.name has been transferred.
