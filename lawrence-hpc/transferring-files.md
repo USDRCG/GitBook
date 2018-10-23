@@ -48,12 +48,12 @@ The standard command line method for file movement between hosts is the `scp`com
 
 The syntax of the `scp` command has four parts: 
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%281%29.png)
 
 Type the `scp` command as follows \(type the path you want your file transferred to on Lawrence; here I use ''some.folder'\):
 
 ```text
-[local@xyz ~]$ scp file.name ./pathTo/file/file.name user.name@lawrence.usd.edu:/home/user.name/some.folder
+[local@xyz ~]$ scp  ./pathTo/file/file.name user.name@lawrence.usd.edu:/home/user.name/some.folder
 user.name@lawrence.usd.edu's password: 
 file.name              100% 8893     8.7KB/s   00:00
 ```
@@ -63,11 +63,11 @@ file.name              100% 8893     8.7KB/s   00:00
 Hints:
 
 * If an error such as "No such file or directory" appears, look in the directory at the new location to make sure it failed.  If it did, try adding usd.local after home \(user.name@lawrence.usd.edu:/home/usd.local/user.name/some.folder\)
-* Don't forget the period \(.\) at the start of the initial path to the file: it refers to the current working directory \(the directory you are located in\).
+* Don't forget either the period \(.\) at the start of the initial path to the file \(it refers to the current working directory \(the directory you are located in\)\) or a complete path to the file \(/home/Desktop/pathTo/file/file.name\)
 * To transfer directories, add an -r flag
 
 ```text
-[user.name@login@login some.folder]$ scp -r myDirectory/ ./pathTo/myDirectory/ user.name@lawrence.usd.edu:/home/user.name/
+[user.name@login@login some.folder]$ scp -r ./pathTo/and/including/myDirectory/ user.name@lawrence.usd.edu:/home/user.name/
 contents.c                                      100%  1KB    45KB/s    00:00
 of.c                                            100%  2KB    44KB/s    00:00
 directory.c                                     100%  2KB    43KB/s    00:00

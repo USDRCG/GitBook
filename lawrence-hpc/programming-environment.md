@@ -47,18 +47,20 @@ impi               mpich/intel        openmpi-1.6/gcc    openmpi-1.8/intel
 
 
 
-#### To load an MPI module:
+#### To load/unload an MPI module:
 
 ```text
+############## Load ################
 [user.name@usd.local@login ~]$ module load openmpi-2.0/gcc
+
+############# Unload ###############
+[user.name@usd.local@login ~]$ module unload openmpi-2.0/gcc
 ```
 
 #### To view the MPI in use:
 
 ```text
 [user.name@usd.local@login ~]$ mpirun --version
-mpirun (Open MPI) 2.0.1
+
 ```
-
-
 

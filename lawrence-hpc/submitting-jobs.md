@@ -168,15 +168,178 @@ Below is an example batch script which calls the GPU node, this template \(examp
 
 #### MPI
 
-MPI is used to divide work among multiple processors.  Below is a template script \(mpi-template.sh\) and template C file \(mpi\_hello\_world.c\).  There is a third script, mpi\_hello\_world, in use but not shown here.
+MPI is used to divide work among multiple processors.  Below is a template script \(mpi-template.sh\) and template C file \(mpi\_hello\_world.c\).
 
 ![](../.gitbook/assets/mpi-py-template4.png)
 
 ![](../.gitbook/assets/mpi-c-template4b.png)
 
+#### MPI-python
+
+Some researchers prefer the python programming language, rather than C.  If this is true of you, a python mpi template script is also available.  Before beginning, ensure that you have **Anaconda \(or Bioconda\) installed on your Lawrence login**.  If you don't have one of these, install as below \(it will take a few minutes\).  When the Anaconda installer asks if you would like to add the Anaconda commands to your path, select yes.
+
+```text
+[user.name@usd.local@login ~]$ /apps/install-anaconda.sh
+……
+installation finished.
+Do you wish the installer to prepend the Anaconda3 install location
+to PATH in your /home/usd.local/adison.kleinsasser/.bashrc ? [yes|no]
+[no] >>> yes
+
+Appending source /home/usd.local/adison.kleinsasser/anaconda3/bin/activate to /home/usd.local/adison.kleinsasser/.bashrc
+A backup will be made to: /home/usd.local/adison.kleinsasser/.bashrc-anaconda3.bak
+
+
+For this change to become active, you have to open a new terminal.
+
+Thank you for installing Anaconda3!
+
+===========================================================================
+
+```
+
+Make sure that no other modules are loaded, and remove them if needed.
+
+```text
+[user.name@usd.local@login ~]$ module list
+Currently Loaded Modulefiles:
+  1) openmpi-2.0/gcc
+[user.name@usd.local@login ~]$ module purge
+[user.name@usd.local@login ~]$ module list
+No Modulefiles Currently Loaded.
+[user.name@usd.local@login ~]$
+
+[user.name@usd.local@login ~]$ which python
+~/anaconda3/bin/python
+[user.name@usd.local@login ~]$ which mpi
+/usr/bin/which: no mpi in (/home/usd.local/user.name/anaconda3/bin:/usr/lib64/qt-3.3/bin:
+.....
+
+
+```
+
+![](../.gitbook/assets/mpi-py-template6.png)
+
+#### MPI and Python for Graphs/Visual Products \(Elephant example\)
+
+MPI can also be used for python scripts that produce visual products.  As an example, we have provided a script \(elephant.py\), which produces a .png file containing a graph with a line shaped like an elephant: 
+
+![](../.gitbook/assets/elephant.png)
+
+MPI script:
+
+{% code-tabs %}
+{% code-tabs-item title="mpi-elephant-template.sh" %}
+```text
+#!/bin/bash
+
+# Example job submission script
+
+# ensure anaconda is installed
+# install with /apps/install-anaconda.sh
+
+# This is a comment.
+# Lines beginning with the # symbol are comments and are not interpreted by
+# the Job Scheduler.
+
+# Lines beginning with #SBATCH are special commands to configure the job.
+
+### Job Configuration Starts Here #############################################
+
+
+# Export all current environment variables to the job (Don't change this)
+#SBATCH --get-user-env
+
+# The default is one task per node
+#SBATCH --ntasks=2
+#SBATCH --nodes=1
+
+#request 10 minutes of runtime - the job will be killed if it exceeds this
+#SBATCH --time=10:00
+
+# Change email@example.com to your real email address
+#SBATCH --mail-user=email@example.com
+#SBATCH --mail-type=END
+
+
+### Commands to run your program start here ####################################
+
+pwd
+echo "This is the MPI-elephant-template"
+
+#module load openmpi-2.0/intel
+
+# -np needs to match --ntasks
+# Should use mpiexec from $PATH, (~/anaconda3/bin)
+mpiexec -np 2 python elephant.py
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Python script:
+
+{% code-tabs %}
+{% code-tabs-item title="elephant.py" %}
+```text
+"""
+Author: Piotr A. Zolnierczuk (zolnierczukp at ornl dot gov)
+
+Based on a paper by:
+Drawing an elephant with four complex parameters
+Jurgen Mayer, Khaled Khairy, and Jonathon Howard,
+Am. J. Phys. 78, 648 (2010), DOI:10.1119/1.3254017
+"""
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as pylab
+# import pylab
+
+
+# elephant parameters
+p1, p2, p3, p4 = (50 - 30j, 18 +  8j, 12 - 10j, -14 - 60j )
+p5 = 40 + 20j # eyepiece
+
+def fourier(t, C):
+    f = np.zeros(t.shape)
+    A, B = C.real, C.imag
+    for k in range(len(C)):
+        f = f + A[k]*np.cos(k*t) + B[k]*np.sin(k*t)
+    return f
+
+def elephant(t, p1, p2, p3, p4, p5):
+    npar = 6
+    Cx = np.zeros((npar,), dtype='complex')
+    Cy = np.zeros((npar,), dtype='complex')
+
+    Cx[1] = p1.real*1j
+    Cx[2] = p2.real*1j
+    Cx[3] = p3.real
+    Cx[5] = p4.real
+
+    Cy[1] = p4.imag + p1.imag*1j
+    Cy[2] = p2.imag*1j
+    Cy[3] = p3.imag*1j
+
+    x = np.append(fourier(t,Cx), [-p5.imag])
+    y = np.append(fourier(t,Cy), [p5.imag])
+
+    return x,y
+
+x, y = elephant(np.linspace(0,2*np.pi,1000), p1, p2, p3, p4, p5)
+pylab.plot(y,-x,'.')
+print("Saving figure")
+pylab.savefig('elephant.png')
+
+#pylab.show()
+print("Done")
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
 ### Graphical User Interface Jobs \(VNC\)
 
-#### **General Compute**
+#### **General Compute**  
 
 The example below demonstrates how to start a VNC session on a general purpose compute node:
 
