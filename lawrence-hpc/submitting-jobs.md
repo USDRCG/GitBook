@@ -6,7 +6,7 @@ Lawrence has two methods of job submission: **interactive** and **batch**.
 
 **Interactive jobs**: An interactive job, as its name suggests, is the more **user-involved**. Users request a node \(please don't perform computations in the login node\), and then perform computations or analysis by **directly typing commands** into the command line.  Interactive jobs end if the user logs off of Lawrence.
 
-**Batch jobs:** Batch jobs are designed to run one or more scripts \(python, C, etc.\) on one or more files through a **pre-written script**. These **do not need interaction** with the user once they have been ordered in the terminal \(either started, or put in Lawrence's queue if the desired node is in use\). Batch scripts **continue to run** if the user logs off of Lawrence.
+**Batch jobs:** Batch jobs are designed to run one or more scripts \(python, C, etc.\) on one or more files through a **pre-written script**. These **do not need interaction** with the user once they have been submitted in the terminal \(either started on a node, or put in Lawrence's queue if the desired node is in use\). Batch scripts **continue to run** if the user logs off of Lawrence.
 
 ## Slurm
 
@@ -16,7 +16,7 @@ For the commonly used Slurm commands on the Lawrence HPC, we have provided quick
 
 ### Partitions
 
-There are five Slurm partitions to be aware of when submitting jobs on Lawrence, the default partition \(nodes\), preemptible partition, high memory partition, graphics processing partition, and visualization partition. For an in-depth overview of Slurm preemption, please visit the corresponding Slurm [webpage](https://slurm.schedmd.com/preempt.html).
+There are five Slurm partitions on Lawrence: the default partition \(nodes\), preemptible partition, high memory partition, graphics processing partition, and visualization partition. For an in-depth overview of Slurm preemption, please visit the corresponding Slurm [webpage](https://slurm.schedmd.com/preempt.html).
 
 #### Nodes \(default\) Partition
 
@@ -42,7 +42,7 @@ Press Ctrl+D to exit the preemptible partition and return to the login node.
 
 #### High Memory Partition
 
-Tasks that require a large memory \(RAM\) may be run on a high-memory \(himem\) node using the "-p himem" flag.  
+Jobs that require a large amount of memory \(RAM\) may be run on a high-memory \(himem\) node using the "-p himem" flag.  
 
 ```text
 [user.name@usd.local@login ~]$ srun --pty -p himem bash
@@ -97,15 +97,11 @@ For interactive jobs on the Lawrence himem nodes, use the srun command as follow
 
 #### GPU
 
-The GPU node must be specifically requested using the “--gres” parameter. GPU access is controlled by cgroups, which means the resource must be requested if it is to be used. This prevents use conflicts. The format for requesting the GPU node \(as specified in the contig file\) is TYPE:LABEL:NUMBER.
+When requesting a new GPU node, the access to a GPU device must be explicitly requested using the "--gres" parameter.  The format for requesting the GPU node is TYPE:LABEL:NUMBER.  On Lawrence, type will always be "gpu", and label will always be "pascal".    
 
-TYPE will be “gpu”.
+NUMBER is the number of GPUs being requested. On Lawrence, the GPU has two GPUs, and you can request one or two by specifying “1” or “2”.
 
-LABEL is defined as “pascal” for the GPU node.
-
-NUMBER is the amount of resources requested. For the GPU node, there are two logic units, so a user can request “1” or “2”.
-
-An example command would be as follows:
+An example command to request one GPU would be as follows:
 
 ```text
 srun --pty -p gpu --gres=gpu:pascal:1 bash
@@ -117,7 +113,7 @@ To see which GPUs are available use the following command:
 nvidia-smi
 ```
 
-For interactive GPU sessions, the gpu node is requested as below:
+Similarly, to launch an interactive job on a GPU node with the srun command, do the following:
 
 ```text
 [user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu:pascal:1 bash
@@ -126,7 +122,7 @@ For interactive GPU sessions, the gpu node is requested as below:
 
 ## Batch Jobs
 
-To make submitting a batch job easier, there are a few templates available for the general nodes, the high memory nodes, and the GPU node.  There is also a template for setting up an MPI.  To use a template, copy the template directory into your home directory:
+To make submitting a batch job easier, there are a few templates available for the general nodes, the high memory nodes, and the GPU node.  There is also a template for setting up a parallel job using MPI.  To use a template, copy the template directory into your home directory:
 
 ```text
 [user.name@usd.local@login ~]$ cp -r /opt/examples/ $HOME
@@ -138,11 +134,17 @@ or
 [user.name@usd.local@login ~]$ cp -r /opt/examples/ $HOME/your/directoryPath/here
 ```
 
-Open the desired template, and edit the contents as needed.
+Open the desired template with an editor such as nano, and edit the contents as needed.
 
 #### General Compute
 
-Batch jobs can be submitted on the Lawrence cluster using Slurm commands. A variety of configurations can be used for formulating a batch script. A basic batch script will look like the one below:
+Batch jobs can be submitted on the Lawrence cluster using the sbatch command. 
+
+```text
+[user.name@usd.local@login ~]$ sbatch example.sh
+```
+
+A variety of configurations can be used for formulating a batch script. A basic batch script will look like the one below:
 
 ![](../.gitbook/assets/exampletemplate1.png)
 
@@ -150,7 +152,7 @@ Batch jobs can be submitted on the Lawrence cluster using Slurm commands. A vari
 
 Below is an example batch script, called simple-template.sh in the example template directory. This template can be followed when requesting a node on Lawrence:
 
-![](../.gitbook/assets/node-batch-template3.png)
+![](../.gitbook/assets/mpi-node.png)
 
 #### HiMem
 
@@ -158,7 +160,7 @@ To use a high memory node within a batch job, add “--partition=himem” to you
 
 Below is an example batch script which calls the a high-memory node. This template \(examples/himem-template.sh\) can be followed when requesting the himem node on Lawrence:
 
-![](../.gitbook/assets/himem-batch-template-4.png)
+![](../.gitbook/assets/himem-batch-template-4%20%281%29.png)
 
 #### GPU
 
@@ -168,9 +170,9 @@ Below is an example batch script which calls the GPU node, this template \(examp
 
 #### MPI
 
-MPI is used to divide work among multiple processors.  Below is a template script \(mpi-template.sh\) and template C file \(mpi\_hello\_world.c\).
+MPI is a software environment used to divide work among multiple processors.  Below is a template script \(mpi-template.sh\) and example MPI program written in the C language \(mpi\_hello\_world.c\). Both can be found in /opt/examples/mpi/.
 
-![](../.gitbook/assets/mpi-py-template4.png)
+![](../.gitbook/assets/mpi-c-template.png)
 
 ![](../.gitbook/assets/mpi-c-template4b.png)
 
@@ -198,7 +200,7 @@ Thank you for installing Anaconda3!
 
 ```
 
-Make sure that no other modules are loaded, and remove them if needed.
+Make sure that no other modules are loaded, and remove them if needed. You can use the "which" command to verify that you are using the python and mpirun commands from Anaconda.
 
 ```text
 [user.name@usd.local@login ~]$ module list
@@ -208,17 +210,16 @@ Currently Loaded Modulefiles:
 [user.name@usd.local@login ~]$ module list
 No Modulefiles Currently Loaded.
 [user.name@usd.local@login ~]$
-
 [user.name@usd.local@login ~]$ which python
 ~/anaconda3/bin/python
-[user.name@usd.local@login ~]$ which mpi
-/usr/bin/which: no mpi in (/home/usd.local/user.name/anaconda3/bin:/usr/lib64/qt-3.3/bin:
+[user.name@usd.local@login ~]$ which mpirun
+~/anaconda3/bin/mpirun
 .....
-
-
 ```
 
-![](../.gitbook/assets/mpi-py-template6.png)
+Below is a template script \(mpi-python-template.sh\) and example MPI program written in the python language \(csvIntoPython.py\).  This python script reads a csv file, and prints the data to a slurm file \(slurm-00000.out\). Both templates can be found in "/opt/examples/mpi/".
+
+![](../.gitbook/assets/mpi-py-template6%20%281%29.png)
 
 #### MPI and Python for Graphs/Visual Products \(Elephant example\)
 
@@ -226,7 +227,7 @@ MPI can also be used for python scripts that produce visual products.  As an exa
 
 ![](../.gitbook/assets/elephant.png)
 
-MPI script:
+Job script:
 
 {% code-tabs %}
 {% code-tabs-item title="mpi-elephant-template.sh" %}
@@ -251,7 +252,7 @@ MPI script:
 #SBATCH --get-user-env
 
 # The default is one task per node
-#SBATCH --ntasks=2
+#SBATCH --ntasks=1
 #SBATCH --nodes=1
 
 #request 10 minutes of runtime - the job will be killed if it exceeds this
@@ -265,13 +266,9 @@ MPI script:
 ### Commands to run your program start here ####################################
 
 pwd
-echo "This is the MPI-elephant-template"
+echo "This is the elephant example"
 
-#module load openmpi-2.0/intel
-
-# -np needs to match --ntasks
-# Should use mpiexec from $PATH, (~/anaconda3/bin)
-mpiexec -np 2 python elephant.py
+python elephant.py
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

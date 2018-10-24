@@ -57,10 +57,13 @@ impi               mpich/intel        openmpi-1.6/gcc    openmpi-1.8/intel
 [user.name@usd.local@login ~]$ module unload openmpi-2.0/gcc
 ```
 
-#### To view the MPI in use:
+#### To view the version of MPI in use:
 
 ```text
 [user.name@usd.local@login ~]$ mpirun --version
+[user.name@usd.local@login ~]$ mpirun --version
+mpirun (Open MPI) 2.0.1
 
+Report bugs to http://www.open-mpi.org/community/help/
 ```
 

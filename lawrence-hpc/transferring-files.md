@@ -14,7 +14,7 @@ In MobaXterm, the file explorer/hierarchy is visible just to the left of the com
 
 From this section of the MobaXterm window, you can drag and drop files between either computer as you desire.
 
-![](../.gitbook/assets/screenshot-6.png)
+![](../.gitbook/assets/mobaxmovingfile.png)
 
 ![](../.gitbook/assets/screenshot-8.png)
 
@@ -22,7 +22,7 @@ From this section of the MobaXterm window, you can drag and drop files between e
 
 Cyberduck can also be used for moving files by sftp in Windows and Mac, but not Linux. You can find the Cyberduck installation [here](https://cyberduck.io/). Once installed, opening Cyberduck should return a window as follows:
 
-![](../.gitbook/assets/cyberduck_1%20%281%29.png)
+![](../.gitbook/assets/image%20%2810%29.png)
 
 You will need to open a connection by clicking on the 'Open Connection' icon. This will return a window to fill in with the host information. Fill this window in as shown below \(note user.name will be your personal Lawrence username\). Be sure to choose SFTP and port 22:
 
@@ -30,7 +30,7 @@ You will need to open a connection by clicking on the 'Open Connection' icon. Th
 
 After successfully connecting, you can upload files into your Lawrence folders on your home directory by dragging and dropping from your desktop... 
 
-![](../.gitbook/assets/screenshot-14.png)
+![](../.gitbook/assets/cyberduckmovefile.png)
 
 or by clicking the upload icon at the top of the Cyberduck display.
 
@@ -38,7 +38,7 @@ or by clicking the upload icon at the top of the Cyberduck display.
 
 ![](../.gitbook/assets/screenshot-21.png)
 
-### SCP
+### Command Line SCP
 
 The standard command line method for file movement between hosts is the `scp`command \(secure copy\). This is an ssh based protocol designed for moving files between local and remote hosts. To get files from your local computer, you will need to open a local terminal session on your computer \(Do not connect to the HPC! In this example, local@xyz is my local PC\).
 
@@ -46,19 +46,19 @@ The standard command line method for file movement between hosts is the `scp`com
 [local@xyz ~]$
 ```
 
-The syntax of the `scp` command has four parts: 
+The syntax of the `scp` command has three parts: 
 
-![](../.gitbook/assets/image%20%281%29.png)
+1. scp command
+2. current path to file to be moved
+3. target path where the file will be sent
 
 Type the `scp` command as follows \(type the path you want your file transferred to on Lawrence; here I use ''some.folder'\):
 
 ```text
-[local@xyz ~]$ scp  ./pathTo/file/file.name user.name@lawrence.usd.edu:/home/user.name/some.folder
+[local@xyz ~]$ scp  ./pathTo/file/file.name User.Name@Lawrence.usd.edu:/home/user.name/some.folder
 user.name@lawrence.usd.edu's password: 
 file.name              100% 8893     8.7KB/s   00:00
 ```
-
-
 
 Hints:
 
@@ -67,7 +67,7 @@ Hints:
 * To transfer directories, add an -r flag
 
 ```text
-[user.name@login@login some.folder]$ scp -r ./pathTo/and/including/myDirectory/ user.name@lawrence.usd.edu:/home/user.name/
+[user.name@login@login some.folder]$ scp -r ./pathTo/and/including/myDirectory/ User.Name@Lawrence.usd.edu:/home/user.name/
 contents.c                                      100%  1KB    45KB/s    00:00
 of.c                                            100%  2KB    44KB/s    00:00
 directory.c                                     100%  2KB    43KB/s    00:00
@@ -80,5 +80,13 @@ Open a second terminal and log in to Lawrence, then list directories.  The file 
 file.name
 ```
 
-The last line in the first terminal gives stats on the transfer. You can also use scp for other data transfer applications including HPC to local PC, between HPCs, and between PCs. In a second terminal, where you are logged into Lawrence, you can check that the file was transferred and put into some.folder.
+The last line in the first terminal gives stats on the transfer.  In a second terminal, where you are logged into Lawrence, you can check that the file was transferred and put into some.folder.
+
+You can also use scp for other data transfer applications including HPC to local PC, between HPCs, and between PCs. To transfer files from Lawrence to your PC, \(while not logged in to Lawrence\) simply switch the two paths in the scp command \(numbers 2 and 3\), and move the filename to the end of the first path.  If needed, add "usd.local" to the path on Lawrence \("/home/usd.local/user.name/some.folder"\).
+
+```text
+[local@xyz ~]$ scp User.Name@Lawrence.usd.edu:/home/user.name/some.folder/file.name  ./pathTo/file/
+user.name@lawrence.usd.edu's password: 
+file.name              100% 8893     8.7KB/s   00:00
+```
 
