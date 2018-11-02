@@ -55,19 +55,20 @@ The syntax of the `scp` command has three parts:
 Type the `scp` command as follows \(type the path you want your file transferred to on Lawrence; here I use ''some.folder'\):
 
 ```text
-[local@xyz ~]$ scp  ./pathTo/file/file.name User.Name@Lawrence.usd.edu:/home/user.name/some.folder
+[local@xyz ~]$ scp  ./pathTo/file/file.name User.Name@Lawrence.usd.edu:/home/usd.local/user.name/some.folder
 user.name@lawrence.usd.edu's password: 
 file.name              100% 8893     8.7KB/s   00:00
 ```
 
 Hints:
 
-* If an error such as "No such file or directory" appears, look in the directory at the new location to make sure it failed.  If it did, try adding usd.local after home \(user.name@lawrence.usd.edu:/home/usd.local/user.name/some.folder\)
+* If you are logging into Lawrence as a user from another school \(not USD\), "usd.local" may be replaced by an identifier for your school: \(e.g. user.name@lawrence.usd.edu:/home/**blackhills.local**/user.name/some.folder\)
 * Don't forget either the period \(.\) at the start of the initial path to the file \(it refers to the current working directory \(the directory you are located in\)\) or a complete path to the file \(/home/Desktop/pathTo/file/file.name\)
+* Don't forget the colon \(:\) after ".edu"
 * To transfer directories, add an -r flag
 
 ```text
-[user.name@login@login some.folder]$ scp -r ./pathTo/and/including/myDirectory/ User.Name@Lawrence.usd.edu:/home/user.name/
+[user.name@login@login some.folder]$ scp -r ./pathTo/and/including/myDirectory/ User.Name@Lawrence.usd.edu:/home/usd.local/user.name/
 contents.c                                      100%  1KB    45KB/s    00:00
 of.c                                            100%  2KB    44KB/s    00:00
 directory.c                                     100%  2KB    43KB/s    00:00
@@ -82,10 +83,10 @@ file.name
 
 The last line in the first terminal gives stats on the transfer.  In a second terminal, where you are logged into Lawrence, you can check that the file was transferred and put into some.folder.
 
-You can also use scp for other data transfer applications including HPC to local PC, between HPCs, and between PCs. To transfer files from Lawrence to your PC, \(while not logged in to Lawrence\) simply switch the two paths in the scp command \(numbers 2 and 3\), and move the filename to the end of the first path.  If needed, add "usd.local" to the path on Lawrence \("/home/usd.local/user.name/some.folder"\).
+You can also use scp for other data transfer applications including HPC to local PC, between HPCs, and between PCs. To transfer files from Lawrence to your PC, \(while not logged in to Lawrence\) simply switch the two paths in the scp command \(numbers 2 and 3\), and move the filename to the end of the first path.  If needed, change "usd.local" to the reference for your institution.
 
 ```text
-[local@xyz ~]$ scp User.Name@Lawrence.usd.edu:/home/user.name/some.folder/file.name  ./pathTo/file/
+[local@xyz ~]$ scp User.Name@Lawrence.usd.edu:/home/usd.local/user.name/some.folder/file.name  ./pathTo/file/
 user.name@lawrence.usd.edu's password: 
 file.name              100% 8893     8.7KB/s   00:00
 ```

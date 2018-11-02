@@ -170,69 +170,16 @@ Below is an example batch script which calls the GPU node, this template \(examp
 
 ![](../.gitbook/assets/gpubatchtemplate2.png)
 
-### MPI
+### Python for Graphs/Visual Products \(Elephant example\)
 
-MPI is a software environment used to divide work among multiple processors.  Below is a template script \(mpi-template.sh\) and example MPI program written in the C language \(mpi\_hello\_world.c\). Both can be found in /opt/examples/mpi/.
-
-![](../.gitbook/assets/mpi-c-template.png)
-
-![](../.gitbook/assets/mpi-c-template4b.png)
-
-### MPI-python
-
-Some researchers prefer the python programming language, rather than C.  If this is true of you, a python mpi template script is also available.  Before beginning, ensure that you have **Anaconda \(or Bioconda\) installed on your Lawrence login**.  If you don't have one of these, install as below \(it will take a few minutes\).  When the Anaconda installer asks if you would like to add the Anaconda commands to your path, select yes.
-
-```text
-[user.name@usd.local@login ~]$ /apps/install-anaconda.sh
-……
-installation finished.
-Do you wish the installer to prepend the Anaconda3 install location
-to PATH in your /home/usd.local/adison.kleinsasser/.bashrc ? [yes|no]
-[no] >>> yes
-
-Appending source /home/usd.local/adison.kleinsasser/anaconda3/bin/activate to /home/usd.local/adison.kleinsasser/.bashrc
-A backup will be made to: /home/usd.local/adison.kleinsasser/.bashrc-anaconda3.bak
-
-
-For this change to become active, you have to open a new terminal.
-
-Thank you for installing Anaconda3!
-
-===========================================================================
-
-```
-
-Make sure that no other modules are loaded, and remove them if needed. You can use the "which" command to verify that you are using the python and mpirun commands from Anaconda.
-
-```text
-[user.name@usd.local@login ~]$ module list
-Currently Loaded Modulefiles:
-  1) openmpi-2.0/gcc
-[user.name@usd.local@login ~]$ module purge
-[user.name@usd.local@login ~]$ module list
-No Modulefiles Currently Loaded.
-[user.name@usd.local@login ~]$
-[user.name@usd.local@login ~]$ which python
-~/anaconda3/bin/python
-[user.name@usd.local@login ~]$ which mpirun
-~/anaconda3/bin/mpirun
-.....
-```
-
-Below is a template script \(mpi-python-template.sh\) and example MPI program written in the python language \(csvIntoPython.py\).  This python script reads a csv file, and prints the data to a slurm file \(slurm-00000.out\). Both templates can be found in "/opt/examples/mpi/".
-
-![](../.gitbook/assets/mpi-py-template6%20%281%29.png)
-
-### MPI and Python for Graphs/Visual Products \(Elephant example\)
-
-MPI can also be used for python scripts that produce visual products.  As an example, we have provided a script \(elephant.py\), which produces a .png file containing a graph with a line shaped like an elephant: 
+Python scripts can be used to produce visual products on Lawrence.  As an example, we have provided a batch script \(elephant-template.sh\) that calls a python script \(elephant.py\) which produces a .png file containing a graph with a line shaped like an elephant: 
 
 ![](../.gitbook/assets/elephant.png)
 
 Job script:
 
 {% code-tabs %}
-{% code-tabs-item title="mpi-elephant-template.sh" %}
+{% code-tabs-item title="elephant-template.sh" %}
 ```text
 #!/bin/bash
 
@@ -335,6 +282,59 @@ print("Done")
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+### MPI
+
+MPI is a software environment used to divide work among multiple processors.  Below is a template script \(mpi-template.sh\) and example MPI program written in the C language \(mpi\_hello\_world.c\). Both can be found in /opt/examples/mpi/.
+
+![](../.gitbook/assets/mpi-c-template.png)
+
+![](../.gitbook/assets/mpi-c-template4b.png)
+
+### MPI-python
+
+Some researchers prefer the python programming language, rather than C.  If this is true of you, a python mpi template script is also available.  Before beginning, ensure that you have **Anaconda \(or Bioconda\) installed on your Lawrence login**.  If you don't have one of these, install as below \(it will take a few minutes\).  When the Anaconda installer asks if you would like to add the Anaconda commands to your path, select yes.
+
+```text
+[user.name@usd.local@login ~]$ /apps/install-anaconda.sh
+……
+installation finished.
+Do you wish the installer to prepend the Anaconda3 install location
+to PATH in your /home/usd.local/adison.kleinsasser/.bashrc ? [yes|no]
+[no] >>> yes
+
+Appending source /home/usd.local/adison.kleinsasser/anaconda3/bin/activate to /home/usd.local/adison.kleinsasser/.bashrc
+A backup will be made to: /home/usd.local/adison.kleinsasser/.bashrc-anaconda3.bak
+
+
+For this change to become active, you have to open a new terminal.
+
+Thank you for installing Anaconda3!
+
+===========================================================================
+
+```
+
+Make sure that no other modules are loaded, and remove them if needed. You can use the "which" command to verify that you are using the python and mpirun commands from Anaconda.
+
+```text
+[user.name@usd.local@login ~]$ module list
+Currently Loaded Modulefiles:
+  1) openmpi-2.0/gcc
+[user.name@usd.local@login ~]$ module purge
+[user.name@usd.local@login ~]$ module list
+No Modulefiles Currently Loaded.
+[user.name@usd.local@login ~]$
+[user.name@usd.local@login ~]$ which python
+~/anaconda3/bin/python
+[user.name@usd.local@login ~]$ which mpirun
+~/anaconda3/bin/mpirun
+.....
+```
+
+Below is a template script \(mpi-python-template.sh\) and example MPI program written in the python language \(csvIntoPython.py\).  This python script reads a csv file, and prints the data to a slurm file \(slurm-00000.out\). Both templates can be found in "/opt/examples/mpi/".
+
+![](../.gitbook/assets/mpi-py-template6%20%281%29.png)
 
 ## Graphical User Interface Jobs \(VNC\)
 

@@ -77,17 +77,21 @@ Do you wish to proceed with the installation of Microsoft VSCode? [yes|no]
 [user.name@usd.local@login ~]$
 ```
 
+To update your Anaconda3 to the latest version of Anaconda3, type the following command:
+
+```text
+[user.name@usd.local@login ~]$ conda update conda && conda update anaconda
+```
+
+### Packages
+
 Packages that do not automatically come with Anaconda may be installed using the "install.packages package-name" command.  Package options are available [here](https://docs.anaconda.com/anaconda/packages/pkg-docs/).  R language package options are available [here](https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/).
 
 ```text
 [user.name@usd.local@login ~]$ install.packages mpi4py
 ```
 
-To update your Anaconda3 to the latest version of Anaconda3, type the following command:
-
-```text
-[user.name@usd.local@login ~]$ conda update conda && conda update anaconda
-```
+### R
 
 After Anaconda is installed, to install R, use "conda install R":
 
@@ -96,6 +100,25 @@ After Anaconda is installed, to install R, use "conda install R":
 Solving environment: done
 ...
 xorg-xproto 7.0.31: ########################################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+[user.name@usd.local@login ~]$
+```
+
+Another popular package at USD is R-essentials.  To install this, use the conda install command "conda install -c r r-essentials":
+
+```text
+[user.name@usd.local@login ~]$ conda install -c r r-essentials
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/usd.local/user.name/anaconda3
+
+  added / updated specs:
+    - r-essentials
+...
 Preparing transaction: done
 Verifying transaction: done
 Executing transaction: done
@@ -120,18 +143,7 @@ Done!
 
 Bioconda will now be available through your home directory to install software. It will appear as "Anaconda"
 
-After Bioconda is installed, to install R, use "conda install R":
-
-```text
-[user.name@usd.local@login ~]$ conda install R
-Solving environment: done
-...
-xorg-xproto 7.0.31: ########################################################### | 100%
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-[user.name@usd.local@login ~]$
-```
+After Bioconda is installed, to install R, use "conda install R" \(see instructions above: _Anaconda - R_\)
 
 ## Math Libraries
 
