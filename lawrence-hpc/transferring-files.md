@@ -22,7 +22,7 @@ From this section of the MobaXterm window, you can drag and drop files between e
 
 Cyberduck can also be used for moving files by sftp in Windows and Mac, but not Linux. You can find the Cyberduck installation [here](https://cyberduck.io/). Once installed, opening Cyberduck should return a window as follows:
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 
 You will need to open a connection by clicking on the 'Open Connection' icon. This will return a window to fill in with the host information. Fill this window in as shown below \(note user.name will be your personal Lawrence username\). Be sure to choose SFTP and port 22:
 

@@ -73,6 +73,8 @@ For the visualization \(viz\) partition, use the "-p viz" flag.
 
 Press Ctrl+D to exit the visualization partition and return to the login node.
 
+![](../.gitbook/assets/lawrencediagram2-ssh-srun.png)
+
 ## Interactive Jobs
 
 #### General Compute
@@ -148,13 +150,13 @@ A variety of configurations can be used for formulating a batch script. A basic 
 
 ![](../.gitbook/assets/exampletemplate1.png)
 
-#### Nodes
+### Nodes
 
 Below is an example batch script, called simple-template.sh in the example template directory. This template can be followed when requesting a node on Lawrence:
 
 ![](../.gitbook/assets/mpi-node.png)
 
-#### HiMem
+### HiMem
 
 To use a high memory node within a batch job, add “--partition=himem” to your script.
 
@@ -162,13 +164,13 @@ Below is an example batch script which calls the a high-memory node. This templa
 
 ![](../.gitbook/assets/himem-batch-template-4%20%281%29.png)
 
-#### GPU
+### GPU
 
 Below is an example batch script which calls the GPU node, this template \(examples/gpu-template.sh\) can be followed when requesting a GPU node on Lawrence:
 
 ![](../.gitbook/assets/gpubatchtemplate2.png)
 
-#### MPI
+### MPI
 
 MPI is a software environment used to divide work among multiple processors.  Below is a template script \(mpi-template.sh\) and example MPI program written in the C language \(mpi\_hello\_world.c\). Both can be found in /opt/examples/mpi/.
 
@@ -176,7 +178,7 @@ MPI is a software environment used to divide work among multiple processors.  Be
 
 ![](../.gitbook/assets/mpi-c-template4b.png)
 
-#### MPI-python
+### MPI-python
 
 Some researchers prefer the python programming language, rather than C.  If this is true of you, a python mpi template script is also available.  Before beginning, ensure that you have **Anaconda \(or Bioconda\) installed on your Lawrence login**.  If you don't have one of these, install as below \(it will take a few minutes\).  When the Anaconda installer asks if you would like to add the Anaconda commands to your path, select yes.
 
@@ -221,7 +223,7 @@ Below is a template script \(mpi-python-template.sh\) and example MPI program wr
 
 ![](../.gitbook/assets/mpi-py-template6%20%281%29.png)
 
-#### MPI and Python for Graphs/Visual Products \(Elephant example\)
+### MPI and Python for Graphs/Visual Products \(Elephant example\)
 
 MPI can also be used for python scripts that produce visual products.  As an example, we have provided a script \(elephant.py\), which produces a .png file containing a graph with a line shaped like an elephant: 
 
@@ -334,48 +336,38 @@ print("Done")
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Graphical User Interface Jobs \(VNC\)
+## Graphical User Interface Jobs \(VNC\)
+
+To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/tigervnc/stable/tigervnc).  Download the 64-bit version, shown below.
+
+![](../.gitbook/assets/screenshot-32.png)
+
+A VNC password also needs to be set up \(this only needs to be done once\). Note: the password will not show up as you type
+
+```text
+[user.name@usd.local@login ~]$ vncpasswd
+Password:
+Verify:
+```
 
 #### **General Compute**  
 
 The example below demonstrates how to start a VNC session on a general purpose compute node:
 
 ```text
-[user.name@usd.local@login ~]$ # The vncpasswd command only needs to be run once
-[user.name@usd.local@login ~]$ vncpasswd
-Password:
-Verify:
 [user.name@usd.local@login ~]$ sbatch /opt/examples/gui-job.sh
 Submitted batch job 2965
 [user.name@usd.local@login ~]$ touch job-2965.out
 [user.name@usd.local@login ~]$ tail -f job-2965.out
-job execution at: Fri Mar 9 12:30:35 CST 2018
-running on node node41
-using default VNC server /usr/bin/vncserver
-got VNC display :2
-local (compute node) VNC port is 5902
-got login node VNC port 50041
-Created reverse ports on login node.]
-
-====================================================
-
-Your VNC server is now running!
-To connect:
-1) Mac/Linux/MobaXterm users: run the following command FROM A NEW LOCAL TERMINAL WINDOW (not this one)
-ssh -L50041:localhost:50041 user.name@usd.local@lawrence.usd.edu
-For other users (PuTTY, etc) create a new SSH session and tunnel port 50041 to localhost:50041
-
-2) Then from your computer use a vnc client like TigerVNC Viewer to connect to localhost:50041
-You can download TigerVNC Viewer from https://bintray.com/tigervnc/stable/tigervnc
-Stopping VNC server
-Killing Xvnc process ID 313303
-job 2965 execution finished at: Fri Mar 9 12:31:23 CST 2018
-Type ctrl-C to return to your terminal session.
-^C
-[user.name@usd.local@login ~]$
-
-### Output file is job-xxx.out
 ```
+
+\*Note: the numbers in job-2965.out correspond to the number of the batch job in the second line \(the number in your command line will likely be different\). The tail -f command will print the last few lines of the file, which looks like this:
+
+![](../.gitbook/assets/vncmaketunnel.png)
+
+Copy the ssh command \(it will look like the command circled in red above\) and paste it into a different command line \(then press "enter"\).  Open TigerVNC, copy the localhost \(will look like what is circled in blue\), and paste it into the "NVC Viewer: Connection Details" window.  Click "Connect".
+
+![](../.gitbook/assets/vncviewerconnectiondetails2.png)
 
 #### HiMem
 

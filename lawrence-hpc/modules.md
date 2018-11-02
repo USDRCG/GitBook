@@ -27,9 +27,84 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 >
 ```
 
+## Anaconda
+
+Anaconda is a channel software manager of conda which can be used for installing various applications.  Anaconda is recommended for those wishing to install software that is not readily available as a module. More information on using Anaconda can be found on the Anaconda documentation page[ __here](https://docs.anaconda.com/anaconda/user-guide/)_._ Packages currently available on Anaconda can be found [here](https://docs.anaconda.com/anaconda/packages/pkg-docs/).  Anaconda provides python by default.  R may be installed using the command "conda install R".
+
+To install Anaconda in your home directory on Lawrence, run the install-anaconda script as follows:
+
+```text
+[user.name@usd.local@login ~]$ /apps/install-anaconda.sh
+Downloading installer
+Running installer
+...
+Done!
+[user.name@usd.local@login ~]$
+
+```
+
+Then run the installer.  Make sure to select "yes" when asked about prepending the Anaconda3 install location to PATH.
+
+```text
+[user.name@usd.local@login ~]$ bash anaconda.sh
+
+Welcome to Anaconda3 5.1.0
+
+In order to continue the installation process, please review the license
+agreement.
+....
+Do you accept the license terms? [yes|no]
+[no] >>> yes
+....
+Anaconda3 will now be installed into this location:
+/home/usd.local/user.name/anaconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+[/home/usd.local/user.name/anaconda3] >>>
+REFIX=/home/usd.local/user.name/anaconda3
+installing: python-3.6.4-hc3d631a_1 ...
+...
+Do you wish the installer to prepend the Anaconda3 install location
+to PATH in your /home/usd.local/user.name/.bashrc ? [yes|no]
+[no] >>> yes
+...
+Visual Studio Code License: https://code.visualstudio.com/license
+
+Do you wish to proceed with the installation of Microsoft VSCode? [yes|no]
+>>> no
+[user.name@usd.local@login ~]$
+```
+
+Packages that do not automatically come with Anaconda may be installed using the "install.packages package-name" command.  Package options are available [here](https://docs.anaconda.com/anaconda/packages/pkg-docs/).  R language package options are available [here](https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/).
+
+```text
+[user.name@usd.local@login ~]$ install.packages mpi4py
+```
+
+To update your Anaconda3 to the latest version of Anaconda3, type the following command:
+
+```text
+[user.name@usd.local@login ~]$ conda update conda && conda update anaconda
+```
+
+After Anaconda is installed, to install R, use "conda install R":
+
+```text
+[user.name@usd.local@login ~]$ conda install R
+Solving environment: done
+...
+xorg-xproto 7.0.31: ########################################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+[user.name@usd.local@login ~]$
+```
+
 ## Bioconda
 
-Bioconda is a channel software manager of conda which can be used for installing various bioinformatics applications. Bioconda is recommended for those wishing to install software that is not readily available as a module. More information on using Bioconda can be found on the Bioconda documentation page [here](https://bioconda.github.io/). Packages currently available on Bioconda can be found [here](https://bioconda.github.io/recipes.html#recipes).
+Bioconda is a version of Anaconda \(a channel software manager of conda\) that is designed especially for use in the biological sciences. It can be used for installing various bioinformatics applications. Bioconda is recommended for those wishing to install software that is not readily available as a module, especially in the biological sciences. More information on using Bioconda can be found on the Bioconda documentation page [here](https://bioconda.github.io/). Packages currently available on Bioconda can be found [here](https://bioconda.github.io/recipes.html#recipes).
 
 To install Bioconda in your home directory on Lawrence, run the install-bioconda script as follows:
 
@@ -37,13 +112,26 @@ To install Bioconda in your home directory on Lawrence, run the install-bioconda
 [user.name@usd.local@login ~]$ /apps/install-bioconda.sh
 Downloading installer
 Running installer
-PREFIX=/home/usd.local/joseph.madison/anaconda3
+PREFIX=/home/usd.local/user.name/anaconda3
 Installing...
 ...
 Done!
 ```
 
-Bioconda will now be available through your home directory to install software.
+Bioconda will now be available through your home directory to install software. It will appear as "Anaconda"
+
+After Bioconda is installed, to install R, use "conda install R":
+
+```text
+[user.name@usd.local@login ~]$ conda install R
+Solving environment: done
+...
+xorg-xproto 7.0.31: ########################################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+[user.name@usd.local@login ~]$
+```
 
 ## Math Libraries
 
