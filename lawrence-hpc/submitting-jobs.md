@@ -365,9 +365,21 @@ Submitted batch job 2965
 
 ![](../.gitbook/assets/vncmaketunnel.png)
 
-Copy the ssh command \(it will look like the command circled in red above\) and paste it into a different command line \(then press "enter"\).  Open TigerVNC, copy the localhost \(will look like what is circled in blue\), and paste it into the "NVC Viewer: Connection Details" window.  Click "Connect".
+Copy the ssh command \(it will look like the command circled in red above\) and paste it into a different command line \(then press "enter"\).  It will then ask for a password. \(This is the password you would use to log in to Lawrence, not the vnc password.\)  The password will not appear as it is typed in.
+
+![](../.gitbook/assets/gui-2ndwindow2.png)
+
+Open TigerVNC, copy the localhost \(will look like what is circled in blue\), and paste it into the "NVC Viewer: Connection Details" window.  Click "Connect".
 
 ![](../.gitbook/assets/vncviewerconnectiondetails2.png)
+
+The window will then ask for a password. Type in the VNC password you made earlier.
+
+![](../.gitbook/assets/vncwindow-psswd.png)
+
+Your VNC window will then pop up.
+
+![](../.gitbook/assets/vncwindow.png)
 
 #### HiMem
 
