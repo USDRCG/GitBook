@@ -152,7 +152,7 @@ A variety of configurations can be used for formulating a batch script. A basic 
 
 ### Nodes
 
-Below is an example batch script, called simple-template.sh in the example template directory. This template can be followed when requesting a node on Lawrence:
+Below is an example batch script, called simple-template.sh in the example template directory \(/opt/examples/simple-template.sh\). This template can be followed when requesting a node on Lawrence:
 
 ![](../.gitbook/assets/mpi-node.png)
 
@@ -160,13 +160,13 @@ Below is an example batch script, called simple-template.sh in the example templ
 
 To use a high memory node within a batch job, add “--partition=himem” to your script.
 
-Below is an example batch script which calls the a high-memory node. This template \(examples/himem-template.sh\) can be followed when requesting the himem node on Lawrence:
+Below is an example batch script which calls the a high-memory node. This template \(/opt/examples/himem-template.sh\) can be followed when requesting the himem node on Lawrence:
 
 ![](../.gitbook/assets/himem-batch-template-4%20%281%29.png)
 
 ### GPU
 
-Below is an example batch script which calls the GPU node, this template \(examples/gpu-template.sh\) can be followed when requesting a GPU node on Lawrence:
+Below is an example batch script which calls the GPU node, this template \(/opt/examples/gpu-template.sh\) can be followed when requesting a GPU node on Lawrence:
 
 ![](../.gitbook/assets/gpubatchtemplate2.png)
 
@@ -282,6 +282,20 @@ print("Done")
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+### R
+
+R is a commonly used language to make visualizations.  Provided in the /opt/examples/Rscripts folder is an example R script \(exampleScript.R\) and a batch script \(R-batch-tempate.sh\) for running it in batch. \(The file data.csv in the same directory contains the data used.\)
+
+Batch script \(R-batch-template.sh\)
+
+![](../.gitbook/assets/r-batch-template.png)
+
+R script \(exampleScript.R\)
+
+![](../.gitbook/assets/examplescriptr.png)
+
+![](../.gitbook/assets/rgraphic.png)
 
 ### MPI
 
