@@ -400,6 +400,44 @@ Your VNC window will then pop up.
 
 ![](../.gitbook/assets/vncwindow.png)
 
+### Opening Programs in the GUI \(e.g. RStudio\)
+
+Make sure the package\(s\) needed are installed.  For this example, I will use RStudio.  To install RStudio, I use "conda install rstudio"
+
+```text
+[user.name@usd.local@node01 ~]$ conda intstall rstudio
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/usd.local/user.name/anaconda3
+........
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+[user.name@usd.local@node01 ~]$
+```
+
+To run RStudio, type "rstudio"
+
+```text
+[user.name@usd.local@node01 ~]$ rstudio
+load glyph failed err=6 face=0x555cb51b7a30, glyph=2793
+load glyph failed err=6 face=0x555cb51b7a30, glyph=2793
+^C
+[user.name@usd.local@node01 ~]$ 
+```
+
+An RStudio window will then pop up within the TigerVNC window.
+
+![](../.gitbook/assets/screenshot-37.png)
+
+To open a file, go to File/open in the RStudio window. This will connect to the Lawrence local directories, not the directories on the desktop/laptop being used.
+
+![](../.gitbook/assets/screenshot-39.png)
+
+### GUI Partitions
+
 #### HiMem
 
 To request a VNC session on the HiMem node, use the same commands as given under General Compute excepting the following command with sbatch:
