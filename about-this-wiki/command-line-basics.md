@@ -77,6 +77,8 @@
   </tbody>
 </table>## Command Line Basics \(with examples\)
 
+### Navigating Directories
+
 First, we will use the pwd \(print working directory\) command to show our current location.
 
 ```text
@@ -124,6 +126,8 @@ Next, we will make a text file in the exp1 directory. We first have to cd into t
 /home/Joseph.Madison/exp1
 ```
 
+### Making Files
+
 Next, we will create a file using a text editor. Here we will use nano \(there are others including emacs and vi, but nano is simple\). We use the nano command followed by the name of what we want to call the new file. \(Include a file extension if desired.\)
 
 ```text
@@ -159,6 +163,8 @@ You will then be brought back to the directory you put the file in. You can veri
 [Joseph.Madison@login-0-0 exp1]$ pwd
 /home/Joseph.Madison/exp1
 ```
+
+### Moving/Removing Files
 
 You can also move the file you just made with the mv command. Here, I will move file1 from the exp1 directory to the exp2 directory. I will also change directories to the exp2 directory and verify my file was moved. Note: You must specify the entirety of the directory you are moving to, otherwise your file will just be renamed \(mv can double over as a rename command\).
 
@@ -204,6 +210,8 @@ Directories can also be removed using the rm -r command. This command will also 
 [Joseph.Madison@login-0-0 ~]$ ls
 demo_files  dissertation_research  exp1  install_files
 ```
+
+### Misc.
 
 Another useful command is the whoami command. This command will tell you what user you are on the system \(and is also a nice sanity check late at night\)
 

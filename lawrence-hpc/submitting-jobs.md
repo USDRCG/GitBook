@@ -77,7 +77,7 @@ Press Ctrl+D to exit the visualization partition and return to the login node.
 
 ## Interactive Jobs
 
-#### General Compute
+### General Compute
 
 Interactive sessions on compute nodes can be used with the Slurm command "srun". For the use of one node, this command can be used generally as demonstrated below:
 
@@ -86,7 +86,7 @@ Interactive sessions on compute nodes can be used with the Slurm command "srun".
 [user.name@usd.local@node37 ~]$
 ```
 
-#### HiMem
+### HiMem
 
 The Lawrence high-memory \(himem\) partition has two nodes, each with 1.5 TB of RAM. This node is especially useful for jobs requiring a large amount of memory and can be accessed either interactively or with a batch script.
 
@@ -97,7 +97,7 @@ For interactive jobs on the Lawrence himem nodes, use the srun command as follow
 [user.name@usd.local@himem02 ~]$
 ```
 
-#### GPU
+### GPU
 
 When requesting a new GPU node, the access to a GPU device must be explicitly requested using the "--gres" parameter.  The format for requesting the GPU node is TYPE:LABEL:NUMBER.  On Lawrence, type will always be "gpu", and label will always be "pascal".    
 
@@ -352,6 +352,8 @@ Below is a template script \(mpi-python-template.sh\) and example MPI program wr
 
 ## Graphical User Interface Jobs \(VNC\)
 
+### First Time Set-up
+
 To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/tigervnc/stable/tigervnc).  Download the 64-bit version, shown below.
 
 ![](../.gitbook/assets/screenshot-32.png)
@@ -364,30 +366,33 @@ Password:
 Verify:
 ```
 
-#### **General Compute**  
+### **Starting the GUI**  
 
 The example below demonstrates how to start a VNC session on a general purpose compute node:
 
-```text
-[user.name@usd.local@login ~]$ sbatch /opt/examples/gui-job.sh
-Submitted batch job 2965
-[user.name@usd.local@login ~]$ touch job-2965.out
-[user.name@usd.local@login ~]$ tail -f job-2965.out
-```
+#### Command Line \#1:
 
-\*Note: the numbers in job-2965.out correspond to the number of the batch job in the second line \(the number in your command line will likely be different\). The tail -f command will print the last few lines of the file, which looks like this:
+![](../.gitbook/assets/vncmaketunnel-cmd-1.png)
 
-![](../.gitbook/assets/vncmaketunnel.png)
+\*Note: the numbers in job-2965.out **correspond** to the number of the **batch job** in the second line \(the number in your command line will likely be different\). The tail -f command will print the last few lines of the file, which looks like this:
 
-Copy the ssh command \(it will look like the command circled in red above\) and paste it into a different command line \(then press "enter"\).  It will then ask for a password. \(This is the password you would use to log in to Lawrence, not the vnc password.\)  The password will not appear as it is typed in.
+#### Command Line \#1:
 
-![](../.gitbook/assets/gui-2ndwindow2.png)
+![](../.gitbook/assets/vncmaketunnel2.png)
 
-Open TigerVNC, copy the localhost \(will look like what is circled in blue\), and paste it into the "NVC Viewer: Connection Details" window.  Click "Connect".
+Copy the ssh command \(it will look like the command **circled in red above**\) and **paste** it into a **different command line** \(then press "enter"\).  It will then ask for a password. \(This is the password you would use to log in to Lawrence, **not the vnc password**.\)  The password will **not appear** as it is typed in.
 
-![](../.gitbook/assets/vncviewerconnectiondetails2.png)
+#### Command Line \#2:
 
-The window will then ask for a password. Type in the VNC password you made earlier.
+![](../.gitbook/assets/gui-2ndwindow2%20%281%29.png)
+
+#### VNC Viewer
+
+Open TigerVNC, copy the localhost \(it will look like what is circled in blue in command line \#1\), and paste it into the "NVC Viewer: Connection Details" window.  Click "Connect".
+
+![](../.gitbook/assets/cmd1-vnc-viewer.png)
+
+The window will then ask for a password. Type in the **VNC password** you made earlier.
 
 ![](../.gitbook/assets/vncwindow-psswd.png)
 
