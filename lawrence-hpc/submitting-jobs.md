@@ -384,7 +384,7 @@ Copy the ssh command \(it will look like the command **circled in red above**\) 
 
 #### Command Line \#2:
 
-![](../.gitbook/assets/gui-2ndwindow2%20%281%29.png)
+![](../.gitbook/assets/cmdlines1-and-2-vnc%20%281%29.png)
 
 #### VNC Viewer
 
@@ -405,7 +405,7 @@ Your VNC window will then pop up.
 Make sure the package\(s\) needed are installed.  For this example, I will use RStudio.  To install RStudio, I use "conda install rstudio"
 
 ```text
-[user.name@usd.local@node01 ~]$ conda intstall rstudio
+[user.name@usd.local@node01 ~]$ conda install rstudio
 Solving environment: done
 
 ## Package Plan ##
@@ -418,7 +418,7 @@ Executing transaction: done
 [user.name@usd.local@node01 ~]$
 ```
 
-To run RStudio, type "rstudio"
+To run RStudio, type "rstudio" \(all **lowercase**\) in the TigerVNC command line.
 
 ```text
 [user.name@usd.local@node01 ~]$ rstudio
@@ -428,11 +428,11 @@ load glyph failed err=6 face=0x555cb51b7a30, glyph=2793
 [user.name@usd.local@node01 ~]$ 
 ```
 
-An RStudio window will then pop up within the TigerVNC window.
+An RStudio window will then pop up within the TigerVNC window. 
 
 ![](../.gitbook/assets/screenshot-37.png)
 
-To open a file, go to File/open in the RStudio window. This will connect to the Lawrence local directories, not the directories on the desktop/laptop being used.
+You may now use the RStudio in VNC the same way you would use RStudio on the desktop.  To open a file, go to File/open in the RStudio window. This will open the Lawrence local directories, not the directories on the desktop/laptop being used.
 
 ![](../.gitbook/assets/screenshot-39.png)
 
