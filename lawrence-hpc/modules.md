@@ -106,6 +106,8 @@ Executing transaction: done
 [user.name@usd.local@login ~]$
 ```
 
+MRO \(Microsoft R Open\) is also available, and provides threading.
+
 Anaconda may also be used to install R packages.  One popular package at USD is R-essentials.  To install this, use the conda install command "conda install -c r r-essentials":
 
 ```text
