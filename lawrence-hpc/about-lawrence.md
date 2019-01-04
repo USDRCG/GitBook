@@ -2,7 +2,11 @@
 
 The Lawrence Supercomputer was acquired through a combination of state and federal funding: a FY16 SD Board of Regents Research And Development Innovation award, and National Science Foundation Major Research Instrumentation award [OAC-1626516](https://nsf.gov/awardsearch/showAward?AWD_ID=1626516&HistoricalAwards=false).
 
+### Overview
+
 Lawrence runs the CentOS Linux operating system and is made up of over 2,000 CPU cores, including systems with 1.5TB of memory, GPU accelerators, and over 400TB of shared high-speed data storage accessible via a 56GB FDR Infiniband network. Lawrence has an estimated performance of over 60TFLOPS.
+
+### Specifics
 
 The hardware specifications for Lawrence vary by node and are as follows:
 

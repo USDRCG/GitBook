@@ -406,7 +406,11 @@ The window will then ask for a password. Type in the **VNC password** you made e
 
 Your VNC window will then pop up.
 
-![](../.gitbook/assets/vncwindow.png)
+![](../.gitbook/assets/vncwindow%20%281%29.png)
+
+When you are finished, **log out** of the VNC by **closing the black terminal**.  A job that is not closed will continue to run and use node space \(even if you close the window\), until it times out.
+
+![](../.gitbook/assets/vncwindow%20%282%29.png)
 
 ### Opening Programs in the GUI \(e.g. RStudio\)
 

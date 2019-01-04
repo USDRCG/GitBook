@@ -4,21 +4,15 @@ description: Lumerical (FDTD) on Windows PC
 
 # .
 
+
+
 {% hint style="danger" %}
-This site is currently under construction. It may have missing or erroneous steps or details.
+This site is incomplete and currently under construction. It may have missing or erroneous steps or details.  
+
+It also does not meet non-flammability standards and is known to cause cancer in the state of California.
 {% endhint %}
 
 This is a step-by-step guide for running Lumerical on Windows using the license available for Lawrence. This tutorial is a **prerequisite** for the tutorial on running **Lumerical in a GUI on Lawrence**.
-
-## Disable any local node-locked license on your PC
-
-Open the "Configure FDTD License" app on your PC
-
-![](../.gitbook/assets/screenshot-60.png)
-
-Click on the "Node Locked" tab, then the "Licenses" subtab.  Highlight your license, and select "Deactivate". Note that your license will likely have a **limit** on the number of times you may deactivate and reactivate it.  Click "Yes", then "Ok".
-
-![](../.gitbook/assets/deactivatesteps1-6.png)
 
 ## **Install MobaXterm**
 
@@ -40,8 +34,6 @@ Go to [https://www.putty.org/](https://www.putty.org/)
 
 Click the link "here" to go to the download page. 
 
-Log in to Lawrence using MobaXterm.
-
 ![](../.gitbook/assets/puttytodownloadlink.png)
 
 Select the 32-bit installer link to download the PuTTY installer.  When the download is complete, click on the button in the bottom left corner of the browser to open the installer.
@@ -58,13 +50,17 @@ Open a PuTTY window
 
 ![](../.gitbook/assets/screenshot-85.png)
 
-
-
 ## First Time Set-up
 
-{% hint style="warning" %}
-Make sure you have disabled the Lumerical license on your PC, if there is one.  Go to the [top](https://usdrcg.gitbook.io/docs/~/edit/drafts/-LUGvCyCLVx1LFQp3u6h/software-and-apps/lumerical-fdtd-on-windows-pc#disable-any-local-node-locked-license-on-your-pc) of this page for instructions.
-{% endhint %}
+### Disable any local node-locked license on your PC
+
+Open the "Configure FDTD License" app on your PC
+
+![](../.gitbook/assets/screenshot-60.png)
+
+Click on the "Node Locked" tab, then the "Licenses" subtab.  Highlight your license, and select "Deactivate". Note that your license will likely have a **limit** on the number of times you may deactivate and reactivate it.  Click "Yes", then "Ok".
+
+![](../.gitbook/assets/screenshot-61%20%283%29.png)
 
 ### Make Private & Public Keys
 
@@ -120,7 +116,7 @@ A text editor \(nano\) will open, showing your keys. Press your **down-arrow key
 
 Click **Ctrl-o**, then **Enter** to save, and then **Ctrl-x** to exit.
 
-![](../.gitbook/assets/screenshot-136.png)
+![](../.gitbook/assets/screenshot-136%20%281%29.png)
 
 ## Open a PuTTy session to tunnel Lumerical from Lawrence
 

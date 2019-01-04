@@ -7,7 +7,9 @@ description: >-
 # .
 
 {% hint style="danger" %}
-This site is currently under construction. It may be missing or have erroneous steps or details.
+This site is incomplete and currently under construction. It may have missing or erroneous steps or details. 
+
+It also does not meet non-flammability standards and is known to cause cancer in the state of California.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -91,7 +93,7 @@ The window will then ask for a password. Type in the **VNC password** you made e
 
 Your VNC window will then pop up.
 
-![](../.gitbook/assets/vncwindow.png)
+![](../.gitbook/assets/vncwindow%20%281%29.png)
 
 ### Opening Lumerical
 
