@@ -4,6 +4,10 @@ description: Lumerical (FDTD) on Windows PC
 
 # .
 
+{% hint style="danger" %}
+This site is currently under construction. It may have missing or erroneous steps or details.
+{% endhint %}
+
 This is a step-by-step guide for running Lumerical on Windows using the license available for Lawrence. This tutorial is a **prerequisite** for the tutorial on running **Lumerical in a GUI on Lawrence**.
 
 ## Disable any local node-locked license on your PC
