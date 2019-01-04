@@ -6,6 +6,10 @@ Transferring files onto and off of your Lawrence home directory can be done usin
 
 If you prefer to move files using the drag-and-drop method, it is possible using MobaXterm or Cyberduck. This file moving method uses sftp, or SSH \(or Secure\) File Transfer Protocol. For this we will open up MobaXterm or Cyberduck.
 
+{% hint style="info" %}
+For help downloading MobaXterm, click [here](https://usdrcg.gitbook.io/docs/~/edit/drafts/-LUGvCyCLVx1LFQp3u6h/software-and-apps/lumerical-fdtd-on-lawrence-gui#install-mobaxterm).
+{% endhint %}
+
 ### **MobaXterm**
 
 In MobaXterm, the file explorer/hierarchy is visible just to the left of the command line interface.

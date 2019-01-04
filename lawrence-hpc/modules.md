@@ -85,10 +85,10 @@ To update your Anaconda3 to the latest version of Anaconda3, type the following 
 
 ### Packages
 
-Packages that do not automatically come with Anaconda may be installed using the "install.packages package-name" command.  Package options are available [here](https://docs.anaconda.com/anaconda/packages/pkg-docs/).  R language package options are available [here](https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/) \(see the "R" section for installation details for R packages\).
+Packages that do not automatically come with Anaconda may be installed using the "conda install package-name" command.  Package options are available [here](https://docs.anaconda.com/anaconda/packages/pkg-docs/).  R language package options are available [here](https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/) \(see the "R" section for installation details for R packages\).
 
 ```text
-[user.name@usd.local@login ~]$ install.packages mpi4py
+[user.name@usd.local@login ~]$ conda install mpi4py
 ```
 
 ### R

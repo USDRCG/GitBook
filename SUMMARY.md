@@ -40,6 +40,8 @@
 * [rclone for Google Drive](software-and-apps/rclone-configuration-and-usage-for-google-drive.md)
 * [rclone for MS OneDrive](software-and-apps/rclone-for-ms-onedrive.md)
 * [rclone for DropBox](software-and-apps/rclone-for-dropbox.md)
+* [Under Construction](software-and-apps/lumerical-fdtd-on-windows-pc.md)
+* [Under Construction](software-and-apps/lumerical-fdtd-on-lawrence-gui.md)
 
 ## Other Information
 

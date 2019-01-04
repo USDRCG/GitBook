@@ -73,7 +73,7 @@ For the visualization \(viz\) partition, use the "-p viz" flag.
 
 Press Ctrl+D to exit the visualization partition and return to the login node.
 
-![](../.gitbook/assets/lawrencediagram2-ssh-srun.png)
+![](../.gitbook/assets/lawrencediagram2-ssh-srun2.png)
 
 ## Interactive Jobs
 
@@ -358,7 +358,11 @@ To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/
 
 ![](../.gitbook/assets/screenshot-32.png)
 
-A VNC password also needs to be set up \(this only needs to be done once\). Note: the password will not show up as you type
+A VNC password also needs to be set up \(this only needs to be done once\). 
+
+{% hint style="info" %}
+Note: the password will not show up as you type
+{% endhint %}
 
 ```text
 [user.name@usd.local@login ~]$ vncpasswd
@@ -374,7 +378,11 @@ The example below demonstrates how to start a VNC session on a general purpose c
 
 ![](../.gitbook/assets/vncmaketunnel-cmd-1.png)
 
-\*Note: the numbers in job-2965.out **correspond** to the number of the **batch job** in the second line \(the number in your command line will likely be different\). The tail -f command will print the last few lines of the file, which looks like this:
+{% hint style="info" %}
+Note: the numbers in job-2965.out **correspond** to the number of the **batch job** in the second line \(the number in your command line will likely be different\).
+{% endhint %}
+
+The tail -f command will print the last few lines of the file, which looks like this:
 
 #### Command Line \#1:
 

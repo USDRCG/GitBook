@@ -8,14 +8,17 @@ The Lawrence Supercomputer: Lawrence is composed of a many nodes. The user logs 
 
 To start you will need to open a terminal or command line interface.
 
-Next, you will need to login via an ssh session through the login node. You must be given access by the HPC administrator \(which can be requested by contacting the HelpDesk\). Login as so:
+Next, you will need to login via an ssh session through the login node. You must be given access by the HPC administrator \(which can be requested by contacting the HelpDesk\). Login as below:
 
 ```text
-[user@localhost ~]$
 [user@localhost ~]$ ssh User.Name@lawrence.usd.edu
 ```
 
-You will then be prompted for a password. Enter your regular USD credentials. \(Note: the password you type will not show up on the screen.\) If you have more than five failed attempts at logging in, you will be locked out for one hour or until access is reinstated by the system administrator.
+You will then be prompted for a password. Enter your regular USD credentials. If you have more than five failed attempts at logging in, you will be locked out for one hour or until access is reinstated by the system administrator.
+
+{% hint style="info" %}
+Note: the password you type will not show up on the screen.
+{% endhint %}
 
 ```text
 User.Name@lawrence.usd.edu's password:
@@ -41,25 +44,31 @@ Utilization of the Lawrence cluster by Windows users requires the use of the Mob
 
 [https://mobaxterm.mobatek.net/download.html](https://mobaxterm.mobatek.net/download.html)
 
-Once downloaded, you will open the MobaX terminal and the command line prompt will appear:
+Once downloaded, open the MobaX terminal.  Click "Start local terminal".
+
+![](../.gitbook/assets/mobax-startterminal.png)
+
+The command line prompt will appear:
+
+![](../.gitbook/assets/mobax-startterminallogin.png)
+
+You can then ssh onto the Lawrence cluster \(same command as Linux/Mac\). You will be prompted for a password, which is your USD credentials. As a security feature, three incorrect logins will result in your account being locked until the lockout expires or an administrator overrides it.
+
+{% hint style="info" %}
+Note: the password will not show when typing.
+{% endhint %}
 
 ```text
-[2017-12-25 19:55.00]  ~
-[User.Name.NI11018] ➤
-```
-
-You can then ssh onto the Lawrence cluster \(same command as Linux/Mac\). You will be prompted for a password which is your USD credentials. \(Note: the password will not show when typing.\) As a security feature, three incorrect logins will result in your account being locked until the lockout expires or an administrator overrides it.
-
-```text
+[2018-11-19 10:55.23]  ~
 [User.Name.NI11018] ➤ ssh User.Name@lawrence.usd.edu
 User.Name@lawrence.usd.edu's password:
 Last login: Mon Dec 25 19:37:34 2017 from ni11018.usd.local
 [user.name@usd.local@login ~]$
 ```
 
-You will be given a prompt to begin typing commands. All login goes by default to the login node. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager.
+You will be given a prompt to begin typing commands. All logins go to the login node by default. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager.
 
-![](../.gitbook/assets/lawrencediagram2-ssh.png)
+![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence](../.gitbook/assets/lawrencediagram2-ssh.png)
 
 
 

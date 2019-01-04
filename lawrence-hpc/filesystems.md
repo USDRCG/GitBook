@@ -12,7 +12,9 @@ Home directories have 50GB of storage. Additionally, home directories are shared
 $HOME
 ```
 
+{% hint style="warning" %}
 Please note that home directories are not backed up!
+{% endhint %}
 
 ## Group Home Directories
 
@@ -23,7 +25,9 @@ Group home directories have 5TB of storage. Additionally, home directories are s
     /shared (read/write permissions for all group members)
 ```
 
+{% hint style="warning" %}
 Please note that group home directories are not backed up!
+{% endhint %}
 
 ## Scratch
 
@@ -39,5 +43,9 @@ cd $SCRATCH
 cp resultfile.txt $HOME
 ```
 
+{% hint style="warning" %}
 Please note that /scratch is not a shared filesystem and that each node has its own /scratch \(169 GB per node \(SSD\)\). Additionally, the data on scratch only lasts while the job is running! If you need /scratch data from your job, remove it before your job ends.
+{% endhint %}
+
+
 
