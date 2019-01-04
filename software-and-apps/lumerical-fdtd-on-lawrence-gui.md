@@ -1,10 +1,10 @@
 ---
 description: >-
-  Lumerical (FDTD) on Lawrence GUI            Using Lumerical on Lawrence,
+  Lumerical (FDTD) on Lawrence GUI              Using Lumerical on Lawrence,
   through a point-and-click interface
 ---
 
-# Under Construction
+# .
 
 {% hint style="warning" %}
 See the "Lumerical \(FDTD\) on Windows" section "[Disable any local node-locked license on your PC](https://usdrcg.gitbook.io/docs/~/edit/drafts/-LUGvCyCLVx1LFQp3u6h/software-and-apps/lumerical-fdtd-on-windows-pc#disable-any-local-node-locked-license-on-your-pc)" before continuing.
