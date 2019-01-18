@@ -398,7 +398,7 @@ Copy the ssh command \(it will look like the command **circled in red above**\) 
 
 Open TigerVNC, copy the localhost \(it will look like what is circled in blue in command line \#1\), and paste it into the "NVC Viewer: Connection Details" window.  Click "Connect".
 
-![](../.gitbook/assets/cmd1-vnc-viewer.png)
+![](../.gitbook/assets/cmd1-vnc-viewer%20%282%29.png)
 
 The window will then ask for a password. Type in the **VNC password** you made earlier.
 

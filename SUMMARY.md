@@ -42,9 +42,11 @@
 * [rclone for DropBox](software-and-apps/rclone-for-dropbox.md)
 * [.](software-and-apps/lumerical-fdtd-on-windows-pc.md)
 * [.](software-and-apps/lumerical-fdtd-on-lawrence-gui.md)
+* [Gaussian Tutorial](software-and-apps/gaussview-gui.md)
 
 ## Other Information
 
 * [TigerVNC](other-information/tigervnc.md)
 * [X11 Forwarding](other-information/x11-forwarding.md)
+* [Downloads](other-information/downloads.md)
 

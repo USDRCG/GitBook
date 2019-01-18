@@ -44,6 +44,8 @@ Utilization of the Lawrence cluster by Windows users requires the use of the Mob
 
 [https://mobaxterm.mobatek.net/download.html](https://mobaxterm.mobatek.net/download.html)
 
+![](../.gitbook/assets/screenshot-2-5.png)
+
 Once downloaded, open the MobaX terminal.  Click "Start local terminal".
 
 ![](../.gitbook/assets/mobax-startterminal.png)
