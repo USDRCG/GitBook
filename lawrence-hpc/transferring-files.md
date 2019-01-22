@@ -14,7 +14,7 @@ For help downloading MobaXterm, click [here](https://usdrcg.gitbook.io/docs/~/ed
 
 In MobaXterm, the file explorer/hierarchy is visible just to the left of the command line interface.
 
-![](../.gitbook/assets/screenshot-10%20%281%29.png)
+![](../.gitbook/assets/screenshot-10%20%282%29.png)
 
 From this section of the MobaXterm window, you can drag and drop files between either computer as you desire.
 

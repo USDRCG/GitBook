@@ -43,6 +43,22 @@ Welcome to the Lawrence Supercomputer at the University of South Dakota!
 [user.name@usd.local@login ~]$
 ```
 
+## Transferring Files \(Lawrence to & from PC\)
+
+In MobaX, the file explorer/hierarchy is visible just to the left of the command line interface. Navigate into directories by clicking on them, and out of directories using the "parent directory" button.
+
+{% hint style="warning" %}
+Note: entering/exiting a directory in this area doesn't change your current directory \(you'll still be in the same directory as before in the command line\).  Use the cd command to navigate directories in the command line.
+{% endhint %}
+
+![](../.gitbook/assets/screenshot-10%20%281%29.png)
+
+From this section of the MobaX window, you can drag and drop files between Lawrence and your PC as needed.
+
+![](../.gitbook/assets/mobaxmovingfile.png)
+
+![](../.gitbook/assets/screenshot-8.png)
+
 ## Interactive Jobs
 
 Open MobaX and **log into Lawrence** \(see section "Getting Started"\).  
