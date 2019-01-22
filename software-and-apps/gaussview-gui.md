@@ -5,6 +5,7 @@
 | _Command_ | _Description_ |
 | :--- | :--- |
 | ls | list directories & files in current directory |
+| mkdir newDir | makes a new directory in the current directory |
 | cd .. | back up one directory |
 | cd myDirectory/ | open myDirectory |
 | nano file1 | opens file1 in nano editor |
@@ -50,19 +51,28 @@ Make a directory in your home directory, and navigate into it:
 
 ```text
 [user.name@usd.local@login ~]$ mkdir myInteractiveDir
-[user.name@usd.local@login ~]$ cd myInteractiveDir
+[user.name@usd.local@login ~]$ cd myInteractiveDir/
 [user.name@usd.local@login myInteractiveDir]$
+```
+
+Connect to a node.
+
+```text
+[user.name@usd.local@login myInteractiveDir]$ srun --pty bash
+[user.name@usd.local@node56 myInteractiveDir]$
+```
+
+Copy the Gaussian test file into your myInteractiveDir directory.
+
+```text
+[user.name@usd.local@node56 myInteractiveDir]$ cp /opt/examples/Gaussian/test.com ./test.com
+[user.name@usd.local@node56 myInteractiveDir]$ ls
+test.com
 ```
 
 {% hint style="info" %}
 If these commands don't make sense, go to the top section: "Command Line Basics".
 {% endhint %}
-
-Connect to a node
-
-```text
-[user.name@usd.local@login myInteractiveDir]$ srun --pty bash
-```
 
 To see the Gaussian modules available:
 
