@@ -44,6 +44,8 @@ Welcome to the Lawrence Supercomputer at the University of South Dakota!
 
 ## Interactive Jobs
 
+Open MobaX and **log into Lawrence** \(see section "Getting Started"\).  
+
 Make a directory in your home directory, and navigate into it:
 
 ```text
@@ -53,7 +55,7 @@ Make a directory in your home directory, and navigate into it:
 ```
 
 {% hint style="info" %}
-If this command doesn't make sense, go to the top section: "command line basics".
+If these commands don't make sense, go to the top section: "Command Line Basics".
 {% endhint %}
 
 Connect to a node
@@ -70,7 +72,7 @@ To see the Gaussian modules available:
 gaussian/09 gaussian/16
 ```
 
-Load one of the Gaussian modules \(Gaussian 16 or Gaussian 09 are the two that are currently available\).
+Load one of the Gaussian modules.
 
 ```text
 [user.name@usd.local@node56 myInteractiveDir]$ module load gaussian/16
@@ -92,6 +94,10 @@ To view the output, open "interactiveOutput.com" with nano or another editor.
 [user.name@usd.local@node56 myInteractiveDir]$ nano interactiveOutput.com
 ```
 
+{% hint style="info" %}
+To get back out of nano, use the instructions at the bottom of the command line screen, or see "Command Line Basics".
+{% endhint %}
+
 Navigate out of "myInteractiveDir" into your home directory:
 
 ```text
@@ -108,6 +114,8 @@ Exit the node.
 
 ## Batch Jobs
 
+If entering the tutorial at this point, open MobaX and log into Lawrence \(see the second half of "Getting Started"\).
+
 Make a directory in your home directory, and navigate into it:
 
 ```text
@@ -117,7 +125,7 @@ Make a directory in your home directory, and navigate into it:
 ```
 
 {% hint style="info" %}
-If this command doesn't make sense, go to the top section: "command line basics".
+If these commands don't make sense, go to the top section: "Command Line Basics".
 {% endhint %}
 
 Copy the Gaussian batch job template files into your myBatchDir directory.
@@ -131,26 +139,51 @@ gaussianBatchTemplate.sh  output.txt  test.com
 Open the file "gaussianBatchTemplate.sh" using nano \(or another editor, if you prefer\).
 
 ```text
-[user.name@usd.local@login myBatchDir]$ nano myBatchGaussian.sh
+[user.name@usd.local@login myBatchDir]$ nano gaussianBatchTemplate.sh
 ```
 
 In the last line, "**test.com**" is the **input** file name and "**batchOutput.txt**" is the **output** file name.  Also note that the number of CPUs \(**ntasks**\) requested **matches** the **%nprocshared** \(or **%nprocs**\) in the input file.
 
-![](../.gitbook/assets/batchgaussiantemplate3%20%282%29.png)
+![](../.gitbook/assets/batchgaussiantemplate3%20%281%29.png)
 
 {% hint style="warning" %}
 --ntasks in batch file should equal %nprocshared in input file
 {% endhint %}
 
-Run the batch job
+Exit nano \(Ctrl-x\), then run the batch job:
 
 ```text
-[user.name@usd.local@login myBatchDir]$ sbatch myBatchGaussian.sh
+[user.name@usd.local@login myBatchDir]$ sbatch gaussianBatchTemplate.sh
 Submitted batch job 12345
 [user.name@usd.local@login myBatchDir]$ 
 ```
 
-To see the output of your job when completed, open the batchOutput.txt file.
+Show the list of jobs running on Lawrence:
+
+```text
+[user.name@usd.local@login myBatchDir]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             48469     nodes     bash     user1 R       3:04      1 node56
+             48468     nodes gaussian     user2 R       4:22      1 node40
+             48467     nodes     bash     user3 R      23:07      5 node[25-29]
+             48458     nodes     bash     user4 R      23:41      1 node21
+             48459     nodes     bash     user4 R      23:41      1 node22
+             48460     nodes     bash     user4 R      23:41      1 node24
+             48457     nodes     bash     user4 R      25:14      1 node11
+             48449     nodes     bash     user4 R      25:18      1 node13
+             48450     nodes     bash     user4 R      25:18      1 node17
+
+```
+
+Show only your jobs:
+
+```text
+[user.name@usd.local@login myBatchDir]$ squeue -u user.name
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             48401     nodes gaussian   user.n  R    2:34:52      1 node43
+```
+
+When your job is complete, it will not appear on squeue.  To see the output of your job when completed, open the batchOutput.txt file.
 
 ```text
 [user.name@usd.local@login myBatchDir]$ nano batchOutput.txt
@@ -166,7 +199,11 @@ To see how the job went, and look at any errors, open the slurm file.
 Note: the number 12345 in slurm-12345.out corresponds to the number of the batch job above.
 {% endhint %}
 
+![](../.gitbook/assets/slurm.png)
+
 ## Graphical User Interface Jobs \(VNC\)
+
+If entering the tutorial at this point, open MobaX and log into Lawrence \(see the second half of "Getting Started"\).
 
 ### First Time Set-up
 
@@ -212,9 +249,9 @@ Copy the ssh command \(it will look like the command **circled in red above**\) 
 
 ![](../.gitbook/assets/mobax-addterminal.png)
 
-**Paste** the ssh command into the **second MobaX command line** \(then press "enter"\).  It will ask for a password. \(This is the password you would use to log in to Lawrence, **not the vnc password**.\)  The password will **not appear** as it is typed in.
+**Paste** the ssh command into the **second MobaX command line**.  It will ask for a password. \(This is the password you would use to log in to Lawrence, **not the vnc password**.\)  The password will **not appear** as it is typed in.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Ctrl-V may not work to paste in MobaX; try right-clicking and select paste from the menu.
 {% endhint %}
 
@@ -238,13 +275,17 @@ Your VNC window will then pop up.  The **black command line** is the **heartbeat
 
 Before opening Gaussview, you must load a Gaussian module.  Use the "module avail gauss" command to see which Gaussian modules are available, then load one and open gview.
 
-```text
+{% code-tabs %}
+{% code-tabs-item title="Xterm command line:" %}
+```bash
 [adison.kleinsasser@usd.local@node15 ~]$ module avail gauss
 ------------------------------- /act/modulefiles ------------------------------- 
 gaussian/09 gaussian/16 
 [adison.kleinsasser@usd.local@node15 ~]$ module load gaussian/16 
 [adison.kleinsasser@usd.local@node15 ~]$ gview
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ![](../.gitbook/assets/gview%20%281%29.PNG)
 
