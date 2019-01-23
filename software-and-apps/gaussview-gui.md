@@ -59,6 +59,8 @@ From this section of the MobaX window, you can drag and drop files between Lawre
 
 ![](../.gitbook/assets/screenshot-8.png)
 
+Once your files are in the proper directories, they can be handled in the same way as the example input files are handled in this tutorial \(excluding the steps of copying the example input files into their respective directories\).
+
 ## Interactive Jobs
 
 Open MobaX and **log into Lawrence** \(see section "Getting Started"\).  
