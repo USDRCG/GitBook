@@ -17,6 +17,7 @@
 * [Submitting Jobs](lawrence-hpc/submitting-jobs.md)
 * [Legacy-Lawrence Migration](lawrence-hpc/legacy-lawrence-migration-instructions.md)
 * [Programming Environment](lawrence-hpc/programming-environment.md)
+* [Gaussian Tutorial](lawrence-hpc/gaussview-gui.md)
 
 ## Legacy HPC
 
@@ -42,7 +43,6 @@
 * [rclone for DropBox](software-and-apps/rclone-for-dropbox.md)
 * [.](software-and-apps/lumerical-fdtd-on-windows-pc.md)
 * [.](software-and-apps/lumerical-fdtd-on-lawrence-gui.md)
-* [Gaussian Tutorial](software-and-apps/gaussview-gui.md)
 
 ## Other Information
 
