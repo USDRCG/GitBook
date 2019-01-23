@@ -280,7 +280,7 @@ Copy the ssh command \(it will look like the command **circled in red above**\) 
 **Paste** the ssh command into the **second MobaX command line**.  It will ask for a password. \(This is the password you would use to log in to Lawrence, **not the vnc password**.\)  The password will **not appear** as it is typed in.
 
 {% hint style="warning" %}
-Ctrl-V may not work to paste in MobaX; try right-clicking and select paste from the menu.
+**Ctrl-V** may **not work** **to paste** in MobaX; try right-clicking and select paste from the menu.
 {% endhint %}
 
 #### Command Line \#2:
