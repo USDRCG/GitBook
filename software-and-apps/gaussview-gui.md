@@ -48,7 +48,7 @@ Welcome to the Lawrence Supercomputer at the University of South Dakota!
 In MobaX, the file explorer/hierarchy is visible just to the left of the command line interface. Navigate into directories by clicking on them, and out of directories using the "parent directory" button.
 
 {% hint style="warning" %}
-Note: entering/exiting a directory in this area doesn't change your current directory \(you'll still be in the same directory as before in the command line\).  Use the cd command to navigate directories in the command line.
+Note: entering/exiting a directory in this area doesn't change your current directory in the command line \(you'll still be in the same directory as before in the command line\).  Use the cd command to navigate directories in the command line.
 {% endhint %}
 
 ![](../.gitbook/assets/screenshot-10%20%281%29.png)
