@@ -321,7 +321,7 @@ When you are finished, **log out** of the VNC by **closing the black terminal**.
 
 ![](../.gitbook/assets/vncwindow%20%282%29.png)
 
-### 
+To restart the GUI \(such as if the black terminal was closed by mistake\), go back to "[Starting the GUI](https://usdrcg.gitbook.io/docs/~/edit/drafts/-LYmYnaNN75hL-fIM-U5/lawrence-hpc/gaussview-gui#starting-the-gui)"
 
 
 
