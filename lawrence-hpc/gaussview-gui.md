@@ -24,7 +24,7 @@ The "cd" command is used to move into and out of directories \(folders\).  It's 
 
 MobaXterm can be freely downloaded here \(use the Home Installer Edition\): [https://mobaxterm.mobatek.net/download.html](https://mobaxterm.mobatek.net/download.html)
 
-![](../.gitbook/assets/screenshot-2-5.png)
+![](../.gitbook/assets/screenshot-2-5%20%281%29.png)
 
 Open MobaX.
 
@@ -104,7 +104,7 @@ Load one of the Gaussian modules.
 
 ```text
 [user.name@usd.local@node56 myInteractiveDir]$ module load gaussian/16
-[user.name@usd.local@node56 myInteractiveDir]$ module list gauss
+[user.name@usd.local@node56 myInteractiveDir]$ module list
 Currently Loaded Modulefiles:
   1) gaussian/16
 ```
