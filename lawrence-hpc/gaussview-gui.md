@@ -164,15 +164,21 @@ Copy the Gaussian batch job template files into your myBatchDir directory.
 gaussianBatchTemplate.sh  output.txt  test.com
 ```
 
-Open the file "gaussianBatchTemplate.sh" using nano \(or another editor, if you prefer\).
+Open the file "gaussianBatchTemplate.sh" using nano \(or another editor, if you prefer\) and note the features described in the image below.
 
 ```text
 [user.name@usd.local@login myBatchDir]$ nano gaussianBatchTemplate.sh
 ```
 
-In the last line, "**test.com**" is the **input** file name and "**batchOutput.txt**" is the **output** file name.  Also note that the number of CPUs \(**ntasks**\) requested **matches** the **%nprocshared** \(or **%nprocs**\) in the input file.
+Open the file "test.com" \(you will have to exit viewing gaussianBatchTemplate.sh in nano to do this in the same terminal\).
 
-![](../.gitbook/assets/batchgaussiantemplate3%20%281%29.png)
+```text
+[user.name@usd.local@login myBatchDir]$ nano test.com
+```
+
+In the last line, "**test.com**" is the **input** file name and the slurm ID followed by ".out" is the **output** file name.  Also note that the number of CPUs \(**ntasks**\) requested **matches** the **%nprocshared** \(or **%nprocs**\) in the input file.
+
+![](../.gitbook/assets/batchgaussiantemplate3%20%287%29.png)
 
 {% hint style="warning" %}
 --ntasks in batch file should equal %nprocshared in input file
@@ -191,8 +197,8 @@ Show the list of jobs running on Lawrence:
 ```text
 [user.name@usd.local@login myBatchDir]$ squeue
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             12345     nodes gaussian     user2 R       0:22      1 node40
              48469     nodes     bash     user1 R       3:04      1 node56
-             48468     nodes gaussian     user2 R       4:22      1 node40
              48467     nodes     bash     user3 R      23:07      5 node[25-29]
              48458     nodes     bash     user4 R      23:41      1 node21
              48459     nodes     bash     user4 R      23:41      1 node22
@@ -208,13 +214,13 @@ Show only your jobs:
 ```text
 [user.name@usd.local@login myBatchDir]$ squeue -u user.name
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-             48401     nodes gaussian   user.n  R    2:34:52      1 node43
+             12345     nodes gaussian   user.n  R    2:34:52      1 node43
 ```
 
-When your job is complete, it will not appear on squeue.  To see the output of your job when completed, open the batchOutput.txt file.
+When your job is complete, it will not appear on squeue.  To see the output of your job when completed, open the ".out" file.
 
 ```text
-[user.name@usd.local@login myBatchDir]$ nano batchOutput.txt
+[user.name@usd.local@login myBatchDir]$ nano 12345.out
 ```
 
 To see how the job went, and look at any errors, open the slurm file.
@@ -231,7 +237,7 @@ Note: the number 12345 in slurm-12345.out corresponds to the number of the batch
 
 ## Graphical User Interface Jobs \(VNC\)
 
-If entering the tutorial at this point, open MobaX and log into Lawrence \(see the second half of "Getting Started"\).
+If entering the tutorial at this point, open MobaX and log into Lawrence \(for help, see the section "Getting Started"\).
 
 ### First Time Set-up
 
