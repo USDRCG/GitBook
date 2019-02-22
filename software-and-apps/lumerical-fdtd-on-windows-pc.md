@@ -12,23 +12,27 @@ This site is incomplete and currently under construction. It may have missing or
 It also does not meet non-flammability standards and is known to cause cancer in the state of California.
 {% endhint %}
 
-This is a step-by-step guide for running Lumerical on Windows using the license available for Lawrence. This tutorial is a **prerequisite** for the tutorial on running **Lumerical in a GUI on Lawrence**.
+This is a step-by-step guide for running Lumerical on Windows using the license available for Lawrence. 
+
+## Disable any local node-locked license on your PC
+
+Open the "Configure FDTD License" app on your PC
+
+![](../.gitbook/assets/screenshot-60.png)
+
+Click on the "Node Locked" tab, then the "Licenses" subtab.  Highlight your license, and select "Deactivate". Note that your license will likely have a **limit** on the number of times you may deactivate and reactivate it.  Click "Yes", then "Ok".
+
+![](../.gitbook/assets/screenshot-61%20%283%29.png)
+
+### 
 
 ## **Install MobaXterm**
 
-Go to the MobaXterm website [here](https://mobaxterm.mobatek.net/download-home-edition.html). Click on the "MobaXterm Home Edition v11.0 \(Portable edition\)" button.
+Go to the MobaXterm website [here](https://mobaxterm.mobatek.net/download-home-edition.html). Click on the "MobaXterm Home Edition v11.1 \(Home Installer Edition\)" button.
 
-![](../.gitbook/assets/screenshot-101.png)
-
-Go to your downloads folder, and extract the files from the zipped folder you just downloaded.  \(If desired, choose a new location for the extracted contents.\)
-
-![](../.gitbook/assets/screenshot-103%20%281%29.png)
+![](../.gitbook/assets/screenshot-2-5%20%281%29.png)
 
 ## Install PuTTY
-
-{% hint style="info" %}
-If you already have PuTTY installed in your computer, you may ignore this section. \(Click [here](https://usdrcg.gitbook.io/docs/~/edit/drafts/-LUGvCyCLVx1LFQp3u6h/software-and-apps/lumerical-fdtd-on-windows-pc#create-a-putty-session-to-tunnel-lumerical-from-lawrence).\)
-{% endhint %}
 
 Go to [https://www.putty.org/](https://www.putty.org/)
 
@@ -52,19 +56,9 @@ Open a PuTTY window
 
 ## First Time Set-up
 
-### Disable any local node-locked license on your PC
-
-Open the "Configure FDTD License" app on your PC
-
-![](../.gitbook/assets/screenshot-60.png)
-
-Click on the "Node Locked" tab, then the "Licenses" subtab.  Highlight your license, and select "Deactivate". Note that your license will likely have a **limit** on the number of times you may deactivate and reactivate it.  Click "Yes", then "Ok".
-
-![](../.gitbook/assets/screenshot-61%20%283%29.png)
-
 ### Make Private & Public Keys
 
-Open PuTTygen
+Open PuTTYgen \(not PuTTY from the last section\).
 
 ![](../.gitbook/assets/screenshot-125.png)
 
@@ -117,6 +111,10 @@ A text editor \(nano\) will open, showing your keys. Press your **down-arrow key
 Click **Ctrl-o**, then **Enter** to save, and then **Ctrl-x** to exit.
 
 ![](../.gitbook/assets/screenshot-136%20%281%29.png)
+
+{% hint style="info" %}
+If the pasted line looks **shorter than the other line\(s\)**, but you are **certain you copied all of the public key**, don't worry- use the left arrow key to move past the left end of the pasted line, and the line will scroll, showing the rest of it.
+{% endhint %}
 
 ## Open a PuTTy session to tunnel Lumerical from Lawrence
 
