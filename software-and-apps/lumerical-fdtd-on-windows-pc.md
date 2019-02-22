@@ -14,6 +14,10 @@ It also does not meet non-flammability standards and is known to cause cancer in
 
 This is a step-by-step guide for running Lumerical on Windows using the license available for Lawrence. 
 
+{% hint style="info" %}
+If you have **done this before** on the computer ****you are **currently using,** and **haven't \(re\)activated** a Lumerical licence on it since, you may **skip to** the section "Open a PuTTY Session to Tunnel Lumerical from Lawrence".  
+{% endhint %}
+
 ## Disable any local node-locked license on your PC
 
 Open the "Configure FDTD License" app on your PC
@@ -23,8 +27,6 @@ Open the "Configure FDTD License" app on your PC
 Click on the "Node Locked" tab, then the "Licenses" subtab.  Highlight your license, and select "Deactivate". Note that your license will likely have a **limit** on the number of times you may deactivate and reactivate it.  Click "Yes", then "Ok".
 
 ![](../.gitbook/assets/screenshot-61%20%283%29.png)
-
-### 
 
 ## **Install MobaXterm**
 
@@ -116,7 +118,7 @@ Click **Ctrl-o**, then **Enter** to save, and then **Ctrl-x** to exit.
 If the pasted line looks **shorter than the other line\(s\)**, but you are **certain you copied all of the public key**, don't worry- use the left arrow key to move past the left end of the pasted line, and the line will scroll, showing the rest of it.
 {% endhint %}
 
-## Open a PuTTy session to tunnel Lumerical from Lawrence
+## Open a PuTTY Session to Tunnel Lumerical from Lawrence
 
 Open a Windows Command Line
 
