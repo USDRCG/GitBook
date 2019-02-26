@@ -14,6 +14,10 @@ It also does not meet non-flammability standards and is known to cause cancer in
 
 This is a step-by-step guide for running Lumerical on a graphical user interface \(GUI\) on Lawrence. 
 
+{% hint style="info" %}
+If you have **done this before** on the computer ****you are **currently using,** and **haven't \(re\)activated** a Lumerical licence on it since, you may **skip to** the section "Opening Lumerical on Lawrence".
+{% endhint %}
+
 ## Disable any local node-locked license on your PC
 
 Open the "Configure FDTD License" app on your PC
@@ -195,23 +199,5 @@ Your VNC window will then pop up.
 
 ![](../.gitbook/assets/vncwindow%20%281%29.png)
 
-### Opening Lumerical
-
-  Open a Windows command line
-
-![](../.gitbook/assets/screenshot-91%20%281%29.png)
-
-Connect to the Lawrence license, replacing "user.name" with your username on Lawrence and "path\to\ID\_RASfile\" with the path to your file.
-
-```text
-C:\Users\user>putty -ssh user.name@lawrence.usd.edu -L 27011:10.1.1.250:27011 -L 42128:10.1.1.250:42128 -i "C:\Users\user\path\to\ID_RASfile\id_rsa.ppk"
-```
-
-A new window will appear. It may ask for a password to log into Lawrence.
-
-![](../.gitbook/assets/screenshot-134.png)
-
-
-
-You may now open the Lumerical software on your desktop.
+### 
 

@@ -1,18 +1,10 @@
 ---
-description: Lumerical (FDTD) on Windows PC
+description: >-
+  This is a step-by-step guide for running Lumerical on Windows using the
+  license available for Lawrence.
 ---
 
-# .
-
-
-
-{% hint style="danger" %}
-This site is incomplete and currently under construction. It may have missing or erroneous steps or details.  
-
-It also does not meet non-flammability standards and is known to cause cancer in the state of California.
-{% endhint %}
-
-This is a step-by-step guide for running Lumerical on Windows using the license available for Lawrence. 
+# Lumerical \(FDTD\) on Windows PC
 
 {% hint style="info" %}
 If you have **done this before** on the computer ****you are **currently using,** and **haven't \(re\)activated** a Lumerical licence on it since, you may **skip to** the section "Open a PuTTY Session to Tunnel Lumerical from Lawrence".  
@@ -46,7 +38,7 @@ Select the 32-bit installer link to download the PuTTY installer.  When the down
 
 ![](../.gitbook/assets/screenshot-73%20%282%29.png)
 
-Install PuTTy with the installer
+Install PuTTY with the installer
 
 ![](../.gitbook/assets/screenshot-79.png)
 
@@ -86,7 +78,7 @@ The command line prompt will appear:
 
 ![](../.gitbook/assets/mobax-startterminallogin.png)
 
-You can then ****ssh onto the Lawrence cluster. You will be prompted for a password, which is your USD credentials. As a security feature, three incorrect logins will result in your account being locked until the lockout expires or an administrator overrides it.
+You can then ****ssh onto the Lawrence cluster. You will be prompted for a password, which is based on your USD credentials. As a security feature, three incorrect logins will result in your account being locked until the lockout expires or an administrator overrides it.
 
 ```text
 [2018-11-19 10:55.23]  ~
@@ -124,23 +116,19 @@ Open a Windows Command Line
 
 ![](../.gitbook/assets/screenshot-91.png)
 
-Open a tunnel, replacing user.name with your USD username, and path\to\your\file with the path to the id\_rsa.ppk file:
+Connect to the Lawrence license, replacing "user.name" with your username on Lawrence, and path\to\your\file with the path to the id\_rsa.ppk file:
 
 ```text
 C:\Users\User.name>putty -ssh user.name@lawrence.usd.edu -L 27011:10.1.1.250:27011 -L 42128:10.1.1.250:42128 -i "C:\Users\user.name\path\to\your\file\id_rsa.ppk"
 ```
 
-![](../.gitbook/assets/screenshot-92.png)
-
-Another window will pop up
-
-![](../.gitbook/assets/screenshot-137.png)
-
-It may ask for your password.
+A new window will appear. It may ask for a password to log into Lawrence.
 
 {% hint style="info" %}
 Note: your password will not appear as you type -- nothing will -- just keep typing as if it did.
 {% endhint %}
 
+![](../.gitbook/assets/screenshot-134.png)
 
+You may now open the Lumerical software on your desktop.
 
