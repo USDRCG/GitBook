@@ -56,3 +56,29 @@ It may ask "Would you like to enter a view-only password \(y/n\)?"  The usual re
 
 
 
+## PuTTY
+
+Go to [https://www.putty.org/](https://www.putty.org/)
+
+Click the link "here" to go to the download page. 
+
+![](../.gitbook/assets/puttytodownloadlink.png)
+
+Select the 32-bit installer link to download the PuTTY installer.  When the download is complete, click on the button in the bottom left corner of the browser to open the installer.
+
+![](../.gitbook/assets/screenshot-73%20%282%29.png)
+
+Install PuTTY with the installer
+
+![](../.gitbook/assets/screenshot-79.png)
+
+A README file will pop up.  You may ignore it for now while following this tutorial, but you may find the information useful when using PuTTY on your own.
+
+Open a PuTTY window
+
+![](../.gitbook/assets/screenshot-85.png)
+
+## 
+
+
+
