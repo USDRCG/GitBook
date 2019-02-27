@@ -356,7 +356,7 @@ Below is a template script \(mpi-python-template.sh\) and example MPI program wr
 
 To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/tigervnc/stable/tigervnc).  Download the 64-bit version, shown below.
 
-![](../.gitbook/assets/screenshot-32.png)
+![](../.gitbook/assets/tigervnc-download%20%281%29.png)
 
 A VNC password also needs to be set up \(this only needs to be done once\). 
 

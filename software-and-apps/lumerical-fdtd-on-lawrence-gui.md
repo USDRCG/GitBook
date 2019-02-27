@@ -28,8 +28,6 @@ Click on the "Node Locked" tab, then the "Licenses" subtab.  Highlight your lice
 
 ![](../.gitbook/assets/screenshot-61%20%283%29.png)
 
-### 
-
 ## **Install MobaXterm**
 
 Go to the MobaXterm website [here](https://mobaxterm.mobatek.net/download-home-edition.html). Click on the "MobaXterm Home Edition v11.1 \(Home Installer Edition\)" button.
@@ -133,13 +131,18 @@ If the pasted line looks **shorter than the other line\(s\)**, but you are **cer
 ## Opening Lumerical on Lawrence
 
 {% hint style="info" %}
-You must **set up a tunnel** to the Lumerical license on Lawrence before starting this tutorial.
+**If** you are **entering the tutorial** at this point, open MobaXterm and log into Lawrence:
 
-* If this is your **first time** doing this on your **current** computer \(or you've **reactivated** the license on your PC\), click [here](https://usdrcg.gitbook.io/docs/~/edit/drafts/-LUGvCyCLVx1LFQp3u6h/software-and-apps/lumerical-fdtd-on-windows-pc).
-* If you've **done this before** on your computer \(and haven't reactivated the license on your PC\), click [here](https://usdrcg.gitbook.io/docs/~/edit/drafts/-LUGvCyCLVx1LFQp3u6h/software-and-apps/lumerical-fdtd-on-windows-pc#create-a-putty-session-to-tunnel-lumerical-from-lawrence).
+`[User.NI1111] ➤ ssh User.Name@Lawrence.usd.edu`
+
+`password:` 
+
+`Last login: Tue Feb 26 10:36:10 2019 from 192.236.35.187 Welcome to the Lawrence Supercomputer at the University of South Dakota!`
+
+`.....`
+
+`[user.name@usd.local@login ~]$`
 {% endhint %}
-
-
 
 If you haven't made a VNC password yet, do this now:
 
@@ -165,12 +168,16 @@ In MobaX, open a second terminal by clicking the "+" tab.  This will will be use
 
 ![](../.gitbook/assets/screenshot-116.png)
 
+In the first terminal, begin a batch GUI job.
+
 #### Terminal \#1:
 
 ![](../.gitbook/assets/vncmaketunnel-cmd-1lumerical.png)
 
 {% hint style="info" %}
 Note: the numbers in job-2965.out **correspond** to the number of the **batch job** in the second line \(the number in your command line will likely be different\).
+
+**If the number from the example above** was typed into the "touch" and "tail" commands, rather than the number from your terminal, and the prompt "\[user.name@usd.local@login ~\]$ " hasn't reappeared, hit **Ctrl-C** to get it back, then **repeat** the "touch" and "tail" commands, using the **number that appears in your terminal**.
 {% endhint %}
 
 The tail -f command will print the last few lines of the file, which looks like this:
@@ -187,7 +194,7 @@ Copy the ssh command \(it will look like the command **circled in red above**\) 
 
 #### VNC Viewer
 
-Open TigerVNC, copy the localhost \(it will look like what is circled in blue in command line \#1\), and paste it into the "NVC Viewer: Connection Details" window.  Click "Connect".
+Open TigerVNC, copy the localhost \(it will look like what is circled in blue in command line \#1\), and paste it into the "NVC Viewer: Connection Details" window.  **Click "Connect"**.
 
 ![](../.gitbook/assets/cmd1-vnc-viewer%20%281%29.png)
 
