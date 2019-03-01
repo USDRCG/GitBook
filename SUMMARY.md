@@ -24,7 +24,7 @@
 
 ## .
 
-## Practice
+## Archived Information
 
 * [.](practice/practice.md)
 * [.](practice/about-legacy/README.md)
