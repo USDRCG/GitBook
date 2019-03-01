@@ -1,4 +1,8 @@
-# About Legacy
+---
+description: About Legacy
+---
+
+# .
 
 The Legacy Supercomputer was acquired in 2006 through USD’s [Institutional Development Award](https://www.nigms.nih.gov/Research/CRCB/IDeA/Pages/inbre_map.aspx)from the National Institutes of Health. It was expanded in 2009 and 2011 with additional NIH funding, and the last expansion in 2013 was funded by the college of Arts and Sciences. Legacy's user base has grown from a small cohort of bioinformatics faculty in 2006 to virtually all Science Technology Engineering and Mathematics disciplines with emerging use cases in the humanities.
 
