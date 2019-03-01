@@ -16,7 +16,7 @@
     </tr>
     <tr>
       <td style="text-align:left">ls</td>
-      <td style="text-align:left">list directories & files in current directory</td>
+      <td style="text-align:left">list directories &amp; files in current directory</td>
     </tr>
     <tr>
       <td style="text-align:left">cd ..</td>
@@ -55,7 +55,7 @@
     <tr>
       <td style="text-align:left">mv file1 ./exp1 ./exp2</td>
       <td style="text-align:left">
-        <p>moves file1 from exp1 to exp2 (exp1 & exp2</p>
+        <p>moves file1 from exp1 to exp2 (exp1 &amp; exp2</p>
         <p>are both in the current directory (denoted by period (.))</p>
       </td>
     </tr>
