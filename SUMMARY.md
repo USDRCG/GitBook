@@ -25,6 +25,7 @@
 ## Archived Information
 
 * [.](practice/about-legacy/README.md)
+  * [WARNING: These are the archives, not current information](practice/about-legacy/warning-these-pages-contain-information-that-is-outdated.md)
   * [Start Here](practice/about-legacy/welcome-to-the-usdrcg-wiki.md)
   * [SSH Log In](practice/about-legacy/ssh-log-in.md)
   * [Home Directory](practice/about-legacy/home-directory-and-intro-to-the-command-line.md)

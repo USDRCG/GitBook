@@ -206,5 +206,20 @@ Your VNC window will then pop up.
 
 ![](../.gitbook/assets/vncwindow%20%281%29.png)
 
-### 
+Open a new terminal.
+
+![](../.gitbook/assets/screenshot-9%20%281%29.png)
+
+Load the Lumerical-FDTD module.
+
+```text
+[user.name@usd.local@node55 ~]$ module load lumerical
+[user.name@usd.local@node55 ~]$ module list
+Currently Loaded Modulefiles:
+  1) lumerical
+[user.name@usd.local@node55 ~]$ fdtd-solutions
+
+```
+
+![](../.gitbook/assets/lumericalgui.PNG)
 
