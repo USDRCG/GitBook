@@ -24,7 +24,6 @@
 
 ## Archived Information
 
-* [.](practice/practice.md)
 * [.](practice/about-legacy/README.md)
   * [Start Here](practice/about-legacy/welcome-to-the-usdrcg-wiki.md)
   * [SSH Log In](practice/about-legacy/ssh-log-in.md)
