@@ -22,8 +22,6 @@
 * [Lumerical \(FDTD\) on Windows PC](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
 * [.](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
 
-## .
-
 ## Archived Information
 
 * [.](practice/practice.md)
