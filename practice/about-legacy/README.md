@@ -4,6 +4,12 @@ description: About Legacy
 
 # .
 
+{% hint style="danger" %}
+**WARNING: These are the archives, not current information**
+
+These pages contain information about Legacy, a USD supercomputer that is no longer available, and other information that is no longer in use.  It is kept as a reference for the maintenance of records, and in case of future need.  
+{% endhint %}
+
 The Legacy Supercomputer was acquired in 2006 through USD’s [Institutional Development Award](https://www.nigms.nih.gov/Research/CRCB/IDeA/Pages/inbre_map.aspx)from the National Institutes of Health. It was expanded in 2009 and 2011 with additional NIH funding, and the last expansion in 2013 was funded by the college of Arts and Sciences. Legacy's user base has grown from a small cohort of bioinformatics faculty in 2006 to virtually all Science Technology Engineering and Mathematics disciplines with emerging use cases in the humanities.
 
 Legacy is named after the 'Legacy'[ sculpture](http://www.usd.edu/fine-arts/art/success-stories) on USD's Vermillion campus.
