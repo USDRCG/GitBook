@@ -20,7 +20,7 @@
 * [Gaussian Tutorial](lawrence-hpc/gaussview-gui.md)
 * [Downloads](lawrence-hpc/downloads.md)
 * [Lumerical \(FDTD\) on Windows PC](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
-* [.](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
+* [Lumerical \(FDTD\) on Lawrence GUI](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
 
 ## Archived Information
 

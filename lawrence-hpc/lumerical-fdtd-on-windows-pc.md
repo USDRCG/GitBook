@@ -18,15 +18,21 @@ Open the "Configure FDTD License" app on your PC
 
 Click on the "Node Locked" tab, then the "Licenses" subtab.  Highlight your license, and select "Deactivate". Note that your license will likely have a **limit** on the number of times you may deactivate and reactivate it.  Click "Yes", then "Ok".
 
+{% hint style="info" %}
+Note: if this **causes you concern**, you may also use Lumerical on Lawrence directly, **without deactivating** the license on your computer.  See the next page: "Lumerical \(FDTD\) on Lawrence GUI".
+{% endhint %}
+
 ![](../.gitbook/assets/screenshot-61%20%283%29.png)
 
-## **Install MobaXterm**
+## **Installations**
+
+### **Install MobaXterm**
 
 Go to the MobaXterm website [here](https://mobaxterm.mobatek.net/download-home-edition.html). Click on the "MobaXterm Home Edition v11.1 \(Home Installer Edition\)" button.
 
 ![](../.gitbook/assets/screenshot-2-5%20%281%29.png)
 
-## Install PuTTY
+### Install PuTTY
 
 Go to [https://www.putty.org/](https://www.putty.org/)
 
@@ -110,7 +116,7 @@ Click **Ctrl-o**, then **Enter** to save, and then **Ctrl-x** to exit.
 If the pasted line looks **shorter than the other line\(s\)**, but you are **certain you copied all of the public key**, don't worry- use the left arrow key to move past the left end of the pasted line, and the line will scroll, showing the rest of it.
 {% endhint %}
 
-## Open a PuTTY Session to Tunnel Lumerical from Lawrence
+## Tunnel Lumerical from Lawrence
 
 Open a Windows Command Line
 
