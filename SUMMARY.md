@@ -1,11 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-
-## About this Wiki
-
-* [Welcome to USDRCG Wiki](about-this-wiki/readme.md)
-* [Command Line Basics](about-this-wiki/command-line-basics.md)
+* [Command Line Basics](command-line-basics.md)
 
 ## Lawrence HPC
 
@@ -19,8 +15,8 @@
 * [Programming Environment](lawrence-hpc/programming-environment.md)
 * [Gaussian Tutorial](lawrence-hpc/gaussview-gui.md)
 * [Downloads](lawrence-hpc/downloads.md)
-* [Lumerical \(FDTD\) on Windows PC](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
-* [Lumerical \(FDTD\) on Lawrence GUI](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
+* [Lumerical \(FDTD\) on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
+* [Lumerical \(FDTD\) on Lawrence GUI Tutorial](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
 
 ## Archived Information
 

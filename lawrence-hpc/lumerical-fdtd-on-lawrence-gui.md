@@ -2,7 +2,7 @@
 description: 'Using Lumerical on Lawrence, through a point-and-click interface'
 ---
 
-# Lumerical \(FDTD\) on Lawrence GUI
+# Lumerical \(FDTD\) on Lawrence GUI Tutorial
 
 {% hint style="warning" %}
 To use Lumerical on a Lawrence GUI, you must first have access to use the license.  Please ensure you have access before continuing.

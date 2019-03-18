@@ -4,7 +4,7 @@ description: >-
   license available for Lawrence.
 ---
 
-# Lumerical \(FDTD\) on Windows PC
+# Lumerical \(FDTD\) on Windows PC Tutorial
 
 {% hint style="info" %}
 If you have **done this before** on the computer ****you are **currently using,** and **haven't \(re\)activated** a Lumerical licence on it since, you may **skip to** the section "Open a PuTTY Session to Tunnel Lumerical from Lawrence".  
