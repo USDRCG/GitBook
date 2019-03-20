@@ -118,8 +118,10 @@ Currently Loaded Modulefiles:
 ![](../.gitbook/assets/lumericalgui.PNG)
 
 {% hint style="info" %}
-If you do this, and receive an error like the one below, follow these steps:
+If you receive an error message "-15" or "-4", please continue
 {% endhint %}
+
+### Error -15
 
 ![](../.gitbook/assets/fdtd-error.png)
 
@@ -137,5 +139,19 @@ If it doesn't automatically pop up, try starting fdtd-solutions again.
 [user.name@usd.local@node55 ~]$ fdtd-solutions
 ```
 
- If a license error still comes up, it is possible that you don't have access to the license, or that someone else is using the license.  
+ If a license error still comes up, it is possible that you don't have access to the license.  
+
+### Error -4
+
+If the error looks like this:
+
+![](../.gitbook/assets/screenshot-208.png)
+
+The license is already in use, and the maximum number of users has been reached.  Please try again later.
+
+## Ending GUI session
+
+To end your GUI session, close the black terminal window, **not the VNC window.**
+
+![](../.gitbook/assets/assets_-lmxcw8l8a9ogs7-hqgf_-lvp6cnjtpzd69rnaaqx_-lvpsx-x3jfwnkuay-_o_vncwindow.png)
 

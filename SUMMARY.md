@@ -17,6 +17,8 @@
 * [Downloads](lawrence-hpc/downloads.md)
 * [Lumerical \(FDTD\) on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
 * [Lumerical \(FDTD\) on Lawrence GUI Tutorial](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
+* [.](lawrence-hpc/untitled.md)
+* [Helpful Hints](lawrence-hpc/helpful-hints.md)
 
 ## Archived Information
 
