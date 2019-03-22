@@ -1,6 +1,6 @@
 # Transferring Files
 
-adiTransferring files onto and off of your Lawrence home directory can be done using several methods available to researchers at USD. This section will cover the movement of files between local systems and the Lawrence HPC.
+Transferring files onto and off of your Lawrence home directory can be done using several methods available to researchers at USD. This section will cover the movement of files between local systems and the Lawrence HPC.
 
 ## Drag-and-Drop Option
 
