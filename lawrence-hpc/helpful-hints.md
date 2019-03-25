@@ -22,3 +22,7 @@ It also allows the user to open files from this window in an editor.
 
 
 
+
+
+
+
