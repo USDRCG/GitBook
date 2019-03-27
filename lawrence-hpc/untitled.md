@@ -14,7 +14,7 @@ Navigate to the [Globus](https://www.globus.org/) website and click "Log In".
 
 ![](../.gitbook/assets/dtn1%20%281%29.png)
 
-Select your organization \(University of South Dakota\) from the drop-down menu, then select Continue. 
+Select your organization \(e.g. University of South Dakota\) from the drop-down menu, then select Continue. 
 
 ![](../.gitbook/assets/dtn2.png)
 
@@ -22,7 +22,7 @@ Use your username and password to log in to USD’s CAS log in screen.
 
 ![](../.gitbook/assets/dtn3%20%281%29.png)
 
-Globus will ask for permissions.
+If this is your first time logging in, Globus may ask for permissions.
 
 ![](../.gitbook/assets/dtn4.png)
 
