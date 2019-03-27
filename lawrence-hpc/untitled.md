@@ -12,7 +12,7 @@ This site is incomplete and under construction.  Proceed at your own risk.
 
 Navigate to the [Globus](https://www.globus.org/) website and click "Log In".
 
-![](../.gitbook/assets/dtn1.png)
+![](../.gitbook/assets/dtn1%20%281%29.png)
 
 Select your organization \(University of South Dakota\) from the drop-down menu, then select Continue. 
 
@@ -25,6 +25,20 @@ Use your username and password to log in to USD’s CAS log in screen.
 Globus will ask for permissions.
 
 ![](../.gitbook/assets/dtn4.png)
+
+## Making a Non-USD Login
+
+Go to the "Create a Globus ID" page, [here](https://www.globusid.org/create).  Fill out your information, and select "Create ID".
+
+![](../.gitbook/assets/globusmakeid4.png)
+
+The page will change to a page which asks for a Globus ID verification code.  The email address you entered will receive an email containing this code.  
+
+![](../.gitbook/assets/globusmakeid2.2.png)
+
+Enter this code in the window.
+
+
 
 
 
