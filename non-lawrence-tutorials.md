@@ -1,5 +1,9 @@
 # Non-Lawrence Tutorials
 
+{% hint style="danger" %}
+This site is still under construction.  Some tutorials may not be complete.
+{% endhint %}
+
 ## Ubuntu for Windows
 
 Ubuntu for Windows is available on the Microsoft store.  To begin, search for the Microsoft Store in the search bar in Windows
