@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Command Line Basics](command-line-basics.md)
+* [Non-Lawrence Tutorials](non-lawrence-tutorials.md)
 
 ## Lawrence HPC
 
@@ -17,6 +18,7 @@
 * [Downloads](lawrence-hpc/downloads.md)
 * [Lumerical \(FDTD\) on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
 * [Lumerical \(FDTD\) on Lawrence GUI Tutorial](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
+* [Untitled](lawrence-hpc/untitled-1.md)
 * [.](lawrence-hpc/untitled.md)
 * [Helpful Hints](lawrence-hpc/helpful-hints.md)
 
