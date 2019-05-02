@@ -442,7 +442,7 @@ load glyph failed err=6 face=0x555cb51b7a30, glyph=2793
 
 An RStudio window will then pop up within the TigerVNC window. 
 
-![](../.gitbook/assets/screenshot-37.png)
+![](../.gitbook/assets/screenshot-37%20%281%29.png)
 
 You may now use the RStudio in VNC the same way you would use RStudio on the desktop.  To open a file, go to File/open in the RStudio window. This will open the Lawrence local directories, not the directories on the desktop/laptop being used.
 
