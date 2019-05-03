@@ -45,7 +45,9 @@ Select "Anaconda Navigator".
 
 
 
-## Ubuntu on Windows
+## Anaconda on Ubuntu on Windows
+
+### Installing Ubuntu on Windows
 
 Ubuntu for Windows can be downloaded from the Microsoft store.  
 
@@ -72,6 +74,10 @@ Search for "Ubuntu" and select the app.
 The window will look like this:
 
 ![](../.gitbook/assets/screenshot-265.png)
+
+
+
+### Installing Anaconda on Ubuntu on Windows
 
 
 
