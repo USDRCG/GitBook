@@ -22,7 +22,7 @@
 * [Helpful Hints](lawrence-hpc/helpful-hints.md)
 * [o](lawrence-hpc/anaconda-installation.md)
 
-## Archived Information
+## Archived Information <a id="practice"></a>
 
 * [.](practice/about-legacy/README.md)
   * [WARNING: These are the archives, not current information](practice/about-legacy/warning-these-pages-contain-information-that-is-outdated.md)

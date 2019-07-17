@@ -17,11 +17,11 @@ The hardware specifications for Lawrence vary by node and are as follows:
 | RAM | 96GB  |
 | SSD | 240GB |
 
-| **GPU01** | \_\_ |
+| **GPU01-GPU06** | \_\_ |
 | :--- | :--- |
-| GPU Node                                 | 1 |
+| GPU Node                                 | 6 |
 | CPUs | dual 12-core SkyLake 5000 series |
-| GPUs | 2x Nvidia Tesla P100 16GB  |
+| GPUs | 2x Nvidia Tesla P100/V100 16GB  |
 | RAM | 1926GB  |
 | SSD | 240GB |
 
