@@ -18,6 +18,7 @@
 * [Downloads](lawrence-hpc/downloads.md)
 * [Lumerical \(FDTD\) on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
 * [Lumerical \(FDTD\) on Lawrence GUI Tutorial](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
+* [VNC](lawrence-hpc/vnc.md)
 * [.](lawrence-hpc/untitled.md)
 * [Helpful Hints](lawrence-hpc/helpful-hints.md)
 * [o](lawrence-hpc/anaconda-installation.md)
@@ -41,4 +42,5 @@
   * [X11 Forwarding](practice/about-legacy/x11-forwarding.md)
   * [TigerVNC](practice/about-legacy/tigervnc.md)
   * [Logging in to an interactive session - qlogin](practice/about-legacy/logging-in-to-an-interactive-session-qlogin.md)
+  * [VNC](practice/about-legacy/vnc.md)
 

@@ -350,139 +350,91 @@ Below is a template script \(mpi-python-template.sh\) and example MPI program wr
 
 ![](../.gitbook/assets/mpi-py-template6%20%281%29.png)
 
-## Graphical User Interface Jobs \(VNC\)
-
-### First Time Set-up
-
-To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/tigervnc/stable/tigervnc).  Download the 64-bit version, shown below.
-
-![](../.gitbook/assets/tigervnc-download%20%282%29.png)
-
-A VNC password also needs to be set up \(this only needs to be done once\). 
+## Graphical User Interface jobs
 
 {% hint style="info" %}
-Note: the password will not show up as you type
+If **entering the tutorial** at this point, make sure to **log into Lawrence** before continuing, and start at the login node.
 {% endhint %}
 
+Run a **graphical software** on a node \(such as **Lumerical**, **Gaussian**, or **Firefox**\):
+
+If the software is part of a module, it will need to be loaded first:
+
 ```text
-[user.name@usd.local@login ~]$ vncpasswd
-Password:
-Verify:
+[user.name@usd.local@login ~]$ module load module_name 
+[user.name@usd.local@login ~]$ module list
+Currently Loaded Modulefiles:
+  1) module_name
 ```
-
-### **Starting the GUI**  
-
-The example below demonstrates how to start a VNC session on a general purpose compute node:
-
-#### Command Line \#1:
-
-![](../.gitbook/assets/vncmaketunnel-cmd-1.png)
 
 {% hint style="info" %}
-Note: the numbers in job-2965.out **correspond** to the number of the **batch job** in the second line \(the number in your command line will likely be different\).
+Note: if you don't remember the exact name of the necessary module, the command`module avail`will show all the available modules.
 {% endhint %}
 
-The tail -f command will print the last few lines of the file, which looks like this:
+Then use srun from the login node:
 
-#### Command Line \#1:
+`[user.name@usd.local@login ~]$ srun name_of_software`
 
-![](../.gitbook/assets/vncmaketunnel2.png)
+See below for specific examples:
 
-Copy the ssh command \(it will look like the command **circled in red above**\) and **paste** it into a **different command line** \(then press "enter"\).  It will then ask for a password. \(This is the password you would use to log in to Lawrence, **not the vnc password**.\)  The password will **not appear** as it is typed in.
+### Firefox example
 
-#### Command Line \#2:
+`[user.name@usd.local@login ~]$ srun firefox` 
 
-![](../.gitbook/assets/cmdlines1-and-2-vnc%20%281%29.png)
+The GUI will open:
 
-#### VNC Viewer
+![](../.gitbook/assets/srunfirefox.png)
 
-Open TigerVNC, copy the localhost \(it will look like what is circled in blue in command line \#1\), and paste it into the "NVC Viewer: Connection Details" window.  Click "Connect".
+There may be a list of 200 or more of this error:
 
-![](../.gitbook/assets/cmd1-vnc-viewer%20%282%29.png)
+`(firefox:189943): dconf-CRITICAL **: unable to create directory '/run/user/1093713210/dconf': Permission denied. dconf will not work properly.`
 
-The window will then ask for a password. Type in the **VNC password** you made earlier.
+If this error appears, it's nothing to worry about.
 
-![](../.gitbook/assets/vncwindow-psswd.png)
+### Gaussian example
 
-Your VNC window will then pop up.
+{% hint style="warning" %}
+Note: you must have a license for Gaussian on Lawrence for this tutorial. 
 
-![](../.gitbook/assets/vncwindow%20%281%29.png)
+If you have a license, but it is not on Lawrence yet, please contact the Research Computing Group for assistance.
+{% endhint %}
 
-When you are finished, **log out** of the VNC by **closing the black terminal**.  A job that is not closed will continue to run and use node space \(even if you close the window\), until it times out.
-
-![](../.gitbook/assets/vncwindow%20%282%29.png)
-
-### Opening Programs in the GUI \(e.g. RStudio\)
-
-Make sure the package\(s\) needed are installed.  For this example, I will use RStudio.  To install RStudio, I use "conda install rstudio"
+Load the Gaussian module:
 
 ```text
-[user.name@usd.local@node01 ~]$ conda install rstudio
-Solving environment: done
-
-## Package Plan ##
-
-  environment location: /home/usd.local/user.name/anaconda3
-........
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-[user.name@usd.local@node01 ~]$
+[user.name@usd.local@login ~]$ module load gaussian/16 
+[user.name@usd.local@login ~]$ module list
+Currently Loaded Modulefiles:
+  1) gaussian/16
 ```
 
-To run RStudio, type "rstudio" \(all **lowercase**\) in the TigerVNC command line.
+Launch the Gaussian GUI;
+
+`[user.name@usd.local@login ~]$ srun gview`
+
+The GUI will open:
+
+![](../.gitbook/assets/srungaussian.png)
+
+### Lumerical example
+
+{% hint style="warning" %}
+Note: you must have a license for Lumerical on Lawrence for this tutorial.  
+
+If you have a license, but it is not on Lawrence yet, please contact the Research Computing Group for assistance.
+{% endhint %}
+
+Launch the Lumerical GUI
 
 ```text
-[user.name@usd.local@node01 ~]$ rstudio
-load glyph failed err=6 face=0x555cb51b7a30, glyph=2793
-load glyph failed err=6 face=0x555cb51b7a30, glyph=2793
-^C
-[user.name@usd.local@node01 ~]$ 
+[user.name@usd.local@login ~]$ module load lumerical
+[user.name@usd.local@login ~]$ module list
+Currently Loaded Modulefiles:
+  1) lumerical
+[user.name@usd.local@login ~]$ srun fdtd-solutions
 ```
 
-An RStudio window will then pop up within the TigerVNC window. 
 
-![](../.gitbook/assets/screenshot-37%20%281%29.png)
 
-You may now use the RStudio in VNC the same way you would use RStudio on the desktop.  To open a file, go to File/open in the RStudio window. This will open the Lawrence local directories, not the directories on the desktop/laptop being used.
 
-![](../.gitbook/assets/screenshot-39.png)
-
-### GUI Partitions
-
-#### HiMem
-
-To request a VNC session on the HiMem node, use the same commands as given under General Compute excepting the following command with sbatch:
-
-```text
-[user.name@usd.local@login ~]$ sbatch -p himem /opt/examples/gui-job.sh
-```
-
-#### GPU
-
-To request a VNC session on the HiMem node, use the same commands as given under General Compute excepting the following command with sbatch:
-
-```text
-[user.name@usd.local@login ~]$ sbatch --gres=gpu:pascal:1 -p gpu /opt/examples/gui-job.sh
-```
-
-#### Viz
-
-The Lawrence viz node is designed for users who wish to do advanced visualization. The viz node gives users access to accelerated 3D graphics \(one node with one GPU having a GTX logic unit\). A typical use case for the viz node is a virtual network computing \(VNC\) job coupled with a real-time graphical user interface \(GUI\). Please note that a graphical job can be run on any node on the cluster and is not solely limited to the viz node \(although the viz node will often have the best performance\).
-
-Viz nodes must be specifically requested using the “--gres” parameter. Viz access is controlled by cgroups, which means the resource must be requested if it is to be used. This prevents use conflicts. The format for requesting the GPU node \(as specified in the contig file\) is TYPE:LABEL:NUMBER.
-
-TYPE will be “vis”.
-
-LABEL is defined as “gtx” for the viz node.
-
-NUMBER is the amount of resources requested. For the Vis node the only option is “1” as there is only one.
-
-To request a VNC session on the HiMem node, use the same commands as given under General Compute excepting the following command with sbatch:
-
-```text
-[user.name@usd.local@login ~]$ sbatch --gres=gpu:gtx -p viz /opt/examples/gui-job.sh
-```
-
-### 
 
