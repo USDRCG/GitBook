@@ -21,7 +21,7 @@
 * [VNC](lawrence-hpc/vnc.md)
 * [.](lawrence-hpc/untitled.md)
 * [Helpful Hints](lawrence-hpc/helpful-hints.md)
-* [o](lawrence-hpc/anaconda-installation.md)
+* [.](lawrence-hpc/anaconda-installation.md)
 
 ## Archived Information <a id="practice"></a>
 
