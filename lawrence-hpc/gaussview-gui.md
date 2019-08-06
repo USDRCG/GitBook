@@ -245,29 +245,27 @@ Log into a node
 
 ```text
 [user.name@usd.local@login ~]$ srun --pty bash 
-[user.name@usd.local@node09 ~]$ 
+[user.name@usd.local@node51 ~]$ 
 ```
 
 Load the Gaussian module:
 
 ```text
-[user.name@usd.local@node09 ~]$ module load gaussian/16 
-[user.name@usd.local@node09 ~]$ module list
+[user.name@usd.local@node51 ~]$ module load gaussian/16 
+[user.name@usd.local@node51 ~]$ module list
 Currently Loaded Modulefiles:  
 1) gaussian/16
 ```
 
-Launch the Gaussian GUI;‌
+Launch the Gaussian GUI:
 
 ```
-[user.name@usd.local@node09 ~]$ srun gview
+[user.name@usd.local@node51 ~]$ srun gview
 ```
 
 The GUI will open:
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LMxcW8l8a9ogs7-hqgF%2F-LkPWh-8OX0EZmeb1LZN%2F-LkPeSwU88q2rphziPWV%2FsrunGaussian.png?alt=media&token=e633f828-ad38-41d4-9bc5-432bd3d046b1)
-
-
+![](../.gitbook/assets/srungaussian.png)
 
 
 
