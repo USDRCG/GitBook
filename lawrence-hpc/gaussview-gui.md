@@ -239,95 +239,35 @@ Note: the number 12345 in slurm-12345.out corresponds to the number of the batch
 
 If entering the tutorial at this point, open MobaX and log into Lawrence \(for help, see the section "Getting Started"\).
 
-### First Time Set-up
-
-#### Install TigerVNC
-
-To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/tigervnc/stable/tigervnc).  Download the 64-bit version, shown below.
-
-![](../.gitbook/assets/tigervnc-download.png)
-
-Click on the installed file, and follow the download wizard.
-
-#### Setting a VNC Password
-
-A VNC password needs to be set up \(this only needs to be done **once**\).  Make sure you use **vncpasswd**, **not** **vncpassword.**
-
-{% hint style="info" %}
-Note: the password will not show up as you type
-{% endhint %}
-
-```text
-[user.name@usd.local@login ~]$ vncpasswd
-Password:
-Verify:
-```
-
-It may ask "Would you like to enter a view-only password \(y/n\)?"  The usual response is "n".
-
 ### **Starting the GUI**
 
-Start a VNC session:
+Log into a node
 
-![](../.gitbook/assets/vncmaketunnel-cmd-1.png)
-
-{% hint style="info" %}
-Note: the numbers in job-2965.out **correspond** to the number of the **batch job** in the second line \(the number in your command line will likely be different\).
-{% endhint %}
-
-The tail -f command will print the last few lines of the file, which looks like this:
-
-![](../.gitbook/assets/vncmaketunnel2.png)
-
-Copy the ssh command \(it will look like the command **circled in red above**\) and open a second terminal in MobaX.
-
-![](../.gitbook/assets/mobax-addterminal.png)
-
-**Paste** the ssh command into the **second MobaX command line**.  It will ask for a password. \(This is the password you would use to log in to Lawrence, **not the vnc password**.\)  The password will **not appear** as it is typed in.
-
-{% hint style="warning" %}
-**Ctrl-V** may **not work** **to paste** in MobaX; try right-clicking and select paste from the menu.
-{% endhint %}
-
-#### Command Line \#2:
-
-![](../.gitbook/assets/cmdlines1-and-2-vnc%20%281%29.png)
-
-#### VNC Viewer
-
-Open TigerVNC from the start menu, copy the localhost \(it will look like what is circled in blue in command line \#1\), and paste it into the "VNC Viewer: Connection Details" window.  Click "Connect".
-
-![](../.gitbook/assets/cmd1-vnc-viewer%20%282%29.png)
-
-The window will then ask for a password. Type in the **VNC password** you made earlier.
-
-![](../.gitbook/assets/vncwindow-psswd.png)
-
-Your VNC window will then pop up.  The **black command line** is the **heartbeat** of your VNC session.  **If it ends, your whole session dies,** so **only close it when you are finished.**  Right click in the window, and select "xterm" to open another command line.
-
-![](../.gitbook/assets/screenshot-46%20%281%29.png)
-
-Before opening Gaussview, you must load a Gaussian module.  Use the "module avail gauss" command to see which Gaussian modules are available, then load one and open gview.
-
-{% code-tabs %}
-{% code-tabs-item title="Xterm command line:" %}
-```bash
-[adison.kleinsasser@usd.local@node15 ~]$ module avail gauss
-------------------------------- /act/modulefiles ------------------------------- 
-gaussian/09 gaussian/16 
-[adison.kleinsasser@usd.local@node15 ~]$ module load gaussian/16 
-[adison.kleinsasser@usd.local@node15 ~]$ gview
+```text
+[user.name@usd.local@login ~]$ srun --pty bash 
+[user.name@usd.local@node09 ~]$ 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-![](../.gitbook/assets/gview%20%281%29.PNG)
+Load the Gaussian module:
 
-When you are finished, **log out** of the VNC by **closing the black terminal**.  A job that is not closed will continue to run and use node space \(even if you close the window\), until it times out.
+```text
+[user.name@usd.local@node09 ~]$ module load gaussian/16 
+[user.name@usd.local@node09 ~]$ module list
+Currently Loaded Modulefiles:  
+1) gaussian/16
+```
 
-![](../.gitbook/assets/vncwindow%20%282%29.png)
+Launch the Gaussian GUI;‌
 
-To restart the GUI \(such as if the black terminal was closed by mistake\), go back to "Starting the GUI".
+```
+[user.name@usd.local@node09 ~]$ srun gview
+```
+
+The GUI will open:
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LMxcW8l8a9ogs7-hqgF%2F-LkPWh-8OX0EZmeb1LZN%2F-LkPeSwU88q2rphziPWV%2FsrunGaussian.png?alt=media&token=e633f828-ad38-41d4-9bc5-432bd3d046b1)
+
+
 
 
 

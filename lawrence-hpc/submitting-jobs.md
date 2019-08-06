@@ -379,7 +379,16 @@ See below for specific examples:
 
 ### Firefox example
 
-`[user.name@usd.local@login ~]$ srun firefox` 
+Log into a node
+
+```text
+[user.name@usd.local@login ~]$ srun --pty bash 
+[user.name@usd.local@node51 ~]$ 
+```
+
+Then run Firefox
+
+`[user.name@usd.local@node51 ~]$ srun firefox` 
 
 The GUI will open:
 
@@ -399,18 +408,25 @@ Note: you must have a license for Gaussian on Lawrence for this tutorial.
 If you have a license, but it is not on Lawrence yet, please contact the Research Computing Group for assistance.
 {% endhint %}
 
+Log into a node
+
+```text
+[user.name@usd.local@login ~]$ srun --pty bash 
+[user.name@usd.local@node51 ~]$ 
+```
+
 Load the Gaussian module:
 
 ```text
-[user.name@usd.local@login ~]$ module load gaussian/16 
-[user.name@usd.local@login ~]$ module list
+[user.name@usd.local@node51 ~]$ module load gaussian/16 
+[user.name@usd.local@node51 ~]$ module list
 Currently Loaded Modulefiles:
   1) gaussian/16
 ```
 
 Launch the Gaussian GUI;
 
-`[user.name@usd.local@login ~]$ srun gview`
+`[user.name@usd.local@node51 ~]$ srun gview`
 
 The GUI will open:
 
@@ -424,17 +440,24 @@ Note: you must have a license for Lumerical on Lawrence for this tutorial.
 If you have a license, but it is not on Lawrence yet, please contact the Research Computing Group for assistance.
 {% endhint %}
 
+Log into a node
+
+```text
+[user.name@usd.local@login ~]$ srun --pty bash 
+[user.name@usd.local@node44 ~]$ 
+```
+
 Launch the Lumerical GUI
 
 ```text
-[user.name@usd.local@login ~]$ module load lumerical
-[user.name@usd.local@login ~]$ module list
+[user.name@usd.local@node44 ~]$ module load lumerical
+[user.name@usd.local@node44 ~]$ module list
 Currently Loaded Modulefiles:
   1) lumerical
-[user.name@usd.local@login ~]$ srun fdtd-solutions
+[user.name@usd.local@node44 ~]$ srun fdtd-solutions
 ```
 
-
+![](../.gitbook/assets/srunlumerical.PNG)
 
 
 
