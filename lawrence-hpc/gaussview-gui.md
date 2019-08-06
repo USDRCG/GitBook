@@ -235,7 +235,7 @@ Note: the number 12345 in slurm-12345.out corresponds to the number of the batch
 
 ![](../.gitbook/assets/slurm.png)
 
-## Graphical User Interface Jobs \(VNC\)
+## Graphical User Interface Jobs
 
 If entering the tutorial at this point, open MobaX and log into Lawrence \(for help, see the section "Getting Started"\).
 
