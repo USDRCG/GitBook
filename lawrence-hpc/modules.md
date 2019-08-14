@@ -29,9 +29,9 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 
 ## Anaconda
 
-Anaconda is a channel software manager of conda which can be used for installing various applications.  Anaconda is recommended for those wishing to install software that is not readily available as a module. More information on using Anaconda can be found on the Anaconda documentation page[ __here](https://docs.anaconda.com/anaconda/user-guide/)_._ Packages currently available on Anaconda can be found [here](https://docs.anaconda.com/anaconda/packages/pkg-docs/).  Anaconda provides python by default.  R may be installed using the command "conda install R".
+Anaconda is a channel software manager of conda which can be used for installing various applications.  Anaconda is recommended for those wishing to install software that is not readily available as a module. More information on using Anaconda can be found on the Anaconda documentation page[ __here](https://docs.anaconda.com/anaconda/user-guide/)_._ Packages currently available on Anaconda can be found [here](https://docs.anaconda.com/anaconda/packages/pkg-docs/).  Anaconda provides python by default.  **R may be installed** using the command "**conda install R**".
 
-To install Anaconda in your home directory on Lawrence, connect to a node, then run the install-anaconda script as follows:
+To install Anaconda in your home directory on Lawrence, **connect to a node**, then **run the install-anaconda script** as follows:
 
 ```text
 [user.name@usd.local@login ~]$ srun --pty bash
@@ -44,7 +44,7 @@ Done!
 
 ```
 
-Then run the installer.  Make sure to select "yes" when asked about prepending the Anaconda3 install location to PATH.
+Then run the installer.  Make sure to select **"yes"** when asked about prepending the Anaconda3 install location to PATH.
 
 ```text
 [user.name@usd.local@node10 ~]$ bash Miniconda3-latest-Linux-x86_64.sh
@@ -59,7 +59,7 @@ Please, press ENTER to continue
 
 Click "enter" to continue through the license.  \(You may need to click "enter" multiple times.\)
 
-Accept the terms:
+**Accept** the terms:
 
 ```text
 ....
@@ -68,7 +68,7 @@ Do you accept the license terms? [yes|no]
 ....
 ```
 
-Then click "enter" to accept the installation location when asked.
+Then click **"enter"** to accept the installation location when asked.
 
 ```text
 Miniconda3 will now be installed into this location:
@@ -114,7 +114,7 @@ Then update your Miniconda to the latest version of Anaconda3:
 ```
 
 {% hint style="info" %}
-Note: `conda update conda` may also be used to update Anaconda/Bioconda later.
+Note: **`conda update conda`** may also be used to update Anaconda/Bioconda later.
 {% endhint %}
 
 ### Packages
@@ -137,7 +137,8 @@ xorg-xproto 7.0.31: ########################################################### 
 Preparing transaction: done
 Verifying transaction: done
 Executing transaction: done
-[user.name@usd.local@node10 ~]$
+[user.name@usd.local@node10 ~]$ which R
+
 ```
 
 MRO \(Microsoft R Open\) is also available, and provides threading.
@@ -176,6 +177,69 @@ PREFIX=/home/usd.local/user.name/anaconda3
 Installing...
 ...
 Done!
+```
+
+There will be a **.sh** file in your home directory. Run this using bash.
+
+```text
+[user.name@usd.local@node10 ~]$ ls
+anaconda3  Miniconda3-latest-Linux-x86_64.sh  perl5
+[user.name@usd.local@node10 ~]$ cd anaconda3/
+[user.name@usd.local@node10 ~]$ bash Miniconda3-latest-Linux-x86_64.sh
+
+Welcome to Miniconda3 4.7.10
+
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+
+```
+
+Press **enter** to continue, and to scroll through the license, then type "**yes**" to accept the license.
+
+```text
+Do you accept the license terms? [yes|no]
+[no] >>> yes
+
+Miniconda3 will now be installed into this location:
+/home/usd.local/user.name/miniconda3
+```
+
+Press **enter** to confirm the installation location.
+
+```text
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/home/usd.local/user.name/miniconda3] >>>
+```
+
+Type "**yes**" to allow the installer to run `conda init`
+
+```text
+Do you wish the installer to initialize Miniconda3
+by running conda init? [yes|no]
+[no] >>> yes
+```
+
+Wait for the installation to finish.  Your command prompt will reappear to show that the computer is ready.
+
+```text
+Thank you for installing Miniconda3!
+[user.name@usd.local@node10 ~]$
+```
+
+**Log** **out** of the node and Lawrence**, then back into** Lawrence for the changes to take effect.
+
+```text
+[user.name@usd.local@node10 ~]$ exit
+[user.name@usd.local@login ~]$ exit
+exit
+[MyName.NI1111] ➤ ssh user.name@Lawrence.usd.edu
+...
+[user.name@usd.local@login ~]$ which conda
+~/miniconda3/bin/conda
 ```
 
 Bioconda will now be available through your home directory to install software. It will appear as "Anaconda"
