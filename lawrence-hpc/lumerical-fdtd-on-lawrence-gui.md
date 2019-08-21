@@ -41,8 +41,8 @@ Last login: Tue Feb 26 10:36:10 2019 from 192.236.35.187 Welcome to the Lawrence
 Load the Lumerical-FDTD module.
 
 ```text
-[user.name@usd.local@node55 ~]$ module load lumerical
-[user.name@usd.local@node55 ~]$ module list
+[user.name@usd.local@login ~]$ module load lumerical
+[user.name@usd.local@login ~]$ module list
 Currently Loaded Modulefiles:
   1) lumerical
 ```
@@ -50,7 +50,7 @@ Currently Loaded Modulefiles:
 Start Lumerical
 
 ```text
-[user.name@usd.local@node55 ~]$ fdtd-solutions
+[user.name@usd.local@login ~]$ srun fdtd-solutions
 ```
 
 {% hint style="info" %}
@@ -72,7 +72,7 @@ Ensure that the server listed is "login".  Change this if needed, and click "ok"
 If it doesn't automatically pop up, try starting fdtd-solutions again. 
 
 ```text
-[user.name@usd.local@node55 ~]$ fdtd-solutions
+[user.name@usd.local@login ~]$ srun fdtd-solutions
 ```
 
  If a license error still comes up, it is possible that you don't have access to the license.  
