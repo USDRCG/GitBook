@@ -4,7 +4,7 @@
 
 The Lawrence Supercomputer: Lawrence is composed of a many nodes. The user logs into the login node from their computer. From there they can access many other nodes in order to run analyses. The GPU node is used for graphics processing, and computations involving matrices. The high-memory \(himem\) node contains increased RAM for jobs that require high memory. The VIZ node is used for making visualizations. Besides the special purpose nodes, Lawrence contains 80 computational nodes for data analysis.  The data storage nodes act like a harddrive, albeit much faster, storing the files that are on the user's \(or lab's\) account.  Caution: the storage nodes are not backed up-be sure to back up your files.  The management node is utilized for managing the system.
 
-## Lawrence SSH Login for Linux and Mac
+## Lawrence SSH Login for Mac
 
 To start you will need to open a terminal or command line interface.
 
@@ -37,6 +37,29 @@ Last login: (date and address here)
 All login goes by default to the login node. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager.
 
 ![](../.gitbook/assets/lawrencediagram2-ssh.png)
+
+## Lawrence SSH Login for Linux
+
+Open the command terminal, and ssh into Lawrence
+
+```text
+username@NI8724:~$ ssh -X User.Name@Lawrence.usd.edu
+User.Name@lawrence.usd.edu's password:
+```
+
+{% hint style="info" %}
+Note: your password won't show up while being typed.
+{% endhint %}
+
+If it accepts the password, it will show a welcome message and a prompt.
+
+```text
+Last login: Tue Aug 20 16:03:26 2019 from 192.236.54.40
+Welcome to the Lawrence Supercomputer at the University of South Dakota!
+...
+
+(base) [user.name@usd.local@login ~]$
+```
 
 ## Lawrence SSH Login for Windows
 
@@ -93,6 +116,8 @@ Select the Ubuntu app.
 Click "Get", then "Install".
 
 ![](../.gitbook/assets/ubuntu3.png)
+
+#### Logging in
 
 Open the Ubuntu terminal from Start
 
