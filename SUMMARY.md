@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [Command Line Basics](command-line-basics.md)
-* [Non-Lawrence Tutorials](non-lawrence-tutorials.md)
 
 ## Lawrence HPC
 
@@ -15,7 +14,6 @@
 * [Legacy-Lawrence Migration](lawrence-hpc/legacy-lawrence-migration-instructions.md)
 * [Programming Environment](lawrence-hpc/programming-environment.md)
 * [Gaussian Tutorial](lawrence-hpc/gaussview-gui.md)
-* [Downloads](lawrence-hpc/downloads.md)
 * [Lumerical \(FDTD\) on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
 * [Lumerical \(FDTD\) on Lawrence GUI Tutorial](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
 * [VNC](lawrence-hpc/vnc.md)
@@ -23,12 +21,14 @@
 
 ## Non-Lawrence Guides
 
-* [Anaconda Installation](non-lawrence-guides/anaconda-installation.md)
+* [Downloads](non-lawrence-guides/downloads.md)
+* [Software Installations on Windows](non-lawrence-guides/anaconda-installation.md)
 * [.](non-lawrence-guides/untitled.md)
 
 ## Archived Information <a id="practice"></a>
 
 * [.](practice/about-legacy/README.md)
+  * [Non-Lawrence Tutorials](practice/about-legacy/non-lawrence-tutorials.md)
   * [WARNING: These are the archives, not current information](practice/about-legacy/warning-these-pages-contain-information-that-is-outdated.md)
   * [Start Here](practice/about-legacy/welcome-to-the-usdrcg-wiki.md)
   * [SSH Log In](practice/about-legacy/ssh-log-in.md)
