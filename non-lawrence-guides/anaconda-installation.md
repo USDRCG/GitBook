@@ -1,11 +1,10 @@
 ---
 description: >-
-  Anaconda Installation     This page contains instructions for installing
-  Anaconda/Bioconda on Windows, Ubuntu on Windows, Mac, a Lawrence account, and
-  Jetstream
+  This page contains instructions for installing Anaconda/Bioconda on Windows,
+  Ubuntu on Windows, Mac, a Lawrence account, and Jetstream
 ---
 
-# .
+# Anaconda Installation
 
 {% hint style="danger" %}
 Warning: this site is under construction.  The information may be incomplete.

@@ -10,7 +10,7 @@
 * [Login](lawrence-hpc/login.md)
 * [Filesystems](lawrence-hpc/filesystems.md)
 * [Transferring Files](lawrence-hpc/transferring-files.md)
-* [Software](lawrence-hpc/modules.md)
+* [Software on Lawrence](lawrence-hpc/modules.md)
 * [Submitting Jobs](lawrence-hpc/submitting-jobs.md)
 * [Legacy-Lawrence Migration](lawrence-hpc/legacy-lawrence-migration-instructions.md)
 * [Programming Environment](lawrence-hpc/programming-environment.md)
@@ -19,9 +19,12 @@
 * [Lumerical \(FDTD\) on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
 * [Lumerical \(FDTD\) on Lawrence GUI Tutorial](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
 * [VNC](lawrence-hpc/vnc.md)
-* [.](lawrence-hpc/untitled.md)
 * [Helpful Hints](lawrence-hpc/helpful-hints.md)
-* [.](lawrence-hpc/anaconda-installation.md)
+
+## Non-Lawrence Guides
+
+* [Anaconda Installation](non-lawrence-guides/anaconda-installation.md)
+* [.](non-lawrence-guides/untitled.md)
 
 ## Archived Information <a id="practice"></a>
 

@@ -1,4 +1,4 @@
-# Software
+# Software on Lawrence
 
 The Lawrence HPC uses modules for the use of software applications on the HPC. Modules allow various versions of software to be available, and also allows a way to make new software. This document provides a brief overview of module commands as they pertain to USD's Lawrence HPC.
 

@@ -36,6 +36,22 @@ Last login: Tue Feb 26 10:36:10 2019 from 192.236.35.187 Welcome to the Lawrence
 [user.name@usd.local@login ~]$
 ```
 
+{% hint style="info" %}
+Note: When logging in with a terminal other than MobaX, add a flag to the login \(see the tab "[Login](https://usdrcg.gitbook.io/docs/lawrence-hpc/login)" for details\):
+
+Windows/Linux:
+
+```text
+ssh -X User.Name@Lawrence.usd.edu
+```
+
+Mac:
+
+```text
+ssh -Y User.Name@Lawrence.usd.edu
+```
+{% endhint %}
+
 ![](../.gitbook/assets/screenshot-187.png)
 
 Load the Lumerical-FDTD module.
@@ -75,7 +91,7 @@ If it doesn't automatically pop up, try starting fdtd-solutions again.
 [user.name@usd.local@login ~]$ srun fdtd-solutions
 ```
 
- If a license error still comes up, it is possible that you don't have access to the license.  
+ If a license error still comes up, it is possible that you don't have a license.  If that is not the case, please contact the Service desk \(servicedesk@usd.edu\) for assistance.
 
 ### Error -4
 
