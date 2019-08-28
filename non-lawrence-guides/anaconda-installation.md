@@ -38,12 +38,6 @@ Select "Anaconda Navigator".
 
 ![](../.gitbook/assets/screenshot-37.png)
 
-
-
-## Bioconda on Windows
-
-
-
 ## Anaconda on Ubuntu on Windows
 
 ### Installing Ubuntu on Windows
@@ -168,4 +162,24 @@ user@NI0000:~$
 ```
 
 Close and re-open your Ubuntu command line.
+
+## Bioconda on Windows on Ubuntu
+
+After running the installation of Anaconda on Ubuntu on Windows \(see above\), add bioconda:
+
+```text
+user@NI0000:~$ conda config --add channels bioconda
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
