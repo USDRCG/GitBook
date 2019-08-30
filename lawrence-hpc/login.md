@@ -1,7 +1,14 @@
 # Login
 
 {% hint style="warning" %}
-Permission from the HPC administrator is needed to access Lawrence.  This can be requested by contacting the ServiceDesk.
+**Permission** from the HPC administrator is needed to access Lawrence.  This can be requested by contacting the ServiceDesk.
+{% endhint %}
+
+{% hint style="info" %}
+* **USD users:** Lawrence login information will be based on your USD login \(e.g. your password will be the same as for your email account\)
+* **Non-USD users**: receive an email from the ServiceDesk regarding login information and/or password creation after the account is set up.  
+
+For assistance or to ask questions, please contact the ServiceDesk \(servicedesk@usd.edu\).
 {% endhint %}
 
 ![](../.gitbook/assets/lawrencediagram2%20%281%29.png)
