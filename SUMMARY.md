@@ -16,7 +16,6 @@
 * [Gaussian Tutorial](lawrence-hpc/gaussview-gui.md)
 * [Lumerical \(FDTD\) on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
 * [Lumerical \(FDTD\) on Lawrence GUI Tutorial](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
-* [VNC](lawrence-hpc/vnc.md)
 * [Helpful Hints](lawrence-hpc/helpful-hints.md)
 
 ## Non-Lawrence Guides
@@ -28,6 +27,7 @@
 ## Archived Information <a id="practice"></a>
 
 * [.](practice/about-legacy/README.md)
+  * [VNC](practice/about-legacy/vnc-1.md)
   * [Non-Lawrence Tutorials](practice/about-legacy/non-lawrence-tutorials.md)
   * [WARNING: These are the archives, not current information](practice/about-legacy/warning-these-pages-contain-information-that-is-outdated.md)
   * [Start Here](practice/about-legacy/welcome-to-the-usdrcg-wiki.md)

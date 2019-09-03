@@ -6,7 +6,7 @@
 
 To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/tigervnc/stable/tigervnc).  Download the 64-bit version, shown below.
 
-![](../.gitbook/assets/tigervnc-download%20%282%29.png)
+![](../../.gitbook/assets/tigervnc-download%20%282%29.png)
 
 A VNC password also needs to be set up \(this only needs to be done once\). 
 
@@ -26,7 +26,7 @@ The example below demonstrates how to start a VNC session on a general purpose c
 
 #### Command Line \#1:
 
-![](../.gitbook/assets/vncmaketunnel-cmd-1.png)
+![](../../.gitbook/assets/vncmaketunnel-cmd-1.png)
 
 {% hint style="info" %}
 Note: the numbers in job-2965.out **correspond** to the number of the **batch job** in the second line \(the number in your command line will likely be different\).
@@ -36,31 +36,31 @@ The tail -f command will print the last few lines of the file, which looks like 
 
 #### Command Line \#1:
 
-![](../.gitbook/assets/vncmaketunnel2.png)
+![](../../.gitbook/assets/vncmaketunnel2.png)
 
 Copy the ssh command \(it will look like the command **circled in red above**\) and **paste** it into a **different command line** \(then press "enter"\).  It will then ask for a password. \(This is the password you would use to log in to Lawrence, **not the vnc password**.\)  The password will **not appear** as it is typed in.
 
 #### Command Line \#2:
 
-![](../.gitbook/assets/cmdlines1-and-2-vnc%20%281%29.png)
+![](../../.gitbook/assets/cmdlines1-and-2-vnc%20%281%29.png)
 
 #### VNC Viewer
 
 Open TigerVNC, copy the localhost \(it will look like what is circled in blue in command line \#1\), and paste it into the "NVC Viewer: Connection Details" window.  Click "Connect".
 
-![](../.gitbook/assets/cmd1-vnc-viewer%20%282%29.png)
+![](../../.gitbook/assets/cmd1-vnc-viewer%20%282%29.png)
 
 The window will then ask for a password. Type in the **VNC password** you made earlier.
 
-![](../.gitbook/assets/vncwindow-psswd.png)
+![](../../.gitbook/assets/vncwindow-psswd.png)
 
 Your VNC window will then pop up.
 
-![](../.gitbook/assets/vncwindow%20%281%29.png)
+![](../../.gitbook/assets/vncwindow%20%281%29.png)
 
 When you are finished, **log out** of the VNC by **closing the black terminal**.  A job that is not closed will continue to run and use node space \(even if you close the window\), until it times out.
 
-![](../.gitbook/assets/vncwindow%20%282%29.png)
+![](../../.gitbook/assets/vncwindow%20%282%29.png)
 
 ### Opening Programs in the GUI \(e.g. RStudio\)
 
@@ -92,11 +92,11 @@ load glyph failed err=6 face=0x555cb51b7a30, glyph=2793
 
 An RStudio window will then pop up within the TigerVNC window. 
 
-![](../.gitbook/assets/screenshot-37%20%281%29.png)
+![](../../.gitbook/assets/screenshot-37%20%281%29.png)
 
 You may now use the RStudio in VNC the same way you would use RStudio on the desktop.  To open a file, go to File/open in the RStudio window. This will open the Lawrence local directories, not the directories on the desktop/laptop being used.
 
-![](../.gitbook/assets/screenshot-39.png)
+![](../../.gitbook/assets/screenshot-39.png)
 
 ### GUI Partitions
 
