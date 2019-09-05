@@ -74,7 +74,7 @@ Last login: (date and address here)
 ```
 
 {% hint style="info" %}
-If **libgl errors** appear when running a GUI \(e.g. rstudio\), add an export:
+If **libgl errors** appear when running a GUI \(e.g. rstudio\), then before running the software, try exporting this environmental variable:
 
 ```text
 [user.name@usd.local@login ~]$ export LIBGL_ALWAYS_INDIRECT=1
