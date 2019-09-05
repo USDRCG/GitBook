@@ -12,45 +12,23 @@ Extract the files, and double click on the installer.
 
 Follow the setup wizard.  To open MobaX, go to the start search bar, and start typing "MobaXterm".
 
-![](../.gitbook/assets/mobax3.png)
+## XQuartz \(for Mac\)
 
-## TigerVNC
-
-To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/tigervnc/stable/tigervnc).  Download the 64-bit version, shown below.
-
-![](../.gitbook/assets/tigervnc-download.png)
-
-Click on the installed file, and follow the download wizard.
-
-### Setting a VNC Password
-
-Log in to Lawrence using MobaX or another terminal.
-
-```text
-[user.name@ ~]$ ssh User.Name@Lawrence.usd.edu
-Warning: Permanently added 'lawrence.usd.edu' (RSA) to the list of known hosts.
-User.Name@Lawrence.usd.edu's password:
-
-Last login: Wed Jan  9 13:14:19 2019 from 192.236.35.187
-Welcome to the Lawrence Supercomputer at the University of South Dakota!
-......​
-
-[user.name@usd.local@login ~]$
-```
-
-A VNC password needs to be set up \(this only needs to be done **once**\).  Make sure you use **vncpasswd**, **not** **vncpassword.**
-
-{% hint style="info" %}
-Note: the password will not show up as you type
+{% hint style="warning" %}
+If using a USD issued computer, you may need administrative permissions.  Please contact the ServiceDesk for assistance if these permissions prevent installation of the software.
 {% endhint %}
 
-```text
-[user.name@usd.local@login ~]$ vncpasswd
-Password:
-Verify:
-```
+To begin, first download the XQuartz installer [here](https://www.xquartz.org/).
 
-It may ask "Would you like to enter a view-only password \(y/n\)?"  The usual response is "n".
+![](../.gitbook/assets/1.download.png)
+
+Go to your downloads and open the installer.
+
+![](../.gitbook/assets/2.5.png)
+
+Run the installer. \(If using a USD computer, an administrative username/password may be needed for this step.\)
+
+![](../.gitbook/assets/3.4.png)
 
 ## Cyberduck
 
@@ -90,7 +68,43 @@ Open a PuTTY window
 
 ![](../.gitbook/assets/screenshot-85.png)
 
-## 
+## TigerVNC
+
+To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/tigervnc/stable/tigervnc).  Download the 64-bit version, shown below.
+
+![](../.gitbook/assets/tigervnc-download.png)
+
+Click on the installed file, and follow the download wizard.
+
+### Setting a VNC Password
+
+Log in to Lawrence using MobaX or another terminal.
+
+```text
+[user.name@ ~]$ ssh User.Name@Lawrence.usd.edu
+Warning: Permanently added 'lawrence.usd.edu' (RSA) to the list of known hosts.
+User.Name@Lawrence.usd.edu's password:
+
+Last login: Wed Jan  9 13:14:19 2019 from 192.236.35.187
+Welcome to the Lawrence Supercomputer at the University of South Dakota!
+......​
+
+[user.name@usd.local@login ~]$
+```
+
+A VNC password needs to be set up \(this only needs to be done **once**\).  Make sure you use **vncpasswd**, **not** **vncpassword.**
+
+{% hint style="info" %}
+Note: the password will not show up as you type
+{% endhint %}
+
+```text
+[user.name@usd.local@login ~]$ vncpasswd
+Password:
+Verify:
+```
+
+It may ask "Would you like to enter a view-only password \(y/n\)?"  The usual response is "n".
 
 
 
