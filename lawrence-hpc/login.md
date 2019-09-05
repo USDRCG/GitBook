@@ -70,11 +70,11 @@ Last login: (date and address here)
 ### Other information.... ###
 ###                       ###
 ###                       ###
-[user.name@usd.local@login ~]$ export LIBGL_ALWAYS_INDIRECT=1
+[user.name@usd.local@login ~]$ 
 ```
 
 {% hint style="info" %}
-If **libgl errors** appear, add an export:
+If **libgl errors** appear when running a GUI \(e.g. rstudio\), add an export:
 
 ```text
 [user.name@usd.local@login ~]$ export LIBGL_ALWAYS_INDIRECT=1
