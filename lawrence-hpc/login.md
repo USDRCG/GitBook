@@ -70,8 +70,16 @@ Last login: (date and address here)
 ### Other information.... ###
 ###                       ###
 ###                       ###
-[user.name@usd.local@login ~]$
+[user.name@usd.local@login ~]$ export LIBGL_ALWAYS_INDIRECT=1
 ```
+
+{% hint style="info" %}
+If **libgl errors** appear, add an export:
+
+```text
+[user.name@usd.local@login ~]$ export LIBGL_ALWAYS_INDIRECT=1
+```
+{% endhint %}
 
 All login goes by default to the login node. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager.
 
