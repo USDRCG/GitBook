@@ -2,9 +2,9 @@
 
 ## Types of Jobs:
 
-Lawrence has two methods of job submission: **interactive** and **batch**. 
+Lawrence has two methods of job submission: **interactive** and **batch**.
 
-**Interactive jobs**: An interactive job, as its name suggests, is the more **user-involved**. Users request a node \(please don't perform computations in the login node\), and then perform computations or analysis by **directly typing commands** into the command line.  Interactive jobs end if the user logs off of Lawrence.
+**Interactive jobs**: An interactive job, as its name suggests, is the more **user-involved**. Users request a node \(please don't perform computations in the login node\), and then perform computations or analysis by **directly typing commands** into the command line. Interactive jobs end if the user logs off of Lawrence.
 
 **Batch jobs:** Batch jobs are designed to run one or more scripts \(python, C, etc.\) on one or more files through a **pre-written script**. These **do not need interaction** with the user once they have been submitted in the terminal \(either started on a node, or put in Lawrence's queue if the desired node is in use\). Batch scripts **continue to run** if the user logs off of Lawrence.
 
@@ -42,7 +42,7 @@ Press Ctrl+D to exit the preemptible partition and return to the login node.
 
 #### High Memory Partition
 
-Jobs that require a large amount of memory \(RAM\) may be run on a high-memory \(himem\) node using the "-p himem" flag.  
+Jobs that require a large amount of memory \(RAM\) may be run on a high-memory \(himem\) node using the "-p himem" flag.
 
 ```text
 [user.name@usd.local@login ~]$ srun --pty -p himem bash
@@ -53,7 +53,7 @@ Press Ctrl+D to exit the high memory partition and return to the login node.
 
 #### Graphics Processing Unit \(GPU\) Partition
 
-To use the graphics processing unit \(GPU\) partition, use the "-p gpu" flag. 
+To use the graphics processing unit \(GPU\) partition, use the "-p gpu" flag.
 
 ```text
 [user.name@usd.local@login ~]$ srun --pty -p gpu bash
@@ -64,7 +64,7 @@ Press Ctrl+D to exit the GPU partition and return to the login node.
 
 #### Visualization Partition
 
-For the visualization \(viz\) partition, use the "-p viz" flag.  
+For the visualization \(viz\) partition, use the "-p viz" flag.
 
 ```text
 [user.name@usd.local@login ~]$ srun --pty -p viz bash
@@ -99,7 +99,7 @@ For interactive jobs on the Lawrence himem nodes, use the srun command as follow
 
 ### GPU
 
-When requesting a new GPU node, the access to a GPU device must be explicitly requested using the "--gres" parameter.  The format for requesting the GPU node is TYPE:LABEL:NUMBER.  On Lawrence, type will always be "gpu", and label will always be "pascal".    
+When requesting a new GPU node, the access to a GPU device must be explicitly requested using the "--gres" parameter. The format for requesting the GPU node is TYPE:LABEL:NUMBER. On Lawrence, type will always be "gpu", and label will always be "pascal".
 
 NUMBER is the number of GPUs being requested. On Lawrence, the GPU has two GPUs, and you can request one or two by specifying “1” or “2”.
 
@@ -124,13 +124,13 @@ Similarly, to launch an interactive job on a GPU node with the srun command, do 
 
 ## Batch Jobs
 
-To make submitting a batch job easier, there are a few templates available for the general nodes, the high memory nodes, and the GPU node.  There is also a template for setting up a parallel job using MPI.  To use a template, copy the template directory into your home directory:
+To make submitting a batch job easier, there are a few templates available for the general nodes, the high memory nodes, and the GPU node. There is also a template for setting up a parallel job using MPI. To use a template, copy the template directory into one of your directories:
 
 ```text
-[user.name@usd.local@login ~]$ cp -r /opt/examples/ $HOME
+[user.name@usd.local@login ~]$ cp -r /opt/examples/ ./
 ```
 
-or
+                                                                           **or**
 
 ```text
 [user.name@usd.local@login ~]$ cp -r /opt/examples/ $HOME/your/directoryPath/here
@@ -140,7 +140,7 @@ Open the desired template with an editor such as nano, and edit the contents as 
 
 #### General Compute
 
-Batch jobs can be submitted on the Lawrence cluster using the sbatch command. 
+Batch jobs can be submitted on the Lawrence cluster using the sbatch command.
 
 ```text
 [user.name@usd.local@login ~]$ sbatch example.sh
@@ -172,7 +172,7 @@ Below is an example batch script which calls the GPU node, this template \(/opt/
 
 ### Python for Graphs/Visual Products \(Elephant example\)
 
-Python scripts can be used to produce visual products on Lawrence.  As an example, we have provided a batch script \(elephant-template.sh\) that calls a python script \(elephant.py\) which produces a .png file containing a graph with a line shaped like an elephant: 
+Python scripts can be used to produce visual products on Lawrence. As an example, we have provided a batch script \(elephant-template.sh\) that calls a python script \(elephant.py\) which produces a .png file containing a graph with a line shaped like an elephant:
 
 ![](../.gitbook/assets/elephant.png)
 
@@ -285,7 +285,7 @@ print("Done")
 
 ### R
 
-R is a commonly used language to make visualizations.  Provided in the /opt/examples/Rscripts folder is an example R script \(exampleScript.R\) and a batch script \(R-batch-tempate.sh\) for running it in batch. \(The file data.csv in the same directory contains the data used.\)
+R is a commonly used language to make visualizations. Provided in the /opt/examples/Rscripts folder is an example R script \(exampleScript.R\) and a batch script \(R-batch-tempate.sh\) for running it in batch. \(The file data.csv in the same directory contains the data used.\)
 
 Batch script \(R-batch-template.sh\)
 
@@ -299,7 +299,7 @@ R script \(exampleScript.R\)
 
 ### MPI
 
-MPI is a software environment used to divide work among multiple processors.  Below is a template script \(mpi-template.sh\) and example MPI program written in the C language \(mpi\_hello\_world.c\). Both can be found in /opt/examples/mpi/.
+MPI is a software environment used to divide work among multiple processors. Below is a template script \(mpi-template.sh\) and example MPI program written in the C language \(mpi\_hello\_world.c\). Both can be found in /opt/examples/mpi/.
 
 ![](../.gitbook/assets/mpi-c-template.png)
 
@@ -307,7 +307,7 @@ MPI is a software environment used to divide work among multiple processors.  Be
 
 ### MPI-python
 
-Some researchers prefer the python programming language, rather than C.  If this is true of you, a python mpi template script is also available.  Before beginning, ensure that you have **Anaconda \(or Bioconda\) installed on your Lawrence login**.  If you don't have one of these, install as below \(it will take a few minutes\).  When the Anaconda installer asks if you would like to add the Anaconda commands to your path, select yes.
+Some researchers prefer the python programming language, rather than C. If this is true of you, a python mpi template script is also available. Before beginning, ensure that you have **Anaconda \(or Bioconda\) installed on your Lawrence login**. If you don't have one of these, install as below \(it will take a few minutes\). When the Anaconda installer asks if you would like to add the Anaconda commands to your path, select yes.
 
 ```text
 [user.name@usd.local@login ~]$ /apps/install-anaconda.sh
@@ -326,7 +326,6 @@ For this change to become active, you have to open a new terminal.
 Thank you for installing Anaconda3!
 
 ===========================================================================
-
 ```
 
 Make sure that no other modules are loaded, and remove them if needed. You can use the "which" command to verify that you are using the python and mpirun commands from Anaconda.
@@ -346,7 +345,7 @@ No Modulefiles Currently Loaded.
 .....
 ```
 
-Below is a template script \(mpi-python-template.sh\) and example MPI program written in the python language \(csvIntoPython.py\).  This python script reads a csv file, and prints the data to a slurm file \(slurm-00000.out\). Both templates can be found in "/opt/examples/mpi/".
+Below is a template script \(mpi-python-template.sh\) and example MPI program written in the python language \(csvIntoPython.py\). This python script reads a csv file, and prints the data to a slurm file \(slurm-00000.out\). Both templates can be found in "/opt/examples/mpi/".
 
 ![](../.gitbook/assets/mpi-py-template6%20%281%29.png)
 
@@ -381,7 +380,7 @@ See below for specific examples:
 
 Then run Firefox
 
-`[user.name@usd.local@login ~]$ srun firefox` 
+`[user.name@usd.local@login ~]$ srun firefox`
 
 The GUI will open:
 
@@ -396,7 +395,7 @@ If this error appears, it's nothing to worry about.
 ### Gaussian example
 
 {% hint style="warning" %}
-Note: you must have a license for Gaussian on Lawrence for this tutorial. 
+Note: you must have a license for Gaussian on Lawrence for this tutorial.
 
 If you have a license, but it is not on Lawrence yet, please contact the Research Computing Group for assistance.
 {% endhint %}
@@ -421,7 +420,7 @@ The GUI will open:
 ### Lumerical example
 
 {% hint style="warning" %}
-Note: you must have a license for Lumerical on Lawrence for this tutorial.  
+Note: you must have a license for Lumerical on Lawrence for this tutorial.
 
 If you have a license, but it is not on Lawrence yet, please contact the Research Computing Group for assistance.
 {% endhint %}
@@ -437,6 +436,4 @@ Currently Loaded Modulefiles:
 ```
 
 ![](../.gitbook/assets/srunlumerical.PNG)
-
-
 
