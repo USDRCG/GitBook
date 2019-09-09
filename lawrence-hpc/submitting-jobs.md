@@ -351,9 +351,25 @@ Below is a template script \(mpi-python-template.sh\) and example MPI program wr
 
 ## Graphical User Interface jobs
 
-{% hint style="info" %}
-If **entering the tutorial** at this point, make sure to **log into Lawrence** before continuing, and start at the login node.
-{% endhint %}
+Log into Lawrence, using a flag for Mac or Linux:
+
+**MobaX** on Windows:
+
+```text
+[User.Name.NI11018] ➤ ssh User.Name@lawrence.usd.edu
+```
+
+**Mac OS**:
+
+```text
+ITSCkMac07:~ user.name$ ssh -Y User.Name@lawrence.usd.edu
+```
+
+**Linux:**
+
+```text
+username@NI8724:~$ ssh -X User.Name@Lawrence.usd.edu
+```
 
 Run a **graphical software** on a node \(such as **Lumerical**, **Gaussian**, or **Firefox**\):
 

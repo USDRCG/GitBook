@@ -47,15 +47,8 @@ It will start with a command prompt \(a line that ends with "$"\).
 
 Next, login to Lawrence via an ssh session through the login node. 
 
-{% hint style="info" %}
-* **USD users:** Lawrence login information will be based on your USD login \(e.g. your password will be the same as for your email account\)
-* **Non-USD users**: receive an email from the ServiceDesk regarding login information and/or password creation after the account is set up.  
-
-For assistance or to ask questions, please contact the ServiceDesk \(servicedesk@usd.edu\).
-{% endhint %}
-
 ```text
-ITSCkMac07:~ adison.kleinsasser$ ssh -Y User.Name@lawrence.usd.edu
+ITSCkMac07:~ user.name$ ssh User.Name@lawrence.usd.edu
 User.Name@lawrence.usd.edu's password:
 ```
 
@@ -87,15 +80,10 @@ All login goes by default to the login node. Do not run compute jobs on the logi
 
 ## Lawrence SSH Login for Linux
 
-{% hint style="info" %}
-* **USD users:** Lawrence login information will be based on your USD login \(e.g. your password will be the same as in your email account\)
-* **Non-USD users**: receive an email from the ServiceDesk regarding login information and/or password creation after the account is set up.  
-{% endhint %}
-
 Open the command terminal, and ssh into Lawrence
 
 ```text
-username@NI8724:~$ ssh -X User.Name@Lawrence.usd.edu
+username@NI8724:~$ ssh User.Name@Lawrence.usd.edu
 User.Name@lawrence.usd.edu's password:
 ```
 
@@ -140,19 +128,12 @@ The command line prompt will appear:
 
 You can then ssh onto the Lawrence cluster \(same command as Linux/Mac\). 
 
-{% hint style="info" %}
-* **USD users:** Lawrence login information will be based on your USD login \(e.g. your password will be the same as in your email account\)
-* **Non-USD users**: receive an email from the ServiceDesk regarding login information and/or password creation after the account is set up.  
-{% endhint %}
-
 As a security feature, three incorrect logins will result in your account being locked until the lockout expires or an administrator overrides it.
 
 ```text
 [2018-11-19 10:55.23]  ~
 [User.Name.NI11018] ➤ ssh User.Name@lawrence.usd.edu
 User.Name@lawrence.usd.edu's password:
-Last login: Mon Dec 25 19:37:34 2017 from ni11018.usd.local
-[user.name@usd.local@login ~]$
 ```
 
 {% hint style="info" %}
@@ -161,60 +142,13 @@ Note: your **password** will **not show up** as you type- it will look like noth
 
 You will be given a prompt to begin typing commands. All logins go to the login node by default. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager.
 
-![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29.png)
-
-### Using the Ubuntu terminal
-
-Ubuntu for Windows is available on the Microsoft store.  To begin, search for the Microsoft Store in the search bar in Windows
-
-![](../.gitbook/assets/ubuntu-1%20%282%29.png)
-
-Search for "ubuntu" in the search bar of the store.
-
-![](../.gitbook/assets/ubuntu1%20%281%29.png)
-
-Select the Ubuntu app.
-
-![](../.gitbook/assets/ubuntu2%20%281%29.png)
-
-Click "Get", then "Install".
-
-![](../.gitbook/assets/ubuntu3.png)
-
-#### Logging in
-
-Open the Ubuntu terminal from Start
-
-![](../.gitbook/assets/ubuntuonstart.png)
-
-### Logging into Lawrence
-
-With Ubuntu for Windows open, ssh into Lawrence.
-
-{% hint style="info" %}
-* **USD users:** Lawrence login information will be based on your USD login \(e.g. your password will be the same as in your email account\)
-* **Non-USD users**: receive an email from the ServiceDesk regarding login information and/or password creation after the account is set up.  
-{% endhint %}
-
-{% hint style="info" %}
-Note: your **password** will **not show up** as you type- it will look like nothing is happening.  It may seem strange, but keep typing, it is picking up the keystrokes.
-{% endhint %}
-
 ```text
-username@NI8724:~$ ssh -X User.Name@Lawrence.usd.edu
-User.Name@lawrence.usd.edu's password:
-```
-
-If it accepts the password, it will show a welcome message and a prompt \(a line that ends with '$'\).
-
-```text
-Last login: Tue Aug 20 16:03:26 2019 from 192.236.54.40
-Welcome to the Lawrence Supercomputer at the University of South Dakota!
+Last login: Mon Dec 25 19:37:34 2017 from ni11018.usd.local
 ### Other information.... ###
 ###                       ###
 ###                       ###
-(base) [user.name@usd.local@login ~]$
+[user.name@usd.local@login ~]$
 ```
 
-![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh.png)
+![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29.png)
 

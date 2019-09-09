@@ -27,6 +27,7 @@
 ## Archived Information <a id="practice"></a>
 
 * [.](practice/about-legacy/README.md)
+  * [Ubuntu- from Login page](practice/about-legacy/ubuntu-from-login-page.md)
   * [VNC](practice/about-legacy/vnc-1.md)
   * [Non-Lawrence Tutorials](practice/about-legacy/non-lawrence-tutorials.md)
   * [WARNING: These are the archives, not current information](practice/about-legacy/warning-these-pages-contain-information-that-is-outdated.md)
