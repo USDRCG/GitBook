@@ -1,8 +1,12 @@
 # Software on Lawrence
 
-The Lawrence HPC uses modules for the use of software applications on the HPC. Modules allow various versions of software to be available, and also allows a way to make new software. This document provides a brief overview of module commands as they pertain to USD's Lawrence HPC.
+The Lawrence HPC uses modules for the use of pre-installed software applications on the HPC. Modules allow various versions of software to be available. This document provides a brief overview of module commands as they pertain to USD's Lawrence HPC.
 
 Once you are logged into Lawrence, the module commands will be available to you. Following is a brief overview of the basic module commands:
+
+{% hint style="info" %}
+Modules are for software that have been installed on Lawrence as a whole.  If you have **installed** software in your **own account** \(e.g. through Anaconda/Bioconda\), it will be ready without being loaded.
+{% endhint %}
 
 | _Command_ | _Description_ |
 | :--- | :--- |

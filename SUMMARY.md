@@ -11,7 +11,6 @@
 * [Transferring Files](lawrence-hpc/transferring-files.md)
 * [Software on Lawrence](lawrence-hpc/modules.md)
 * [Submitting Jobs](lawrence-hpc/submitting-jobs.md)
-* [Legacy-Lawrence Migration](lawrence-hpc/legacy-lawrence-migration-instructions.md)
 * [Programming Environment](lawrence-hpc/programming-environment.md)
 * [Gaussian Tutorial](lawrence-hpc/gaussview-gui.md)
 * [Lumerical \(FDTD\) on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
@@ -27,6 +26,7 @@
 ## Archived Information <a id="practice"></a>
 
 * [.](practice/about-legacy/README.md)
+  * [Legacy-Lawrence Migration](practice/about-legacy/legacy-lawrence-migration-instructions.md)
   * [Ubuntu- from Login page](practice/about-legacy/ubuntu-from-login-page.md)
   * [VNC](practice/about-legacy/vnc-1.md)
   * [Non-Lawrence Tutorials](practice/about-legacy/non-lawrence-tutorials.md)
