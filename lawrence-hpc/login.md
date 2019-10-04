@@ -1,14 +1,14 @@
 # Login
 
 {% hint style="warning" %}
-**Permission** from the HPC administrator is needed to access Lawrence.  This can be requested by contacting the ServiceDesk.
+**Permission** from the HPC administrator is needed to access Lawrence.  Please email the ServiceDesk \(servicedesk@usd.edu\) to request an account, and **CC** the Research Computing Group \(rcg@usd.edu\).
 {% endhint %}
 
 {% hint style="info" %}
 * **USD users:** Lawrence login information will be based on your USD login \(e.g. your password will be the same as for your email account\)
 * **Non-USD users**: receive an email from the ServiceDesk regarding login information and/or password creation after the account is set up.  
 
-For assistance or to ask questions, please contact the ServiceDesk \(servicedesk@usd.edu\).
+For assistance or to ask questions, please contact the ServiceDesk \(servicedesk@usd.edu\).  Make sure to include the job id of your initial account request.
 {% endhint %}
 
 ![](../.gitbook/assets/lawrencediagram2%20%281%29.png)
@@ -20,7 +20,9 @@ The Lawrence Supercomputer: Lawrence is composed of a many nodes. The user logs 
 ### Install XQuartz
 
 {% hint style="warning" %}
-If using a USD issued computer, you may need administrative permissions.  Please contact the ServiceDesk for assistance if these permissions prevent installation of the software.
+If using a **USD issued computer**, you may need **administrative permissions**.  Please contact the ServiceDesk for assistance if these permissions prevent installation of the software.  Make sure to include details like the software name.
+
+**Example:**  "I have recently been provisioned an account on Lawrence, and I am following the tutorial instructions found at the RCG docs site \([https://usdrcg.gitbook.io/docs/lawrence-hpc/login\#lawrence-ssh-login-for-mac](https://usdrcg.gitbook.io/docs/lawrence-hpc/login#lawrence-ssh-login-for-mac)\) to download XQuartz.  My computer is USD issued, and requires administrative permissions to install the software.  Because I don't have this level of access, I would like help in installing this software."
 {% endhint %}
 
 To begin, first download the XQuartz installer [here](https://www.xquartz.org/).
@@ -115,6 +117,12 @@ Utilization of the Lawrence cluster by Windows users requires the use of the Mob
 [https://mobaxterm.mobatek.net/download.html](https://mobaxterm.mobatek.net/download.html)
 
 ![](../.gitbook/assets/screenshot-2-5%20%282%29.png)
+
+{% hint style="warning" %}
+If using a **USD issued computer**, you may need **administrative permissions**.  Please contact the ServiceDesk for assistance if these permissions prevent installation of the software.  Make sure to include details like the software name.
+
+**Example**:  "I have recently been provisioned an account on Lawrence, and I am following the tutorial instructions found at the RCG docs site \([https://usdrcg.gitbook.io/docs/lawrence-hpc/login\#lawrence-ssh-login-for-mac](https://usdrcg.gitbook.io/docs/lawrence-hpc/login#lawrence-ssh-login-for-mac)\) to download XQuartz.  My computer is USD issued, and requires administrative permissions to install the software.  Because I don't have this level of access, I would like help in installing this software."
+{% endhint %}
 
 Once downloaded, open the MobaX terminal.  Click "Start local terminal".
 

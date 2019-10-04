@@ -91,7 +91,7 @@ If it doesn't automatically pop up, try starting fdtd-solutions again.
 [user.name@usd.local@login ~]$ srun fdtd-solutions
 ```
 
- If a license error still comes up, it is possible that you don't have a license.  If that is not the case, please contact the Service desk \(servicedesk@usd.edu\) for assistance.
+ If a license error still comes up, it is possible that you don't have a license.  If that is not the case, please contact the Service desk \(servicedesk@usd.edu\) for assistance.  Be sure to include the name of the software, the fact that you are on Lawrence, and a description of the error in your email.
 
 ### Error -4
 

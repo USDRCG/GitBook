@@ -15,7 +15,9 @@ Follow the setup wizard.  To open MobaX, go to the start search bar, and start t
 ## XQuartz \(for Mac\)
 
 {% hint style="warning" %}
-If using a USD issued computer, you may need administrative permissions.  Please contact the ServiceDesk for assistance if these permissions prevent installation of the software.
+If using a **USD issued computer**, you may need **administrative permissions**.  Please contact the ServiceDesk for assistance if these permissions prevent installation of the software.  Make sure to include details like the software name.
+
+**Example:**  "I am following the tutorial instructions found at the RCG docs site \([https://usdrcg.gitbook.io/docs/non-lawrence-guides/downloads\#xquartz-for-mac](https://usdrcg.gitbook.io/docs/non-lawrence-guides/downloads#xquartz-for-mac)\) to download XQuartz.  My computer is USD issued, and requires administrative permissions to install the software.  Because I don't have this level of access, I would like help in installing this software."
 {% endhint %}
 
 To begin, first download the XQuartz installer [here](https://www.xquartz.org/).
