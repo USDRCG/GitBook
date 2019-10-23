@@ -99,27 +99,58 @@ For interactive jobs on the Lawrence himem nodes, use the srun command as follow
 
 ### GPU
 
-When requesting a new GPU node, the access to a GPU device must be explicitly requested using the "--gres" parameter. The format for requesting the GPU node is TYPE:LABEL:NUMBER. On Lawrence, type will always be "gpu", and label will always be "pascal".
+When requesting a new GPU node, the access to a GPU device must be explicitly requested using the "--gres" parameter. The format for requesting a generic resource \(gres\) is TYPE:LABEL:NUMBER. On Lawrence, type will always be "gpu", and label will be either "pascal" or "volta".
 
-NUMBER is the number of GPUs being requested. On Lawrence, the GPU has two GPUs, and you can request one or two by specifying “1” or “2”.
+NUMBER is the number of GPUs being requested per node. On Lawrence there are six GPU nodes: GPU01, which has two pascal GPUs, and GPU02 through GPU06, which have one volta GPU each. The number of GPUs per node is what this NUMBER is requesting. So for the GPU01 pascal node, "1" or "2" can be used depending on how many GPUs your workflow requires, but for GPU02 through GPU06, "1" is needed.\
 
-An example command to request one GPU would be as follows:
+{% hint style="warning" %}
+If **requesting one pascal GPU**, please request **half the cores** as well. If all the cores are requested in one pascal GPU, the other pascal GPU will be **held idle**.
+{% endhint %}
+
+#### An example command to request one GPU would be as follows:
 
 ```text
-srun --pty -p gpu --gres=gpu:pascal:1 bash
+[user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu:pascal:1 -B 1:12 bash
+[user.name@usd.local@gpu01 ~]$
 ```
 
-To see which GPUs are available use the following command:
+{% hint style="info" %}
+-B 1:12 requests 12 cores \(half of the total 24 cores\).
+{% endhint %}
+
+**or**
+
+```text
+[user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu:volta:1 bash
+[user.name@usd.local@gpu02 ~]$
+```
+
+#### For **more than one** GPU, use:
+
+```text
+[user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu:pascal:2 bash
+[user.name@usd.local@gpu01 ~]$
+```
+
+{% hint style="info" %}
+The number "**2"** indicates two GPUs.
+{% endhint %}
+
+or
+
+```text
+[user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu:volta:1,gpu:volta:1,gpu:volta:1 bash
+[user.name@usd.local@gpu02 ~]$
+```
+
+{% hint style="info" %}
+\(The number of "gpu:volta:1" listed indicated the **number of GPUs** requested.\)
+{% endhint %}
+
+After being allotted a GPU, to list the stats of your allocated GPU\(s\), use:
 
 ```text
 nvidia-smi
-```
-
-Similarly, to launch an interactive job on a GPU node with the srun command, do the following:
-
-```text
-[user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu:pascal:1 bash
-[user.name@usd.local@gpu01 ~]$
 ```
 
 ## Batch Jobs
@@ -143,7 +174,7 @@ Open the desired template with an editor such as nano, and edit the contents as 
 Batch jobs can be submitted on the Lawrence cluster using the sbatch command.
 
 ```text
-[user.name@usd.local@login ~]$ sbatch example.sh
+[user.name@usd.local@login ~]$ sbatch simple-template.sh
 ```
 
 A variety of configurations can be used for formulating a batch script. A basic batch script will look like the one below:

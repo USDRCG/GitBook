@@ -2,6 +2,10 @@
 
 Transferring files onto and off of your Lawrence home directory can be done using several methods available to researchers at USD. This section will cover the movement of files between local systems and the Lawrence HPC.
 
+{% hint style="info" %}
+Note: For **very large files**, please see the CyberDuck section below, and use a desktop or computer with a wired internet connection \(not wifi\) if possible.
+{% endhint %}
+
 ## Drag-and-Drop Option
 
 If you prefer to move files using the drag-and-drop method, it is possible using MobaXterm or Cyberduck. This file moving method uses sftp, or SSH \(or Secure\) File Transfer Protocol. For this we will open up MobaXterm or Cyberduck.
