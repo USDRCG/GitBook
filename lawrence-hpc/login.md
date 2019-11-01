@@ -108,9 +108,9 @@ Welcome to the Lawrence Supercomputer at the University of South Dakota!
 
 ## Lawrence SSH Login for Windows
 
-There are two options given in this tutorial for logging into Lawrence on a Windows machine:  Using MobaXterm, or using the Ubuntu terminal.  For the MobaX tutorial, please continue.  For the tutorial using Ubuntu, please skip ahead to the section "Using the Ubuntu terminal".
+For video instructions on how to download MobaXterm, click [here](https://usd.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%2243cfe1c4-9acf-4571-add7-aad40134cb34%22).
 
-### Using the MobaXterm terminal
+### Downloading MobaXterm \(MobaX\) terminal
 
 Utilization of the Lawrence cluster by Windows users requires the use of the MobaXterm terminal. MobaXterm can be freely downloaded here \(use the Home Installer Edition\):
 

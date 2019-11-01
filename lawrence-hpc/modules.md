@@ -188,7 +188,6 @@ There will be a **.sh** file in your home directory. Run this using bash.
 ```text
 [user.name@usd.local@node10 ~]$ ls
 anaconda3  Miniconda3-latest-Linux-x86_64.sh  perl5
-[user.name@usd.local@node10 ~]$ cd anaconda3/
 [user.name@usd.local@node10 ~]$ bash Miniconda3-latest-Linux-x86_64.sh
 
 Welcome to Miniconda3 4.7.10
