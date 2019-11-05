@@ -75,7 +75,9 @@
       </td>
     </tr>
   </tbody>
-</table>## Command Line Basics \(with examples\)
+</table>![](.gitbook/assets/how-cd-works.png)
+
+## Command Line Basics \(with examples\)
 
 ### Navigating Directories
 
