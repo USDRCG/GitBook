@@ -2,11 +2,13 @@
 
 ## Types of Jobs:
 
-Lawrence has two methods of job submission: **interactive** and **batch**.
+Lawrence has three methods of job submission: **interactive,** **batch, and GUI** \(graphical user interface\).
 
 **Interactive jobs**: An interactive job, as its name suggests, is the more **user-involved**. Users request a node \(please don't perform computations in the login node\), and then perform computations or analysis by **directly typing commands** into the command line. Interactive jobs end if the user logs off of Lawrence.
 
 **Batch jobs:** Batch jobs are designed to run one or more scripts \(python, C, etc.\) on one or more files through a **pre-written script**. These **do not need interaction** with the user once they have been submitted in the terminal \(either started on a node, or put in Lawrence's queue if the desired node is in use\). Batch scripts **continue to run** if the user logs off of Lawrence.
+
+**GUI jobs**: It is possible to open some types of software in a window on Lawrence.  Software such as Firefox, Gaussian, Lumerical, and RStudio can be opened and used in a manner similar to how they would be used on a desktop.  
 
 ## Slurm
 
@@ -209,8 +211,8 @@ Python scripts can be used to produce visual products on Lawrence. As an example
 
 Job script:
 
-{% code-tabs %}
-{% code-tabs-item title="elephant-template.sh" %}
+{% tabs %}
+{% tab title="elephant-template.sh" %}
 ```text
 #!/bin/bash
 
@@ -250,13 +252,13 @@ echo "This is the elephant example"
 
 python elephant.py
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Python script:
 
-{% code-tabs %}
-{% code-tabs-item title="elephant.py" %}
+{% tabs %}
+{% tab title="elephant.py" %}
 ```text
 """
 Author: Piotr A. Zolnierczuk (zolnierczukp at ornl dot gov)
@@ -311,8 +313,8 @@ pylab.savefig('elephant.png')
 #pylab.show()
 print("Done")
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### R
 
