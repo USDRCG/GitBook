@@ -205,14 +205,13 @@ Below is an example batch script which calls the GPU node, this template \(/opt/
 
 ### Python for Graphs/Visual Products \(Elephant example\)
 
-Python scripts can be used to produce visual products on Lawrence. As an example, we have provided a batch script \(elephant-template.sh\) that calls a python script \(elephant.py\) which produces a .png file containing a graph with a line shaped like an elephant:
+Python scripts can be used to produce visual products on Lawrence. As an example, we have provided a batch script \(/opt/examples/elephant/elephant-template.sh\) that calls a python script \(elephant.py\) which produces a .png file containing a graph with a line shaped like an elephant:
 
 ![](../.gitbook/assets/elephant.png)
 
 Job script:
 
-{% tabs %}
-{% tab title="elephant-template.sh" %}
+{% code title="elephant-template.sh" %}
 ```text
 #!/bin/bash
 
@@ -252,13 +251,11 @@ echo "This is the elephant example"
 
 python elephant.py
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Python script:
 
-{% tabs %}
-{% tab title="elephant.py" %}
+{% code title="elephant.py" %}
 ```text
 """
 Author: Piotr A. Zolnierczuk (zolnierczukp at ornl dot gov)
@@ -313,8 +310,7 @@ pylab.savefig('elephant.png')
 #pylab.show()
 print("Done")
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### R
 
@@ -332,7 +328,7 @@ R script \(exampleScript.R\)
 
 ### MPI
 
-MPI is a software environment used to divide work among multiple processors. Below is a template script \(mpi-template.sh\) and example MPI program written in the C language \(mpi\_hello\_world.c\). Both can be found in /opt/examples/mpi/.
+MPI is a software environment used to divide work among multiple processors. Below is a template script \(/opt/examples/mpi/mpi-template.sh\) and example MPI program written in the C language \(mpi\_hello\_world.c\). Both can be found in /opt/examples/mpi/.
 
 ![](../.gitbook/assets/mpi-c-template.png)
 
