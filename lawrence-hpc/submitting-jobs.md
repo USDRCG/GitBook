@@ -378,7 +378,7 @@ Below is a template script \(mpi-python-template.sh\) and example MPI program wr
 
 ![](../.gitbook/assets/mpi-py-template6%20%281%29.png)
 
-## Graphical User Interface jobs
+## Graphical User Interface \(GUI\) jobs
 
 Log into Lawrence, using a flag for Mac or Linux:
 
