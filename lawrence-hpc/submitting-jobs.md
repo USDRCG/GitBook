@@ -400,13 +400,20 @@ ITSCkMac07:~ user.name$ ssh -Y User.Name@lawrence.usd.edu
 username@NI8724:~$ ssh -X User.Name@Lawrence.usd.edu
 ```
 
+Request a node:
+
+```text
+[user.name@usd.local@login ~]$ srun --pty bash
+[user.name@usd.local@node51 ~]$
+```
+
 Run a **graphical software** on a node \(such as **Lumerical**, **Gaussian**, or **Firefox**\):
 
 If the software is part of a module, it will need to be loaded first:
 
 ```text
-[user.name@usd.local@login ~]$ module load module_name 
-[user.name@usd.local@login ~]$ module list
+[user.name@usd.local@node51 ~]$ module load module_name 
+[user.name@usd.local@node51 ~]$ module list
 Currently Loaded Modulefiles:
   1) module_name
 ```
@@ -415,17 +422,20 @@ Currently Loaded Modulefiles:
 Note: if you don't remember the exact name of the necessary module, the command`module avail`will show all the available modules.
 {% endhint %}
 
-Then use srun from the login node:
+Then run the software:
 
-`[user.name@usd.local@login ~]$ srun name_of_software`
+`[user.name@usd.local@node51 ~]$ name_of_software`
 
 See below for specific examples:
 
 ### Firefox example
 
-Then run Firefox
+Run Firefox:
 
-`[user.name@usd.local@login ~]$ srun firefox`
+```text
+[user.name@usd.local@login ~]$ srun --pty bash
+[user.name@usd.local@node51 ~]$ firefox
+```
 
 The GUI will open:
 
@@ -448,15 +458,16 @@ If you have a license, but it is not on Lawrence yet, please contact the Researc
 Load the Gaussian module:
 
 ```text
-[user.name@usd.local@login ~]$ module load gaussian/16 
-[user.name@usd.local@login ~]$ module list
+[user.name@usd.local@login ~]$ srun --pty bash
+[user.name@usd.local@node51 ~]$ module load gaussian/16 
+[user.name@usd.local@node51 ~]$ module list
 Currently Loaded Modulefiles:
   1) gaussian/16
 ```
 
 Launch the Gaussian GUI;
 
-`[user.name@usd.local@login ~]$ srun gview`
+`[user.name@usd.local@node51 ~]$ gview`
 
 The GUI will open:
 
@@ -473,11 +484,12 @@ If you have a license, but it is not on Lawrence yet, please contact the Researc
 Launch the Lumerical GUI
 
 ```text
-[user.name@usd.local@login ~]$ module load lumerical
-[user.name@usd.local@login ~]$ module list
+[user.name@usd.local@login ~]$ srun --pty bash
+[user.name@usd.local@node51 ~]$ module load lumerical
+[user.name@usd.local@node51 ~]$ module list
 Currently Loaded Modulefiles:
   1) lumerical
-[user.name@usd.local@login ~]$ srun fdtd-solutions
+[user.name@usd.local@node51 ~]$ srun fdtd-solutions
 ```
 
 ![](../.gitbook/assets/srunlumerical.PNG)
