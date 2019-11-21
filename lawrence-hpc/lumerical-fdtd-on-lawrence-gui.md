@@ -57,8 +57,8 @@ ssh -Y User.Name@Lawrence.usd.edu
 Load the Lumerical-FDTD module.
 
 ```text
-[user.name@usd.local@login ~]$ module load lumerical
-[user.name@usd.local@login ~]$ module list
+[user.name@usd.local@node44 ~]$ module load lumerical
+[user.name@usd.local@node44 ~]$ module list
 Currently Loaded Modulefiles:
   1) lumerical
 ```
@@ -66,7 +66,7 @@ Currently Loaded Modulefiles:
 Start Lumerical
 
 ```text
-[user.name@usd.local@login ~]$ srun fdtd-solutions
+[user.name@usd.local@node44 ~]$ fdtd-solutions
 ```
 
 {% hint style="info" %}
@@ -88,7 +88,7 @@ Ensure that the server listed is "login".  Change this if needed, and click "ok"
 If it doesn't automatically pop up, try starting fdtd-solutions again. 
 
 ```text
-[user.name@usd.local@login ~]$ srun fdtd-solutions
+[user.name@usd.local@node44 ~]$ fdtd-solutions
 ```
 
  If a license error still comes up, it is possible that you don't have a license.  If that is not the case, please contact the Service desk \(servicedesk@usd.edu\) for assistance.  Be sure to include the name of the software, the fact that you are on Lawrence, and a description of the error in your email.
