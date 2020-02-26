@@ -103,7 +103,7 @@ Note: the cursor will not move as you type- just like when typing the password t
 
 ### Start Tunnel
 
-After running the `bash start-jupyter-notebook.sh`command \(and setting a password if necessary\), an ssh command and a localhost link will appear in the terminal.
+After running the `bash start-jupyter-notebook.sh`command \(and setting a password if necessary\), an ssh command and a localhost link will appear in the terminal \(They aren't click-able\).
 
 ![](../.gitbook/assets/image%20%2829%29.png)
 
@@ -119,7 +119,7 @@ Then hit "Enter".
 
 ![](../.gitbook/assets/image%20%285%29.png)
 
-Back in the **first terminal**, copy the http address:
+Back in the **first terminal**, copy the localhost link:
 
 ![](../.gitbook/assets/image%20%2821%29.png)
 
