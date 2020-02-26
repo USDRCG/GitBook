@@ -25,6 +25,12 @@ user.name@node02 jupyterScripts]$
 
 Run the install script.
 
+{% hint style="info" %}
+Note: If you would like to **add kernels** to your Jupyter Notebook \(e.g. R, widgets, etc.\), use the   **-h** flag to view options:
+
+* user.name@node02 jupyter\]$ **bash install-jupyter-notebook.sh -h**
+{% endhint %}
+
 ```bash
 user.name@node02 jupyterScripts]$ bash install-jupyter-notebook.sh
 Creating new environment now...
@@ -53,80 +59,65 @@ Follow any instructions that pop up.
 
 
 
-### Set your Password
-
-Once Jupyter is installed, you will need to set a password.
-
-
-
-
-
 ## Starting Jupyter
-
-Make sure you are in a node **other than the login node**.  If you are not, request a node:
-
-```bash
-user.name@login ~]$ srun --pty bash
-user.name@node02 ~]$
-```
 
 Navigate to the directory that contains start-jupyter-notebook.sh and run the file using bash
 
-```
-user.name@node02 jupyter]$ bash start-jupyter-notebook.sh
-```
-
-This will print an ssh command to the terminal:
-
-{% code title="...." %}
-```bash
-========================================================
-
-Your Jupyter Notebook is now running
-To Connect:
-1) Mac/Linux/MobaXterm users: run the following command FROM A NEW LOCAL TERMINAL WINDOW (not this one)
-
-ssh -L50002:localhost:50002 adison.kleinsasser@usd.local@lawrence.usd.edu
-
-For other users (PuTTY, etc) create a new SSH session and tunnel port 50002 to localhost:50002
-
-========================================================
-
-Connect to your jupyter notebook with the following links.
-You need to use the password that was set for your jupyter notebook instance.
-  http://localhost:50002/  or
-  http://127.0.0.1:50002/
-
-```
-{% endcode %}
-
 {% hint style="info" %}
-If you are starting Jupyter for the **first time**, you will need to **set a password**. Please see the "Set Your Password" section under "Installing Jupyter"
+Note: to see **options** **for starting Jupyter**, add an **-h** flag to the command:
+
+* user.name@node02 jupyter\]$ **bash install-jupyter-notebook.sh -h**
 {% endhint %}
 
-### Open Jupyter
+```
+user.name@login jupyter]$ bash start-jupyter-notebook.sh
+```
+
+If you have already opened Jupyter before \(and your password is already set\) you may skip to the "Start Tunnel" section.
+
+### Set a Password
+
+If you are starting Jupyter for the first time, it will prompt you to enter a password:
+
+![Enter your desired password](../.gitbook/assets/image%20%2817%29.png)
+
+{% hint style="info" %}
+Note: the cursor will not move as you type- just like when typing the password to log into Lawrence.
+{% endhint %}
+
+![Enter y](../.gitbook/assets/image%20%283%29.png)
+
+### Start Tunnel
+
+After running the `bash start-jupyter-notebook.sh`command \(and setting a password if necessary\), an ssh command and a localhost link will appear in the terminal.
+
+![](../.gitbook/assets/image%20%2826%29.png)
 
 Copy the ssh command from the print-out. \(**Do not use Ctrl-C**, it'll cut off the job\).
 
 ![Don&apos;t use Ctrl-C](../.gitbook/assets/copysshforjupyter.png)
 
-Open a second terminal, and paste the command into it.
+Open a **second terminal**, and paste the command into it.
 
 ![](../.gitbook/assets/make-2nd-tunnel.png)
 
 Then hit "Enter".
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
 
-Back in the first terminal, copy the http address:
+Back in the **first terminal**, copy the http address:
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](../.gitbook/assets/image%20%2819%29.png)
 
 Then open a browser, and paste it in the address bar
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
-Press "Enter", and Jupyter will come up.
+Press "Enter", then enter your password when prompted:
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2822%29.png)
+
+and Jupyter will come up.
+
+![](../.gitbook/assets/image%20%2815%29.png)
 
