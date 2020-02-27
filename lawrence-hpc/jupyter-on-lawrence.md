@@ -122,6 +122,13 @@ Verify password:
 (jupyter) user.name@usd.local@local jupyterScripts]$ 
 ```
 
+Don't forget to deactivate your environment.
+
+```text
+(jupyter) user.name@usd.local@local jupyterScripts]$ conda deactivate
+user.name@usd.local@local jupyterScripts]$
+```
+
 ### Start Tunnel
 
 After running the `bash start-jupyter-notebook.sh`command \(and setting a password if necessary\), an ssh command and a localhost link will appear in the terminal \(They aren't click-able\).
