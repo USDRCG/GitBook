@@ -20,9 +20,9 @@ user.name@node02 jupyterScripts]$
 Copy the installation and starting scripts into your directory.
 
 ```bash
-user.name@node02 jupyterScripts]$ cp /home/jennewein_lab/shared/bill/jupyter/* ./
+user.name@node02 jupyterScripts]$ cp /apps/jupyter-notebook/* ./
 user.name@node02 jupyterScripts]$ ls
-install-jupyter-notebook.sh  start-jupyter-notebook.sh  test-ipyparallel.py
+install-jupyter-notebook.sh  start-jupyter-notebook.sh
 user.name@node02 jupyterScripts]$ 
 ```
 
@@ -91,7 +91,7 @@ If you have already opened Jupyter before \(and your password is already set\) y
 
 ### Set a Password
 
-If you are starting Jupyter for the first time, it will prompt you to enter a password:
+If you are starting Jupyter for the first time, it will prompt you to create a password for your Jupyter Notebook installation. This can be changed or reset at a later time and is not related to your University password.
 
 ![Enter your desired password](../.gitbook/assets/image%20%2818%29.png)
 
@@ -99,7 +99,28 @@ If you are starting Jupyter for the first time, it will prompt you to enter a pa
 Note: the cursor will not move as you type- just like when typing the password to log into Lawrence.
 {% endhint %}
 
-![Enter y](../.gitbook/assets/image%20%283%29.png)
+![Enter your desired password again](../.gitbook/assets/image%20%283%29.png)
+
+### Resetting your Password
+
+If you forget your password and need to reset it:
+
+Open your Jupyter environment.
+
+```text
+user.name@usd.local@local jupyterScripts]$ conda activate jupyter
+(jupyter) user.name@usd.local@local jupyterScripts]$
+```
+
+Then run "jupyter notebook password".  Enter a new password when prompted. \(Remember, the cursor won't move while typing a password.\)
+
+```text
+(jupyter) user.name@usd.local@local jupyterScripts]$ jupyter notebook password
+Enter password:
+Verify password:
+[NotebookPasswordApp] Wrote hashed password to /home/usd.local/adison.kleinsasser/.jupyter/jupyter_notebook_config.json
+(jupyter) user.name@usd.local@local jupyterScripts]$ 
+```
 
 ### Start Tunnel
 
