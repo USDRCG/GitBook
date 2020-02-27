@@ -129,6 +129,12 @@ Don't forget to deactivate your environment.
 user.name@usd.local@local jupyterScripts]$
 ```
 
+{% hint style="info" %}
+_Why do we bother having a password if it's so easy to reset?_
+
+Once the Jupyter server is started, anyone with the localhost link \(e.g. http://localhost:57742/\) can access that Jupyter.  The password protects Jupyter from being accessible by unauthorized people in the browser, not from people accessing it from within your Lawrence account on the command line.
+{% endhint %}
+
 ### Start Tunnel
 
 After running the `bash start-jupyter-notebook.sh`command \(and setting a password if necessary\), an ssh command and a localhost link will appear in the terminal \(They aren't click-able\).
@@ -151,7 +157,7 @@ Back in the **first terminal**, copy the localhost link:
 
 ![](../.gitbook/assets/image%20%2821%29.png)
 
-Then open a browser, and paste it in the address bar
+Then open a browser, and paste it in the address bar \(Note: your link will likely be **different** from the one shown- **don't copy the one in the picture**\).
 
 ![](../.gitbook/assets/image%20%2813%29.png)
 
