@@ -132,7 +132,7 @@ user.name@usd.local@local jupyterScripts]$
 {% hint style="info" %}
 _Why do we bother having a password if it's so easy to reset?_
 
-Once the Jupyter server is started, anyone on Lawrence can access that Jupyter.  The password protects Jupyter from being accessible by unauthorized people in the browser, not from people accessing it from within your Lawrence account on the command line.
+Once the Jupyter server is started, anyone on Lawrence could theoretically access that Jupyter instance if they know the port it is using. The password protects your Jupyter from being accessible by unauthorized people who would have the same read/write access to any files your running jupyter notebook session can access.
 {% endhint %}
 
 ### Start Tunnel
