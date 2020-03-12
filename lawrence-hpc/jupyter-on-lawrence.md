@@ -93,13 +93,13 @@ If you have already opened Jupyter before \(and your password is already set\) y
 
 If you are starting Jupyter for the first time, it will prompt you to create a password for your Jupyter Notebook installation. This can be changed or reset at a later time and is not related to your University password.
 
-![Enter your desired password](../.gitbook/assets/image%20%2831%29.png)
+![Enter your desired password](../.gitbook/assets/image%20%2833%29.png)
 
 {% hint style="info" %}
 Note: the cursor will not move as you type- just like when typing the password to log into Lawrence.
 {% endhint %}
 
-![Enter your desired password again](../.gitbook/assets/image%20%286%29.png)
+![Enter your desired password again](../.gitbook/assets/image%20%287%29.png)
 
 ### Resetting your Password
 
@@ -139,7 +139,7 @@ Once the Jupyter server is started, anyone on Lawrence could theoretically acces
 
 After running the `bash start-jupyter-notebook.sh`command \(and setting a password if necessary\), an ssh command and a localhost link will appear in the terminal \(They aren't click-able\).
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 Copy the ssh command from the print-out. \(**Do not use Ctrl-C**, it'll cut off the job\).
 
@@ -151,37 +151,37 @@ Open a **second terminal**, and paste the command into it.
 
 Then hit "Enter".
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 Back in the **first terminal**, copy the localhost link:
 
-![](../.gitbook/assets/image%20%2836%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 Then open a browser, and paste it in the address bar \(Note: your link will likely be **different** from the one shown- **don't copy the one in the picture**\).
 
-![](../.gitbook/assets/image%20%2823%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
 Press "Enter", then enter your password when prompted:
 
-![](../.gitbook/assets/image%20%2842%29.png)
+![](../.gitbook/assets/image%20%2844%29.png)
 
 and Jupyter will come up.
 
-![](../.gitbook/assets/image%20%2828%29.png)
+![](../.gitbook/assets/image%20%2830%29.png)
 
 ### Quit Jupyter
 
 When you are done with Jupyter, **don't simply close the browser**.  Make sure you **shut down the server** as well.  Click on the "Quit" button in Jupyter:
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2842%29.png)
 
 The first terminal will then look like this:
 
-![](../.gitbook/assets/image%20%2832%29.png)
+![](../.gitbook/assets/image%20%2834%29.png)
 
 Notice that the command prompt has come back.  In the second terminal, use Ctrl-C to bring back the command line.
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 
 
