@@ -1,3 +1,9 @@
+---
+description: >-
+  This page contains information on logging into Globus and linking a Lawrence
+  home directory, and a lab directory to Globus as endpoints.
+---
+
 # Globus
 
 ## Logging in
