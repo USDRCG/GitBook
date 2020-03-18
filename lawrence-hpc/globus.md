@@ -153,3 +153,5 @@ Under the 'Administered by You' tab, look for the name of the personal endpoint.
 
 ![](../.gitbook/assets/image%20%2854%29.png)
 
+
+
