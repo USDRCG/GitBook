@@ -13,7 +13,7 @@
 * [Submitting Jobs](lawrence-hpc/submitting-jobs.md)
 * [Programming Environment](lawrence-hpc/programming-environment.md)
 * [Gaussian Tutorial](lawrence-hpc/gaussview-gui.md)
-* [Lumerical \(FDTD\) on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
+* [Lumerical \(FDTD\) from Lawrence on Windows PC Tutorial](lawrence-hpc/lumerical-fdtd-on-windows-pc.md)
 * [Lumerical \(FDTD\) on Lawrence GUI Tutorial](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
 * [Helpful Hints](lawrence-hpc/helpful-hints.md)
 * [Jupyter on Lawrence](lawrence-hpc/jupyter-on-lawrence.md)

@@ -26,7 +26,7 @@ Click on the installed file, and follow the download wizard.
 
 ## Opening Lumerical on a Lawrence GUI
 
-Open MobaXterm \(MobaX\) and log into Lawrence.
+Open MobaXterm \(MobaX\) \(or the terminal on a Mac\) and log into Lawrence.
 
 ```text
 [User.NI1111] ➤ ssh User.Name@Lawrence.usd.edu

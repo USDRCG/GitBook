@@ -4,7 +4,7 @@ description: >-
   license available for Lawrence.
 ---
 
-# Lumerical \(FDTD\) on Windows PC Tutorial
+# Lumerical \(FDTD\) from Lawrence on Windows PC Tutorial
 
 {% hint style="info" %}
 If you have **done this before** on the computer ****you are **currently using,** and **haven't \(re\)activated** a Lumerical licence on it since, you may **skip to** the section "Open a PuTTY Session to Tunnel Lumerical from Lawrence".  
@@ -18,7 +18,7 @@ Open the "Configure FDTD License" app on your PC
 
 Click on the "Node Locked" tab, then the "Licenses" subtab.  Highlight your license, and select "Deactivate". Note that your license will likely have a **limit** on the number of times you may deactivate and reactivate it.  Click "Yes", then "Ok".
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Note: if this **causes you concern**, you may also use Lumerical on Lawrence directly, **without deactivating** the license on your computer.  See the next page: "Lumerical \(FDTD\) on Lawrence GUI".
 {% endhint %}
 
