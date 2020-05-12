@@ -19,8 +19,8 @@ The hardware specifications for Lawrence vary by node and are as follows:
 
 | Node81-Node84 |  |
 | :--- | :--- |
-| General compute nodes | 4 |
-| CPUs | dual 16-core Cascade lake |
+| General compute nodes                 | 4 |
+| CPUs | dual 16-core Cascade lake 5000 series |
 | RAM | 96 GB |
 | SSD | 240 GB |
 
@@ -51,7 +51,7 @@ The hardware specifications for Lawrence vary by node and are as follows:
 | **Himem01, himem02** | \_\_ |
 | :--- | :--- |
 | Large Memory Node                | 2 |
-| CPUs | dual 14-core SkyLake 5000 series |
+| CPUs | dual 12-core SkyLake 5000 series |
 | RAM | 1.5TB  |
 | SSD | 2x 240GB, mirrored |
 
