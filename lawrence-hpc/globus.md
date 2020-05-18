@@ -5,7 +5,7 @@ description: >-
   an endpoint with another Globus user.
 ---
 
-# Globus
+# .
 
 {% hint style="warning" %}
 Connecting to SDDS Globus \(data on Lawrence\) through Globus is **only available to** **USD users** at this time.

@@ -17,7 +17,9 @@
 * [Lumerical \(FDTD\) on Lawrence GUI Tutorial](lawrence-hpc/lumerical-fdtd-on-lawrence-gui.md)
 * [Helpful Hints](lawrence-hpc/helpful-hints.md)
 * [Jupyter on Lawrence](lawrence-hpc/jupyter-on-lawrence.md)
-* [Globus](lawrence-hpc/globus.md)
+* [Globus Information](lawrence-hpc/globus-information.md)
+* [Globus Tutorials](lawrence-hpc/globus-tutorials.md)
+* [.](lawrence-hpc/globus.md)
 
 ## Non-Lawrence Guides
 
