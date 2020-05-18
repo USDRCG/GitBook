@@ -29,7 +29,9 @@ It should open your Globus account.
 
 ![](../.gitbook/assets/image%20%2838%29.png)
 
-## Making Lawrence \(Home and Lab Directory\) Endpoints
+## Making Lawrence Endpoints
+
+### Part 1
 
 Select '**Endpoints'** from the side menu, then the '**Shared with You'** tab.
 
@@ -62,6 +64,8 @@ user.name@usd.local@login ~]$ cd
 user.name@usd.local@login ~]$ pwd
 /home/usd.local/user.name
 ```
+
+### Part 2
 
 Fill 'Path' with **lawrence/the\_path\_to/your\_home\_directory\_on\_Lawrence** \(previous step: usually something like lawrence/home/usd.local/user.name\). Choose a display name, fill in other details as desired, and click '**Create Collection**'.  
 
