@@ -58,3 +58,47 @@ Note: If another Globus user with whom you have shared access to your endpoint a
 Example: Person A shares an endpoint with person B and person B makes a new file on the shared endpoint: Lawrence will consider the file to be owned by person A.
 {% endhint %}
 
+## Making Lawrence Endpoints
+
+Select '**Endpoints'** from the side menu, then the '**Shared with You'** tab.
+
+![](../.gitbook/assets/image%20%2857%29.png)
+
+Click on '**Search all endpoints**'.
+
+![](../.gitbook/assets/image%20%2851%29.png)
+
+Type in "**sdds**" then click on the '**SDDS - South Dakota Data Store'** option.
+
+![](../.gitbook/assets/image%20%2823%29.png)
+
+Click on the '**Collections**' tab.
+
+![](../.gitbook/assets/image%20%2876%29.png)
+
+Click on '**Add a Collection**'
+
+![](../.gitbook/assets/image%20%2863%29.png)
+
+Click on '**SDDS - South Dakota Data Store \(POSIX\)**'
+
+![](../.gitbook/assets/image%20%2875%29.png)
+
+For the next step, you will need the path to the directory to which you want to connect \(e.g. home directory, lab directory, etc.\): to find this, from within Lawrence, use the **cd** command to navigate to the desired directory, then use **pwd** to print your working directory.
+
+```text
+user.name@usd.local@login ~]$ cd ~
+user.name@usd.local@login ~]$ pwd
+/home/usd.local/user.name
+```
+
+Fill 'Path' with **lawrence/the\_path\_to/your\_directory\_on\_Lawrence .**  Choose a display name, fill in other details as desired, and click '**Create Collection**'.  
+
+![](../.gitbook/assets/image%20%2874%29.png)
+
+After submitting, a confirmation window will appear.  To make another collection to a directory on Lawrence, click on the '**Create another collection from SDDS - South Dakota Data Store**' button.
+
+![](../.gitbook/assets/image%20%2845%29.png)
+
+
+
