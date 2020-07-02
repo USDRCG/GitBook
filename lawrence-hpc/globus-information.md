@@ -60,7 +60,7 @@ Sub-collections limit access to a particular directory and the sub-directories w
 
 John wants to share the 'Carrots' sub-directory, its files and the 'Carrots-Location' directory with a colleague, but not the 'Apples' or 'Bananas' directories.  To do this, he can make a sub-collection for the 'Carrots' directory.
 
-For instructions on making a guest collection or sub-collection, please see the page 'Globus Tutorials'.
+For instructions on making a guest collection or sub-collection, please see the page [Globus Tutorials: Sharing with Other Users](https://usdrcg.gitbook.io/docs/lawrence-hpc/globus-tutorials#sharing-with-other-users).
 
 ## User Groups
 
