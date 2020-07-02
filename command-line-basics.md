@@ -75,7 +75,9 @@
       </td>
     </tr>
   </tbody>
-</table>![](.gitbook/assets/how-cd-works.png)
+</table>
+
+![](.gitbook/assets/how-cd-works.png)
 
 ## Command Line Basics \(with examples\)
 

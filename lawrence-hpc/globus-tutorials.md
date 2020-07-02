@@ -22,7 +22,9 @@ It should open your Globus account.
 
 ## Sharing with Other Users
 
-Select the desired endpoint.
+Sharing an endpoint is a way to give another person access to one's own data, as explained here.
+
+Select the desired .
 
 ![](../.gitbook/assets/image%20%2856%29.png)
 

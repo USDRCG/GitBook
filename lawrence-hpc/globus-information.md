@@ -50,13 +50,21 @@ Common options for collection base paths include:
 * Lab directories \(on Lawrence\)
 * SDDS lab
 
-## Sub-Collections
+## Guest Collections & Sub-Collections
 
+In regard to data on Lawrence, Guest collections allow a user to share data from locations on Lawrence that would normally be inaccessible to other users \(e.g. a home directory, or a lab group directory if the guest is not a member of the lab group\).  Permissions on a guest collection can be set at read only \(the guest can view, but not edit, the data\), or read & write \(the guest can view and edit data\).  
 
+Sub-collections limit access to a particular directory and the sub-directories within it.  For example: John Smith has a home directory that contains three sub-directories: 'Apples', 'Bananas', and 'Carrots'.  Within the 'Carrots' sub-directory are files and a directory named 'Carrots-Location'.  
+
+![](../.gitbook/assets/sub-collection-example-diagram.png)
+
+John wants to share the 'Carrots' sub-directory, its files and the 'Carrots-Location' directory with a colleague, but not the 'Apples' or 'Bananas' directories.  To do this, he can make a sub-collection for the 'Carrots' directory.
+
+For instructions on making a guest collection or sub-collection, please see the page 'Globus Tutorials'.
 
 ## User Groups
 
 
 
-## Sharing
+
 
