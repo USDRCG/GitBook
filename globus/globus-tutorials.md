@@ -78,28 +78,6 @@ Choose a name for the endpoint.  Also note the "high assurance endpoint" option.
 If a high assurance endpoint is needed, other aspects of the data storage \(such as storage on Lawrence\) may not be equipped with the necessary security measures.  Please contact RCG at rcg@usd.edu for assistance.
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2816%29.png)
-
-Copy the setup key that is generated.
-
-![](../.gitbook/assets/image%20%2870%29.png)
-
-Select the Globus Connect download that matches the computer's operating system.
-
-![](../.gitbook/assets/image%20%282%29.png)
-
-Download and run the install wizard. When the 'Set up Endpoint' box comes up, **paste** the setup key into the corresponding text area.
-
-![](../.gitbook/assets/image%20%2849%29.png)
-
-You may be asked about modifying access to your documents.
-
-![](../.gitbook/assets/image%20%2837%29.png)
-
-Under the 'Administered by You' tab, look for the name of the personal endpoint.
-
-![](../.gitbook/assets/image%20%2854%29.png)
-
 
 
 ## Sharing with Other Users
