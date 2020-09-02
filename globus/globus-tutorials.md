@@ -72,11 +72,31 @@ If the prompt comes up, download the Globus Connect Personal Software.
 
 ![](../.gitbook/assets/image%20%2887%29.png)
 
-Choose a name for the endpoint.  Also note the "high assurance endpoint" option. Then click on '**Generate Setup Key'.**
+A new window for the setup should appear. Click "Log in".
+
+![](../.gitbook/assets/image%20%2895%29.png)
+
+Find your organization in the drop-down menu \(For USD users, this will be 'University of South Dakota'\).
+
+![](../.gitbook/assets/image%20%2894%29.png)
+
+Once you have logged into your organization's login, provide a label for the endpoint and click 'Allow'.
+
+![](../.gitbook/assets/image%20%2891%29.png)
+
+![](../.gitbook/assets/screenshot-79-.png)
+
+Go to the window attached to the globus icon on your taskbar.  In this window, verify your identity \(possibly an email address\), enter the collection name \(endpoint\), and enter details if desired.  Also note the "high assurance endpoint" option. Then click on 'Save'.
 
 {% hint style="warning" %}
 If a high assurance endpoint is needed, other aspects of the data storage \(such as storage on Lawrence\) may not be equipped with the necessary security measures.  Please contact RCG at rcg@usd.edu for assistance.
 {% endhint %}
+
+![](../.gitbook/assets/image%20%2892%29.png)
+
+
+
+![](../.gitbook/assets/image%20%2893%29.png)
 
 
 
