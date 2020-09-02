@@ -64,7 +64,9 @@ For instructions on making a guest collection or sub-collection, please see the 
 
 ## Personal Endpoints
 
-A personal endpoint connects Globus to a personal computer.  Making a personal endpoint allows the user to access files and directories on the personal computer from Globus, and to transfer data from a personal computer to Lawrence, and vice versa, through Globus.  This will likely be linked to your "My Documents" directory.
+A personal endpoint connects Globus to a personal computer.  Making a personal endpoint allows the user to access files and directories on the personal computer from Globus, and to transfer data from a personal computer to Lawrence, and vice versa, through Globus.  This will likely be linked to your "My Documents" directory.  
+
+To make a personal endpoint, see the Globus documentation, or our [tutorial](https://usdrcg.gitbook.io/docs/globus/globus-tutorials#making-a-personal-endpoint).
 
 ## User Groups
 

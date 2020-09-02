@@ -94,7 +94,7 @@ If a high assurance endpoint is needed, other aspects of the data storage \(such
 
 ![](../.gitbook/assets/image%20%2892%29.png)
 
-
+A message about the success of the setup should appear.
 
 ![](../.gitbook/assets/image%20%2893%29.png)
 
