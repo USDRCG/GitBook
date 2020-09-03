@@ -102,6 +102,14 @@ A message about the success of the setup should appear.
 
 ## Making a Group
 
+In the 'Groups' tab, click on 'Create new group'
+
+![](../.gitbook/assets/image%20%2896%29.png)
+
+Add a group name, description if desired, choose the administrator for the group, and whether the group will be viewable by anyone on Globus, or by those in the group.  Then click 'Create Group'.
+
+
+
 
 
 ## Sharing with Other Users \(Individual or Group\)
@@ -142,7 +150,7 @@ For this reason, we recommend making a directory called '**globus**', within the
 
 This should now show up under the '**Permissions**' tab.
 
-![](../.gitbook/assets/image%20%2897%29.png)
+![](../.gitbook/assets/image%20%2898%29.png)
 
 {% hint style="info" %}
 Note: If another Globus user with whom you have shared access to your endpoint adds or makes a change to a file, **that action will be considered as if it was done by you**.  
@@ -156,7 +164,7 @@ Fill in the **path to the directory** \(Note: `/` starts at the endpoint's locat
 
 Select 'group'.  The window will change to a search window.  Select the desired group, then \(back on the first page\) choose whether to give the group write permissions and click "Add Permissions".
 
-![](../.gitbook/assets/image%20%2898%29.png)
+![](../.gitbook/assets/image%20%2899%29.png)
 
 {% hint style="warning" %}
 Note: Keep in mind that **all** the **directories/files** **within the shared directory** will be **accessible** to the **people** it is **shared with** \(be cautious of sharing the path as is, _that is_, leaving it at root: `/` .  
@@ -166,7 +174,7 @@ For this reason, we recommend making a directory called '**globus**', within the
 
 This should now show up under the '**Permissions**' tab.
 
-![](../.gitbook/assets/image%20%2896%29.png)
+![](../.gitbook/assets/image%20%2897%29.png)
 
 {% hint style="info" %}
 Note: If another Globus user with whom you have shared access to your endpoint adds or makes a change to a file, **that action will be considered as if it was done by you**.  
