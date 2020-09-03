@@ -100,7 +100,11 @@ A message about the success of the setup should appear.
 
 
 
-## Sharing with Other Users
+## Making a Group
+
+
+
+## Sharing with Other Users \(Individual or Group\)
 
 Sharing an endpoint is a way to give another person access to one's own data, as explained in [Globus Information: Guest Collections & Sub-Collections](https://usdrcg.gitbook.io/docs/lawrence-hpc/globus-information#guest-collections-and-sub-collections).  
 

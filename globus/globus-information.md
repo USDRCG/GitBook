@@ -74,6 +74,10 @@ Groups allow an endpoint to be shared with the members of a collaboration/lab/et
 
 Groups, therefore, are helpful in controlling access to an endpoint when there is high turnover in the collaboration of people who are using it.
 
+For help making a group, please see the tutorial "Making a Group".
+
+For help giving a group access to an endpoint, please see the tutorial "Sharing with Other Users".
+
 
 
 
