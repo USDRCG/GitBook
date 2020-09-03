@@ -12,7 +12,7 @@ Connecting to SDDS Globus \(data on Lawrence\) through Globus is **only availabl
 
 ### Meta Information
 
-
+A collection consists of an endpoint which is connected to a directory on another system \(Lawrence, a personal computer, etc.\) and which is accessible through Globus.  Think of it
 
 ### Choosing a Base Path
 
@@ -69,6 +69,10 @@ A personal endpoint connects Globus to a personal computer.  Making a personal e
 To make a personal endpoint, see the Globus documentation, or our [tutorial](https://usdrcg.gitbook.io/docs/globus/globus-tutorials#making-a-personal-endpoint).
 
 ## User Groups
+
+Groups allow an endpoint to be shared with the members of a collaboration/lab/etc., all at once, rather than sending invitations individually.  When sharing with a group, access to the endpoint is dependent on membership to the group; if a member leaves the group, their access to the endpoint is forfeited.  
+
+Groups, therefore, are helpful in controlling access to an endpoint when there is high turnover in the collaboration of people who are using it.
 
 
 

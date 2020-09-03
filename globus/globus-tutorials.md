@@ -18,7 +18,7 @@ It should open your Globus account.
 
 ![](../.gitbook/assets/image%20%2838%29.png)
 
-## Making Lawrence Endpoints
+## Making a Lawrence Endpoint
 
 Select '**Endpoints'** from the side menu, then the '**Shared with You'** tab.
 
@@ -116,25 +116,53 @@ Click on the '**Add Permissions - Share With**' button.
 
 ![](../.gitbook/assets/image%20%2821%29.png)
 
-Fill in the **path to the directory** \(Note: `/` starts at the endpoint's location, so the path `/Carrots` \(as per the [example](https://usdrcg.gitbook.io/docs/lawrence-hpc/globus-information#guest-collections-and-sub-collections)\) in permissions for an endpoint that connects to the home directory `lawrence/home/usd.local/user.name` will connect to `lawrence/home/usd.local/user.name/Carrots` overall\).  Ensure **'user' is selected**, and **enter the email address** of the user who is to be given permissions.  Make sure this email address is connected to the user's Globus account.  Then click '**Add**'.
+{% hint style="info" %}
+The next step is separated into two paths based on whether the endpoint needs to be shared with a user or with a group.  Please choose the section accordingly.  
+{% endhint %}
+
+### If sharing with an individual user:
+
+Fill in the **path to the directory** \(Note: `/` starts at the endpoint's location, so the path `/Carrots` \(as per the [example](https://usdrcg.gitbook.io/docs/lawrence-hpc/globus-information#guest-collections-and-sub-collections)\) in permissions for an endpoint that connects to the home directory `lawrence/home/usd.local/user.name` will connect to `lawrence/home/usd.local/user.name/Carrots` overall\). 
+
+Ensure **'user' is selected**, and **enter the email address** of the user who is to be given permissions.  Make sure this email address is connected to the user's Globus account.  Then click '**Add**'.
 
 ![](../.gitbook/assets/image%20%2880%29.png)
 
+Write a message if desired, choose **whether to give the recipient write access**, and click '**Add Permission**'.
+
 {% hint style="warning" %}
 Note: Keep in mind that **all** the **directories/files** **within the shared directory** will be **accessible** to the **people** it is **shared with** \(be cautious of sharing the path as is, _that is_, leaving it at root: `/` .  
+
+For this reason, we recommend making a directory called '**globus**', within the home/lab directory \(this must be done on Lawrence\), organizing files/directories to be shared within that directory, rather than sharing the entire home/lab directory, and then sharing the 'globus' directory. **\(Replace 'Carrots'** in this example **with 'globus'**.\)
 {% endhint %}
+
+This should now show up under the '**Permissions**' tab.
+
+![](../.gitbook/assets/image%20%2897%29.png)
 
 {% hint style="info" %}
-We recommend making a directory called '**globus**', within the home/lab directory \(this must be done on Lawrence\), organizing files/directories to be shared within that directory, rather than sharing the entire home/lab directory, and then sharing the 'globus' directory. **\(Replace 'Carrots'** in this example **with 'globus'**.\)
+Note: If another Globus user with whom you have shared access to your endpoint adds or makes a change to a file, **that action will be considered as if it was done by you**.  
+
+Example: Person A shares an endpoint with person B and person B makes a new file on the shared endpoint: Lawrence will consider the file to be owned by person A.
 {% endhint %}
 
-Write a message if desired, choose whether to give the recipient write access, and click '**Add Permission**'.
+### If sharing with a group:
 
-![](../.gitbook/assets/image%20%2881%29.png)
+Fill in the **path to the directory** \(Note: `/` starts at the endpoint's location, so the path `/Carrots` \(as per the [example](https://usdrcg.gitbook.io/docs/lawrence-hpc/globus-information#guest-collections-and-sub-collections)\) in permissions for an endpoint that connects to the home directory `lawrence/home/usd.local/user.name` will connect to `lawrence/home/usd.local/user.name/Carrots` overall\). 
 
-This should now show up under the '**Sharing**' tab.
+Select 'group'.  The window will change to a search window.  Select the desired group, then \(back on the first page\) choose whether to give the group write permissions and click "Add Permissions".
 
-![](../.gitbook/assets/image%20%2878%29.png)
+![](../.gitbook/assets/image%20%2898%29.png)
+
+{% hint style="warning" %}
+Note: Keep in mind that **all** the **directories/files** **within the shared directory** will be **accessible** to the **people** it is **shared with** \(be cautious of sharing the path as is, _that is_, leaving it at root: `/` .  
+
+For this reason, we recommend making a directory called '**globus**', within the home/lab directory \(this must be done on Lawrence\), organizing files/directories to be shared within that directory, rather than sharing the entire home/lab directory, and then sharing the 'globus' directory. **\(Replace 'Carrots'** in this example **with 'globus'**.\)
+{% endhint %}
+
+This should now show up under the '**Permissions**' tab.
+
+![](../.gitbook/assets/image%20%2896%29.png)
 
 {% hint style="info" %}
 Note: If another Globus user with whom you have shared access to your endpoint adds or makes a change to a file, **that action will be considered as if it was done by you**.  
