@@ -116,7 +116,7 @@ The group overview will appear once the group is created.
 
 ## Sharing with Other Users \(Individual or Group\)
 
-Sharing an endpoint is a way to give another person access to one's own data, as explained in [Globus Information: Guest Collections & Sub-Collections](https://usdrcg.gitbook.io/docs/lawrence-hpc/globus-information#guest-collections-and-sub-collections).  
+Sharing an endpoint is a way to give another person access to one's own data, as explained in [Globus Information: Guest Collections & Sub-Collections](https://usdrcg.gitbook.io/docs/globus/globus-information#guest-collections-and-sub-collections).  
 
 First, select the endpoint that is **connected to the data to be shared** \(even if not all the data to which the endpoint is connected will be shared; this can be restricted in another step\).
 
