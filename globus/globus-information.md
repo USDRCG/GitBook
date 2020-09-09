@@ -76,7 +76,7 @@ Groups, therefore, are helpful in controlling access to an endpoint when there i
 
 For help making a group, please see the tutorial "[Making a Group](https://usdrcg.gitbook.io/docs/globus/globus-tutorials#making-a-group)".
 
-For help giving a group access to an endpoint, please see the tutorial "[Sharing with Other Users](https://usdrcg.gitbook.io/docs/globus/globus-tutorials#sharing-with-other-users)".
+For help giving a group access to an endpoint, please see the tutorial "[Sharing with Other Users](https://usdrcg.gitbook.io/docs/globus/globus-tutorials#sharing-with-other-users-individual-or-group)".
 
 
 
