@@ -12,7 +12,9 @@ Connecting to SDDS Globus \(data on Lawrence\) through Globus is **only availabl
 
 ### Meta Information
 
-A collection consists of an endpoint which is connected to a directory on another system \(Lawrence, a personal computer, etc.\) and which is accessible through Globus.  Think of it
+A collection consists of an endpoint which is connected to a directory on another system \(Lawrence, a personal computer, etc.\) and which is accessible through Globus.  Think of it as a window, and the place on the system to which the endpoint is connected is a room.  The endpoint \(window\) provides access through the internet to the part of the system or computer \(room\) it is attached to.
+
+For more information, please see the [Globus documentation](https://docs.globus.org/how-to/).
 
 ### Choosing a Base Path
 
