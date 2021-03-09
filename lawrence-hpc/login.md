@@ -99,7 +99,7 @@ If **libgl errors** appear when running a GUI \(e.g. rstudio\), then before runn
 ```
 {% endhint %}
 
-All login goes by default to the login node. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager.
+All logins go to the login node by default. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager. See the picture below for a graphical representation of how the login nodes relate to the rest of Lawrence.
 
 ![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29%20%281%29%20%281%29.png)
 
@@ -148,6 +148,8 @@ Welcome to the Lawrence Supercomputer at the University of South Dakota!
 ###                       ###
 (base) [user.name@usd.local@login ~]$
 ```
+
+All logins go to the login node by default. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager. See the picture below for a graphical representation of how the login nodes relate to the rest of Lawrence.
 
 ![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29.png)
 
@@ -225,6 +227,8 @@ Last login: Mon Dec 25 19:37:34 2017 from ni11018.usd.local
 ###                       ###
 [user.name@usd.local@login ~]$
 ```
+
+All logins go to the login node by default. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager. See the picture below for a graphical representation of how the login nodes relate to the rest of Lawrence.
 
 ![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29%20%281%29.png)
 
