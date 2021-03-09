@@ -20,7 +20,7 @@ If you have **done this before** on the computer ****you are **currently using,*
 
 Go to the MobaXterm website [here](https://mobaxterm.mobatek.net/download-home-edition.html). Click on the "MobaXterm Home Edition v11.1 \(Home Installer Edition\)" button.
 
-![](../.gitbook/assets/screenshot-2-5%20%283%29.png)
+![](../.gitbook/assets/screenshot-2-5%20%283%29%20%282%29.png)
 
 Click on the installed file, and follow the download wizard.
 

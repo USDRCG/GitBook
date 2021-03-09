@@ -332,7 +332,7 @@ R script \(exampleScript.R\)
 
 MPI is a software environment used to divide work among multiple processors. Below is a template script \(/opt/examples/mpi/mpi-template.sh\) and example MPI program written in the C language \(mpi\_hello\_world.c\). Both can be found in /opt/examples/mpi/.
 
-![](../.gitbook/assets/mpi-c-template%20%282%29.png)
+![](../.gitbook/assets/mpi-c-template%20%282%29%20%281%29.png)
 
 ![](../.gitbook/assets/mpi-c-template4b.png)
 

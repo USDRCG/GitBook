@@ -77,7 +77,7 @@
   </tbody>
 </table>
 
-![](.gitbook/assets/screenshot-160%20%281%29%20%281%29.png)
+![](.gitbook/assets/screenshot-160%20%281%29%20%282%29%20%281%29.png)
 
 ## Command Line Basics \(with examples\)
 
