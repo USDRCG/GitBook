@@ -47,18 +47,40 @@ It will start with a command prompt \(a line that ends with "$"\).
 
 ![](../.gitbook/assets/5.1a.png)
 
-Next, login to Lawrence via an ssh session through the login node. 
+Next, login to Lawrence via an ssh session through the login node.  The output you see will be different depending on how your Duo account is setup.  First is if your account uses 'Push Notification' for your Duo secondary authentication.
 
 ```text
 ITSCkMac07:~ user.name$ ssh User.Name@lawrence.usd.edu
-User.Name@lawrence.usd.edu's password:
+Keyboard-interactive authentication prompts from server:
+| Password:
+| Duo two-factor login for user.name@usd.edu
+|
+| Enter a passcode or select one of the following options:
+|
+|  1. Duo Push to XXX-XXX-####
+|
+| Passcode or option (1-1): 1
+| Success. Logging you in...
+End of keyboard-interactive prompts from server
+```
+
+If you use a Token, your login will look more like this
+
+```text
+ITSCkMac07:~ user.name$ ssh User.Name@lawrence.usd.edu
+Password: 
+Duo two-factor login for user.name@usd.edu
+
+Enter a passcode or select one of the following options:
+
+Passcode: ######
 ```
 
 {% hint style="info" %}
-Note: your **password** will **not show up** as you type- it will look like nothing is happening.  It may seem strange, but keep typing, it is picking up the keystrokes.
+Note: your **password** will **not show up** as you type and it may look like nothing is happening.  It may seem strange, but keep typing, the remote system is still picking up your keystrokes and when you hit enter your password will be checked. However, the **passcode** you type in from your Duo token **will show up** as you type, this is normal.
 {% endhint %}
 
-If it accepts the password, it will show a welcome message and a prompt \(a line that ends with '$'\).
+If it accepts the password and your second Duo authentication method, it will show a welcome message and a prompt \(a line that ends with '$'\).
 
 ```text
 Last login: (date and address here)
@@ -78,15 +100,37 @@ If **libgl errors** appear when running a GUI \(e.g. rstudio\), then before runn
 
 All login goes by default to the login node. Do not run compute jobs on the login node! Please read further instructions on how to use Slurm, the Lawrence cluster workload manager.
 
-![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29.png)
+![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29%20%281%29.png)
 
 ## Lawrence SSH Login for Linux
 
-Open the command terminal, and ssh into Lawrence
+Open the command terminal, and ssh into Lawrence.  The output you see will be different depending on how your Duo account is setup.  First is if your account uses 'Push Notification' for your Duo secondary authentication.
 
 ```text
 username@NI8724:~$ ssh User.Name@Lawrence.usd.edu
-User.Name@lawrence.usd.edu's password:
+Keyboard-interactive authentication prompts from server:
+| Password:
+| Duo two-factor login for user.name@usd.edu
+|
+| Enter a passcode or select one of the following options:
+|
+|  1. Duo Push to XXX-XXX-####
+|
+| Passcode or option (1-1): 1
+| Success. Logging you in...
+End of keyboard-interactive prompts from server
+```
+
+If you use a Token for your Duo secondary authentication, your login will look more like this
+
+```text
+username@NI8724:~$ ssh User.Name@Lawrence.usd.edu
+Password: 
+Duo two-factor login for user.name@usd.edu
+
+Enter a passcode or select one of the following options:
+
+Passcode: ######
 ```
 
 {% hint style="info" %}
@@ -104,7 +148,7 @@ Welcome to the Lawrence Supercomputer at the University of South Dakota!
 (base) [user.name@usd.local@login ~]$
 ```
 
-![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh.png)
+![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29.png)
 
 ## Lawrence SSH Login for Windows
 
@@ -116,7 +160,7 @@ Utilization of the Lawrence cluster by Windows users requires the use of the Mob
 
 [https://mobaxterm.mobatek.net/download.html](https://mobaxterm.mobatek.net/download.html)
 
-![](../.gitbook/assets/screenshot-2-5%20%282%29.png)
+![](../.gitbook/assets/screenshot-2-5%20%283%29%20%281%29.png)
 
 {% hint style="warning" %}
 If using a **USD issued computer**, you may need **administrative permissions**.  Please contact the ServiceDesk for assistance if these permissions prevent installation of the software.  Make sure to include details like the software name.
@@ -158,5 +202,5 @@ Last login: Mon Dec 25 19:37:34 2017 from ni11018.usd.local
 [user.name@usd.local@login ~]$
 ```
 
-![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29.png)
+![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29%20%281%29.png)
 

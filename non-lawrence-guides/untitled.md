@@ -20,7 +20,7 @@ Select your organization \(e.g. University of South Dakota\) from the drop-down 
 
 Use your username and password to log in to USD’s CAS log in screen.
 
-![](../.gitbook/assets/dtn3%20%281%29.png)
+![](../.gitbook/assets/dtn3%20%281%29%20%281%29.png)
 
 If this is your first time logging in, Globus may ask for permissions.
 
@@ -88,7 +88,7 @@ Click on the group name.
 
 Click on "invite Others".
 
-![](../.gitbook/assets/globusgroup9.png)
+![](../.gitbook/assets/globusgroup9%20%281%29.png)
 
 Type in the name of the group member to add and select from the dropdown menu.
 
