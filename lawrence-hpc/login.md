@@ -134,7 +134,7 @@ Passcode: ######
 ```
 
 {% hint style="info" %}
-Note: your password won't show up while being typed.
+Note: your **password** will **not show up** as you type and it may look like nothing is happening.  It may seem strange, but keep typing, the remote system is still picking up your keystrokes and when you hit enter your password will be checked. However, the **passcode** you type in from your Duo token **will show up** as you type, this is normal.
 {% endhint %}
 
 If it accepts the password, it will show a welcome message and a prompt.
