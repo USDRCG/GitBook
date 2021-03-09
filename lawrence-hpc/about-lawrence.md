@@ -17,7 +17,7 @@ The hardware specifications for Lawrence vary by node and are as follows:
 | RAM | 96 GB  |
 | SSD | 240 GB |
 
-| Node81-Node84 |  |
+| **Node81-Node85** |  |
 | :--- | :--- |
 | General compute nodes                 | 4 |
 | CPUs | dual 16-core Cascade lake 5000 series |
@@ -48,28 +48,35 @@ The hardware specifications for Lawrence vary by node and are as follows:
 | SSD | 240GB |
 | Graphics Adapter                     | Nvidia GTX 1080i 11GB |
 
-| **Himem01, himem02** | \_\_ |
+| **Himem01, Himem02** | \_\_ |
 | :--- | :--- |
 | Large Memory Node                | 2 |
 | CPUs | dual 12-core SkyLake 5000 series |
 | RAM | 1.5TB  |
 | SSD | 2x 240GB, mirrored |
 
-| **Login** |  |
+| **Login01** |  |
+| :--- | :--- |
+| Login Node                                | 1 |
+| CPUs | dual 16-core SkyLake 5000 series |
+| RAM | 96GB |
+| SSD | 2x 240GB, mirrored |
+
+| **Login02** |  |
 | :--- | :--- |
 | Login Node                                | 1 |
 | CPUs | dual 12-core SkyLake 5000 series |
 | RAM | 96GB |
 | SSD | 2x 240GB, mirrored |
 
-| Head |  |
+| **Head** |  |
 | :--- | :--- |
 | Management node                     | 1 |
 | CPUs | Dual 12-core SkyLake 5000 series |
 | RAM | 96GB |
 | SSD | 2x 240GB, mirrored |
 
-| Zfs01, Zfs02 |   |
+| **Zfs01, Zfs02** |   |
 | :--- | :--- |
 | Storage nodes | 2x ZFS, 432TB Raw total |
 | Storage configuration | RAIDZ2 across the 2x 216TB                                    |
