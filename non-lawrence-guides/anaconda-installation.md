@@ -44,7 +44,7 @@ Select "Anaconda Navigator".
 
 Ubuntu for Windows can be downloaded from the Microsoft store.  
 
-![](../.gitbook/assets/ubuntu-1%20%284%29%20%284%29%20%281%29.png)
+![](../.gitbook/assets/ubuntu-1%20%284%29%20%284%29%20%284%29%20%281%29.png)
 
 Search for "ubuntu".
 
@@ -52,11 +52,11 @@ Search for "ubuntu".
 
 Select the app.
 
-![](../.gitbook/assets/ubuntu2%20%281%29%20%281%29.png)
+![](../.gitbook/assets/ubuntu2%20%281%29%20%281%29%20%281%29.png)
 
 Click "**Get**", then "**Install**".
 
-![](../.gitbook/assets/ubuntu3%20%282%29%20%282%29%20%282%29.png)
+![](../.gitbook/assets/ubuntu3%20%282%29%20%282%29%20%282%29%20%282%29.png)
 
 ![](../.gitbook/assets/ubuntu4.png)
 
