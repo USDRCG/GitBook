@@ -48,7 +48,7 @@ It will start with a command prompt \(a line that ends with "$"\).
 
 ![](../.gitbook/assets/5.1a.png)
 
-Next, login to Lawrence via an ssh session through the login node. The output you see will be different depending on how your Duo account is setup. This first example is if your account uses 'Push Notification' for your Duo secondary authentication.
+Next, login to Lawrence via an ssh session through the login node. The output you see will be different depending on how your Duo account is setup and if you use SSH Keys. Using SSH Keys will bypass the password and Duo requirements while continuing to use a password will require a second authentication through Duo. This first example is if your account uses 'Push Notification' for your Duo secondary authentication.
 
 ```text
 ITSCkMac07:~ user.name$ ssh User.Name@lawrence.usd.edu
@@ -79,6 +79,7 @@ Passcode: ######
 
 {% hint style="info" %}
 Note: your **password** will **not show up** as you type and it may look like nothing is happening. It may seem strange, but keep typing, the remote system is still picking up your keystrokes and when you hit enter your password will be checked. However, the **passcode** you type in from your Duo token **will show up** as you type, this is normal.
+If you mistype your password, the system won't check to see you mistyped it until you complete your Duo authentication at which point it will say `Success. Logging you in...` but then ask you for your password again. Make sure to correctly type your password this time, and complete the Duo authentication again to log in.
 {% endhint %}
 
 If it accepts the password and your second Duo authentication method, it will show a welcome message and a prompt \(a line that ends with '$'\).
@@ -105,7 +106,7 @@ All logins go to the login node by default. Do not run compute jobs on the login
 
 ## Lawrence SSH Login for Linux
 
-Open the command terminal, and ssh into Lawrence. The output you see will be different depending on how your Duo account is setup. This first example is if your account uses 'Push Notification' for your Duo secondary authentication.
+Open the command terminal, and ssh into Lawrence. The output you see will be different depending on how your Duo account is setup and if you use SSH Keys. Using SSH Keys will bypass the password and Duo requirements while continuing to use a password will require a second authentication through Duo. This first example is if your account uses 'Push Notification' for your Duo secondary authentication.
 
 ```text
 username@NI8724:~$ ssh User.Name@Lawrence.usd.edu
@@ -136,6 +137,7 @@ Passcode: ######
 
 {% hint style="info" %}
 Note: your **password** will **not show up** as you type and it may look like nothing is happening. It may seem strange, but keep typing, the remote system is still picking up your keystrokes and when you hit enter your password will be checked. However, the **passcode** you type in from your Duo token **will show up** as you type, this is normal.
+If you mistype your password, the system won't check to see you mistyped it until you complete your Duo authentication at which point it will say `Success. Logging you in...` but then ask you for your password again. Make sure to correctly type your password this time, and complete the Duo authentication again to log in.
 {% endhint %}
 
 If it accepts the password and your second Duo authentication method, it will show a welcome message and a prompt \(a line that ends with '$'\).
@@ -183,7 +185,8 @@ The command line prompt will appear:
 
 You can then ssh onto the Lawrence cluster \(same command as Linux/Mac\).
 
-The output you see will be different depending on how your Duo account is setup. This first example is if your account uses 'Push Notification' for your Duo secondary authentication.
+The output you see will be different depending on how your Duo account is setup and if you use SSH Keys. Using SSH Keys will bypass the password and Duo requirements while continuing to use a password will require a second authentication through Duo. This first example is if your account uses 'Push Notification' for your Duo secondary authentication.
+
 
 ```text
 [2018-11-19 10:55.23]  ~
@@ -216,6 +219,7 @@ Passcode: ######
 
 {% hint style="info" %}
 Note: your **password** will **not show up** as you type and it may look like nothing is happening. It may seem strange, but keep typing, the remote system is still picking up your keystrokes and when you hit enter your password will be checked. However, the **passcode** you type in from your Duo token **will show up** as you type, this is normal.
+If you mistype your password, the system won't check to see you mistyped it until you complete your Duo authentication at which point it will say `Success. Logging you in...` but then ask you for your password again. Make sure to correctly type your password this time, and complete the Duo authentication again to log in.
 {% endhint %}
 
 If it accepts the password and your second Duo authentication method, it will show a welcome message and a prompt \(a line that ends with '$'\).
