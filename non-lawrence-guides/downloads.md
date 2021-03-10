@@ -58,7 +58,7 @@ Click the link "here" to go to the download page.
 
 Select the 32-bit installer link to download the PuTTY installer.  When the download is complete, click on the button in the bottom left corner of the browser to open the installer.
 
-![](../.gitbook/assets/screenshot-73%20%283%29%20%282%29%20%281%29.png)
+![](../.gitbook/assets/screenshot-73%20%283%29%20%282%29%20%282%29%20%281%29.png)
 
 Install PuTTY with the installer
 
@@ -74,7 +74,7 @@ Open a PuTTY window
 
 To run VNC, you will need TigerVNC Viewer, available [here](https://bintray.com/tigervnc/stable/tigervnc).  Download the 64-bit version, shown below.
 
-![](../.gitbook/assets/tigervnc-download%20%282%29%20%282%29.png)
+![](../.gitbook/assets/tigervnc-download%20%282%29%20%282%29%20%282%29.png)
 
 Click on the installed file, and follow the download wizard.
 
