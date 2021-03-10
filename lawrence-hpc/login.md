@@ -79,6 +79,7 @@ Passcode: ######
 
 {% hint style="info" %}
 Note: your **password** will **not show up** as you type and it may look like nothing is happening. It may seem strange, but keep typing, the remote system is still picking up your keystrokes and when you hit enter your password will be checked. However, the **passcode** you type in from your Duo token **will show up** as you type, this is normal.
+
 If you mistype your password, the system won't check to see you mistyped it until you complete your Duo authentication at which point it will say `Success. Logging you in...` but then ask you for your password again. Make sure to correctly type your password this time, and complete the Duo authentication again to log in.
 {% endhint %}
 
@@ -137,6 +138,7 @@ Passcode: ######
 
 {% hint style="info" %}
 Note: your **password** will **not show up** as you type and it may look like nothing is happening. It may seem strange, but keep typing, the remote system is still picking up your keystrokes and when you hit enter your password will be checked. However, the **passcode** you type in from your Duo token **will show up** as you type, this is normal.
+
 If you mistype your password, the system won't check to see you mistyped it until you complete your Duo authentication at which point it will say `Success. Logging you in...` but then ask you for your password again. Make sure to correctly type your password this time, and complete the Duo authentication again to log in.
 {% endhint %}
 
@@ -187,7 +189,6 @@ You can then ssh onto the Lawrence cluster \(same command as Linux/Mac\).
 
 The output you see will be different depending on how your Duo account is setup and if you use SSH Keys. Using SSH Keys will bypass the password and Duo requirements while continuing to use a password will require a second authentication through Duo. This first example is if your account uses 'Push Notification' for your Duo secondary authentication.
 
-
 ```text
 [2018-11-19 10:55.23]  ~
 [User.Name.NI11018] ➤ ssh User.Name@lawrence.usd.edu
@@ -219,6 +220,7 @@ Passcode: ######
 
 {% hint style="info" %}
 Note: your **password** will **not show up** as you type and it may look like nothing is happening. It may seem strange, but keep typing, the remote system is still picking up your keystrokes and when you hit enter your password will be checked. However, the **passcode** you type in from your Duo token **will show up** as you type, this is normal.
+
 If you mistype your password, the system won't check to see you mistyped it until you complete your Duo authentication at which point it will say `Success. Logging you in...` but then ask you for your password again. Make sure to correctly type your password this time, and complete the Duo authentication again to log in.
 {% endhint %}
 

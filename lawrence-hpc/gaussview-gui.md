@@ -16,7 +16,7 @@
 The "cd" command is used to move into and out of directories \(folders\).  It's basically equivalent \(in Windows Explorer\) to clicking on a subfolder of the folder you are in \(eg. "cd subfolder/"\)  or hitting the back arrow to move out of a folder into the previous one \(eg. "cd .."\).  
 {% endhint %}
 
-![](../.gitbook/assets/screenshot-160%20%281%29%20%282%29%20%282%29.png)
+![](../.gitbook/assets/screenshot-160%20%281%29%20%282%29%20%282%29%20%282%29.png)
 
 ## Getting Started
 
@@ -24,7 +24,7 @@ The "cd" command is used to move into and out of directories \(folders\).  It's 
 
 MobaXterm can be freely downloaded here \(use the Home Installer Edition\): [https://mobaxterm.mobatek.net/download.html](https://mobaxterm.mobatek.net/download.html)
 
-![](../.gitbook/assets/screenshot-2-5%20%283%29%20%282%29%20%282%29%20%281%29.png)
+![](../.gitbook/assets/screenshot-2-5%20%283%29%20%282%29%20%282%29%20%283%29%20%281%29.png)
 
 Open MobaX.
 
@@ -178,7 +178,7 @@ Open the file "test.com" \(you will have to exit viewing gaussianBatchTemplate.s
 
 In the last line, "**test.com**" is the **input** file name and the slurm ID followed by ".out" is the **output** file name.  Also note that the number of CPUs \(**ntasks**\) requested **matches** the **%nprocshared** \(or **%nprocs**\) in the input file.
 
-![](../.gitbook/assets/batchgaussiantemplate3%20%287%29%20%282%29%20%282%29%20%282%29.png)
+![](../.gitbook/assets/batchgaussiantemplate3%20%287%29%20%282%29%20%282%29%20%282%29%20%282%29.png)
 
 {% hint style="warning" %}
 --ntasks in batch file should equal %nprocshared in input file

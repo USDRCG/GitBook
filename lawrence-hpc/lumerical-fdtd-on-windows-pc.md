@@ -22,7 +22,7 @@ Click on the "Node Locked" tab, then the "Licenses" subtab.  Highlight your lice
 Note: if this **causes you concern**, you may also use Lumerical on Lawrence directly, **without deactivating** the license on your computer.  See the next page: "Lumerical \(FDTD\) on Lawrence GUI".
 {% endhint %}
 
-![](../.gitbook/assets/screenshot-61%20%283%29%20%283%29%20%283%29%20%283%29.png)
+![](../.gitbook/assets/screenshot-61%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29.png)
 
 ## **Installations**
 
@@ -30,7 +30,7 @@ Note: if this **causes you concern**, you may also use Lumerical on Lawrence dir
 
 Go to the MobaXterm website [here](https://mobaxterm.mobatek.net/download-home-edition.html). Click on the "MobaXterm Home Edition v11.1 \(Home Installer Edition\)" button.
 
-![](../.gitbook/assets/screenshot-2-5%20%283%29%20%282%29%20%282%29%20%281%29.png)
+![](../.gitbook/assets/screenshot-2-5%20%283%29%20%282%29%20%282%29%20%283%29%20%281%29.png)
 
 ### Install PuTTY
 
@@ -42,7 +42,7 @@ Click the link "here" to go to the download page.
 
 Select the 32-bit installer link to download the PuTTY installer.  When the download is complete, click on the button in the bottom left corner of the browser to open the installer.
 
-![](../.gitbook/assets/screenshot-73%20%283%29%20%282%29%20%282%29%20%281%29.png)
+![](../.gitbook/assets/screenshot-73%20%283%29%20%282%29%20%282%29%20%282%29%20%281%29.png)
 
 Install PuTTY with the installer
 
@@ -64,7 +64,7 @@ Open PuTTYgen \(not PuTTY from the last section\).
 
 Select "Generate", then wave your mouse around in a haphazard fashion.
 
-![](../.gitbook/assets/screenshot-126%20%284%29%20%284%29%20%284%29%20%284%29.png)
+![](../.gitbook/assets/screenshot-126%20%284%29%20%284%29%20%284%29%20%284%29%20%284%29.png)
 
 Save the private key.  \(If asked whether you are sure about saving without passphrase protection, click "yes".  **Remember** where you save it.  **Save** the key as **id\_rsa.ppk**.
 
@@ -134,7 +134,7 @@ A new window will appear. It may ask for a password to log into Lawrence.
 Note: your password will not appear as you type -- nothing will -- just keep typing as if it did.
 {% endhint %}
 
-![](../.gitbook/assets/screenshot-134%20%282%29%20%282%29%20%282%29.png)
+![](../.gitbook/assets/screenshot-134%20%282%29%20%282%29%20%282%29%20%282%29.png)
 
 You may now open the Lumerical software on your desktop.
 
