@@ -238,3 +238,65 @@ All logins go to the login node by default. **Do not** run compute jobs on the l
 
 ![The &quot;ssh User.Name@Lawrence.usd.edu&quot; command is used to login to the &quot;Login node&quot; on Lawrence.](../.gitbook/assets/lawrencediagram2-ssh%20%281%29%20%281%29.png)
 
+## Generating and using SSH Keys
+
+SSH Keys are a way to securely connect to Lawrence over SSH that doesn't require your USD password.  SSH Keys have come as a pair and have a public and private half.  The public key part will be installed Lawrence using your password and Duo, and after that you can now connect to Lawrence using the keys.  The private key part should stay securely on your own machine.  This will allow you to avoid typing your password every time you need to connect or transfer files to or from Lawrence.
+
+### Generate an SSH Key
+
+Open a terminal on your system, this can be on Mac, Linux, or MobaXTerm on Windows.  You will use the `ssh-keygen` program to generate the keys, so type `ssh-keygen` and press Enter.  The following example shows it on a Mac, but it should be similar on any OS.  You should accept the file path unless you have a specific reason to use a different one.  Protecting the key with a passphrase will make it more secure, but will require you to type in the passphrase you set here to use it.  If you do set a passphrase make sure that this passphrase is not your USD account password and is a completely different, secure, passphrase.
+
+```text
+ITSCkMac07:~ user.name$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/user.name/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/user.name/.ssh/id_rsa.
+Your public key has been saved in /Users/user.name/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:PeEOZEGL2TKV+IILrwPxOq1lUkffQOyFR7tjCtJq9tE user.name@ITSCkMac07.usd.local
+The key's randomart image is:
++---[RSA 2048]----+
+|     ..==.       |
+|     .+=++       |
+|    .o*+* .      |
+|. .o..oB.+ .     |
+| ooo+...S +      |
+|...+oo o + .     |
+|.+*.. E   .      |
+|o*+. .           |
+|.o ..            |
++----[SHA256]-----+
+```
+
+### Copy the SSH Key to lawrence
+
+This process installs the public portion of your key on Lawrence which will allow you to authenticate and connect.  In your terminal type `ssh-copy-id <user.name>@lawrence.usd.edu` and press enter.  If you gave a different path for your key, you will need to supply the key you with to copy with the `-i` option in a way that looks like this `ssh-copy-id -i /path/to/key/i/generated user.name@lawrence.usd.edu`.  Also note that your Duo authentication method may differ from the following method.  Duo authentication is described above.
+
+```text
+ITSCkMac07:~ user.name$ ssh-copy-id user.name@lawrence.usd.edu
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/Users/user.name/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Password: 
+Duo two-factor login for user.name@usd.edu
+
+Enter a passcode or select one of the following options:
+
+Passcode: XXXXXX
+
+Number of key(s) added:        1
+
+Now try logging into the machine, with:   "ssh 'user.name@lawrence.usd.edu'"
+and check to make sure that only the key(s) you wanted were added.
+
+```
+
+### Verify SSH Key installation worked
+
+Login to lawrence with `ssh user.name@lawrence.usd.edu`.  If it doesn't prompt you for a password and Duo authentication, you have done it correctly.  It may prompt you for they key's passcode if you set it.  Remember that if you set up a seperate name you will still need to use the `-i` option to pass your key like this `ssh -i /path/to//key/i/generated user.name@lawrence.usd.edu`.
+
+### Use your key with other programs
+
+You can now use your SSH Key with terminal logins, MobaXTerm on Windows, FileZilla on all platforms, Cyberduck, and others.
