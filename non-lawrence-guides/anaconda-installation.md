@@ -18,13 +18,13 @@ To download Anaconda, go to the distribution website: [https://www.anaconda.com/
 
 Scroll down to the download section.  Select "Windows", then select "Download".
 
-![](../.gitbook/assets/screenshot-19%20%281%29.png)
+![](<../.gitbook/assets/screenshot-19 (1).png>)
 
 Follow the installation wizard.
 
 ![](../.gitbook/assets/anacondainstallationsteps.png)
 
-The Users Guide should pop up \([this](http://docs.anaconda.com/anaconda/user-guide/getting-started/#open-nav-win) webpage\).
+The Users Guide should pop up ([this](http://docs.anaconda.com/anaconda/user-guide/getting-started/#open-nav-win) webpage).
 
 ![](../.gitbook/assets/screenshot-34.png)
 
@@ -42,21 +42,21 @@ Select "Anaconda Navigator".
 
 ### Installing Ubuntu on Windows
 
-Ubuntu for Windows can be downloaded from the Microsoft store.  
+Ubuntu for Windows can be downloaded from the Microsoft store. &#x20;
 
-![](../.gitbook/assets/ubuntu-1%20%284%29%20%284%29%20%284%29%20%284%29%20%281%29.png)
+![](<../.gitbook/assets/ubuntu-1 (4) (4) (4) (4) (4) (4).png>)
 
 Search for "ubuntu".
 
-![](../.gitbook/assets/ubuntu1.png)
+![](<../.gitbook/assets/ubuntu1 (1).png>)
 
 Select the app.
 
-![](../.gitbook/assets/ubuntu2%20%281%29%20%281%29%20%281%29%20%281%29.png)
+![](<../.gitbook/assets/ubuntu2 (1) (1) (1) (1) (1) (1).png>)
 
 Click "**Get**", then "**Install**".
 
-![](../.gitbook/assets/ubuntu3%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29.png)
+![](<../.gitbook/assets/ubuntu3 (2) (2) (2) (2) (2) (2).png>)
 
 ![](../.gitbook/assets/ubuntu4.png)
 
@@ -72,9 +72,9 @@ The window will look like this:
 
 ### Installing Anaconda on Ubuntu on Windows
 
-First, open Ubuntu for Windows \(see above\) and check to ensure that conda is not already installed. 
+First, open Ubuntu for Windows (see above) and check to ensure that conda is not already installed.&#x20;
 
-```text
+```
 user@NI0000:~$ which conda
 ```
 
@@ -84,7 +84,7 @@ If it has been, a file path will show up under the command, if not, the next lin
 
 Download the installer
 
-```text
+```
 user@NI0000:~$ wget --quiet --no-check-certificate https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64
 .sh
 user@NI0000:~$ ls
@@ -94,11 +94,11 @@ Miniconda3-latest-Linux-x86_64.sh
 
 Run the installer
 
-```text
+```
 user@NI0000:~$ bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/anaconda3
 ```
 
-```text
+```
 PREFIX=/home/adison/anaconda3
 Unpacking payload ...
 …
@@ -114,11 +114,11 @@ user@NI0000:~$
 
 Run an update:
 
-```text
+```
 user@NI0000:~$ $HOME/anaconda3/bin/conda update conda -y
 ```
 
-```text
+```
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
  ...
@@ -129,11 +129,11 @@ user@NI0000:~$
 
 Then install Anaconda
 
-```text
+```
 user@NI0000:~$ $HOME/anaconda3/bin/conda install anaconda -y
 ```
 
-```text
+```
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
  
@@ -146,11 +146,11 @@ user@NI0000:~$
 
 Initialize
 
-```text
+```
 user@NI0000:~$ $HOME/anaconda3/bin/conda init
 ```
 
-```text
+```
 no change     /home/user/anaconda3/condabin/conda
 ...
 no change     /home/user/anaconda3/etc/profile.d/conda.csh
@@ -165,13 +165,11 @@ Close and re-open your Ubuntu command line.
 
 ## Bioconda on Windows on Ubuntu
 
-After running the installation of Anaconda on Ubuntu on Windows \(see above\), add bioconda:
+After running the installation of Anaconda on Ubuntu on Windows (see above), add bioconda:
 
-```text
+```
 user@NI0000:~$ conda config --add channels bioconda
 ```
-
-
 
 
 

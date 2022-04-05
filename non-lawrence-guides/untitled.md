@@ -10,21 +10,21 @@ This site is incomplete and under construction.  Proceed at your own risk.
 
 ## Getting Started
 
-Navigate to the [Globus](https://www.globus.org/) website and click "Log In".
+Navigate to the [Globus](https://www.globus.org) website and click "Log In".
 
-![](../.gitbook/assets/dtn1%20%281%29.png)
+![](../.gitbook/assets/dtn1.png)
 
-Select your organization \(e.g. University of South Dakota\) from the drop-down menu, then select Continue. 
+Select your organization (e.g. University of South Dakota) from the drop-down menu, then select Continue.&#x20;
 
-![](../.gitbook/assets/dtn2.png)
+![](<../.gitbook/assets/dtn2 (1).png>)
 
 Use your username and password to log in to USD’s CAS log in screen.
 
-![](../.gitbook/assets/dtn3%20%281%29%20%281%29.png)
+![](<../.gitbook/assets/dtn3 (1) (1).png>)
 
 If this is your first time logging in, Globus may ask for permissions.
 
-![](../.gitbook/assets/dtn4.png)
+![](<../.gitbook/assets/dtn4 (1).png>)
 
 ## Making a Non-USD Login
 
@@ -32,7 +32,7 @@ Go to the "Create a Globus ID" page, [here](https://www.globusid.org/create).  F
 
 ![](../.gitbook/assets/globusmakeid4.png)
 
-The page will change to a page which asks for a Globus ID verification code.  The email address you entered will receive an email containing this code.  
+The page will change to a page which asks for a Globus ID verification code.  The email address you entered will receive an email containing this code. &#x20;
 
 ![](../.gitbook/assets/globusmakeid2.2.png)
 
@@ -62,11 +62,11 @@ Open the options sidebar.
 
 Click on "Groups".
 
-![](../.gitbook/assets/globusgroup2%20%281%29.png)
+![](<../.gitbook/assets/globusgroup2 (1).png>)
 
 Click on "Create new group".
 
-![](../.gitbook/assets/globusgroup3%20%281%29.png)
+![](<../.gitbook/assets/globusgroup3 (1).png>)
 
 Enter your group's information and click the "Create Group" button.
 
@@ -88,7 +88,7 @@ Click on the group name.
 
 Click on "invite Others".
 
-![](../.gitbook/assets/globusgroup9%20%281%29.png)
+![](<../.gitbook/assets/globusgroup9 (1).png>)
 
 Type in the name of the group member to add and select from the dropdown menu.
 
@@ -96,13 +96,11 @@ Type in the name of the group member to add and select from the dropdown menu.
 
 Send the invitation.
 
-![](../.gitbook/assets/globusgroup11.png)
+![](<../.gitbook/assets/globusgroup11 (1).png>)
 
 
 
 
 
-## 
-
-
+##
 
