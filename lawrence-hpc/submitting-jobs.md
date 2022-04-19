@@ -20,7 +20,7 @@ For the commonly used Slurm commands on the Lawrence HPC, we have provided quick
 
 ### Partitions
 
-There are five Slurm partitions on Lawrence: the default partition (nodes), preemptible partition (preemptible), high memory partition (himem), graphics processing partition (gpu), and visualization partition (viz). For an in-depth overview of Slurm preemption, please visit the corresponding Slurm [webpage](https://slurm.schedmd.com/preempt.html).
+There are six main Slurm partitions on Lawrence: the default partition (short), normal job partition (nodes), preemptible partition (preemptible), high memory partition (himem), graphics processing partition (gpu), and visualization partition (viz). For an in-depth overview of Slurm preemption, please visit the corresponding Slurm [webpage](https://slurm.schedmd.com/preempt.html).
 
 #### Short (default) Partition
 
