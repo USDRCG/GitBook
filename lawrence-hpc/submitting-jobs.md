@@ -38,7 +38,7 @@ Press Ctrl+D to exit the node and return to the login node.
 The typical Slurm partition for most jobs is called “nodes” and will run a job for up to two days on a general compute node/s. When running the sbatch or srun command pass the -p flag with the argument “nodes”, your job will be scheduled on the “nodes” partition.
 
 ```
-[user.name@usd.local@login ~]$ srun --pty -p nodesbash
+[user.name@usd.local@login ~]$ srun --pty -p nodes bash
 [user.name@usd.local@node23 ~]$
 ```
 
