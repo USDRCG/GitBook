@@ -12,21 +12,28 @@ Lawrence runs the Rocky8 Linux operating system and is made up of over 2,000 CPU
 
 The hardware specifications for Lawrence vary by node and are as follows:
 
-| **Node01-Node80**     |                                  |
+| **Node001-Node080**   |                                  |
 | --------------------- | -------------------------------- |
 | General compute nodes | 80                               |
 | CPUs                  | dual 12-core SkyLake 5000 series |
 | RAM                   | 96 GB                            |
 | SSD                   | 240 GB                           |
 
-| **Node81-Node85**     |                                       |
+| **Node081-Node085**   |                                       |
 | --------------------- | ------------------------------------- |
 | General compute nodes | 4                                     |
 | CPUs                  | dual 16-core Cascade lake 5000 series |
 | RAM                   | 96 GB                                 |
 | SSD                   | 240 GB                                |
 
-| **GPU01** | \_\_                             |
+| **Node086-Node093**   |                                       |
+| --------------------- | ------------------------------------- |
+| General compute nodes | 8                                     |
+| CPUs                  | dual 16-core Ice lake 6000 series     |
+| RAM                   | 96 GB                                 |
+| SSD                   | 240 GB                                |
+
+| **GPU001**| \_\_                             |
 | --------- | -------------------------------- |
 | GPU Node  | 1                                |
 | CPUs      | dual 12-core SkyLake 5000 series |
@@ -34,7 +41,7 @@ The hardware specifications for Lawrence vary by node and are as follows:
 | RAM       | 192GB                            |
 | SSD       | 240GB                            |
 
-| **GPU02-GPU06** | \_\_                             |
+| **GPU002-GPU006** | \_\_                           |
 | --------------- | -------------------------------- |
 | GPU Node        | 5                                |
 | CPUs            | dual 12-core SkyLake 5000 series |
@@ -42,7 +49,15 @@ The hardware specifications for Lawrence vary by node and are as follows:
 | RAM             | 192GB                            |
 | SSD             | 240GB                            |
 
-| **Viz01**        |                                  |
+| **GPU007-GPU008** | \_\_                           |
+| --------------- | -------------------------------- |
+| GPU Node        | 2                                |
+| CPUs            | dual 12-core Ice Lake 6000 series |
+| GPUs            | 1x Nvidia Ampere A100 80GB       |
+| RAM             | 128GB                            |
+| SSD             | 240GB                            |
+
+| **Viz001**       |                                  |
 | ---------------- | -------------------------------- |
 | Viz Node         | 1                                |
 | CPUs             | dual 12-core SkyLake 5000 series |
@@ -50,7 +65,7 @@ The hardware specifications for Lawrence vary by node and are as follows:
 | SSD              | 240GB                            |
 | Graphics Adapter | Nvidia GTX 1080i 11GB            |
 
-| **Himem01, Himem02** | \_\_                             |
+| **Himem001, Himem002** | \_\_                             |
 | -------------------- | -------------------------------- |
 | Large Memory Node    | 2                                |
 | CPUs                 | dual 12-core SkyLake 5000 series |
