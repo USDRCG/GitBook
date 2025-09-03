@@ -296,6 +296,21 @@ and check to make sure that only the key(s) you wanted were added.
 
 Login to lawrence with `ssh user.name@lawrence.usd.edu`. If it doesn't prompt you for a password and Duo authentication, you have done it correctly. It may prompt you for they key's passcode if you set it. Remember that if you set up a seperate name you will still need to use the `-i` option to pass your key like this `ssh -i /path/to//key/i/generated user.name@lawrence.usd.edu`.
 
+### Create an ssh config file to reduce typing
+
+The config file for ssh is usually located at `~/.ssh/config` on Macs and Linux machines.  On Windows it should be somewhere similar, especially if you're using WSL.
+
+```
+$ cat ~/.ssh/config
+Host lawrence
+    Hostname lawrence.usd.edu
+    User user.name
+    IdentityFile ~/.ssh/id_rsa
+```
+This is the format for the ssh config file, the `Host` is the 'friendly' name you will use with ssh to connect to this machine.  The Hostname is the ip or full hostname of the machine you want to connect too.  In our case it's lawrence.usd.edu. The User is the username you want to give to the system, this will your username, that you would normally see after the `ssh` and before the `@` symbol in `ssh user.name@lawrence.usd.edu` string.  The IdentityFile is the private ssh key you generated earlier.  Note that in this example we generated an RSA keypair, but many current systems will generate an ed25519 keypair, and their default filenames are different.  Just make sure that the file name you generated above is the same as on this line and it should work.
+
+Once you've saved this config file in the proper location, you can now use `ssh lawrence` to connect to the cluster.  You may also use this same alias with `scp` or `rsync` to move files on or off of the cluster without using a password.
+
 ### Use your key with other programs
 
-You can now use your SSH Key with terminal logins, MobaXTerm on Windows, FileZilla on all platforms, Cyberduck, and others.
+You can now use your SSH Key with terminal logins, MobaXTerm on Windows, FileZilla on all platforms, Cyberduck, and others.  For these GUI programs, you generally just need to set the private key in the settings for this server and it should connect without using your password.
