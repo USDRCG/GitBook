@@ -10,11 +10,9 @@ Lawrence has three methods of job submission: **interactive,** **batch, and GUI*
 
 **GUI jobs**: It is possible to open some types of software in a window on Lawrence.  Software such as Firefox, Gaussian, Lumerical, and RStudio can be opened and used in a manner similar to how they would be used on a desktop. &#x20;
 
-**Science Gateway:**  Some software applications are now accessible through the Science Gateway.  Please see the [website](https://sciencegateway.usd.edu) to view the available applications.
-
 ## Slurm
 
-The Slurm Workload Manager is the job scheduler used by the Lawrence HPC. For a comprehensive overview of Slurm commands, visit the Slurm webpage: [https://slurm.schedmd.com/quickstart.html](https://slurm.schedmd.com/quickstart.html)
+The Slurm Workload Manager is the job scheduler used by the Lawrence HPC, it is the proper way to get access to compute resources on the cluster. For a comprehensive overview of Slurm commands, visit the Slurm webpage: [https://slurm.schedmd.com/quickstart.html](https://slurm.schedmd.com/quickstart.html)
 
 For the commonly used Slurm commands on the Lawrence HPC, we have provided quick-start documentation with examples within the Wiki.
 
@@ -509,6 +507,3 @@ Currently Loaded Modulefiles:
 
 ![](../.gitbook/assets/srunlumerical.PNG)
 
-## Science Gateway
-
-Instructions for the Science Gateway coming soon.
