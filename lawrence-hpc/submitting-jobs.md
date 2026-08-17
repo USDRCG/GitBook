@@ -66,7 +66,7 @@ Press Ctrl+D to exit the high memory partition and return to the login node.
 
 #### Graphics Processing Unit (GPU) Partition
 
-To use the graphics processing unit (GPU) partition, use the "-p gpu" flag.  You will also likely need the "--gres" flag, which is explained more below.
+To use the graphics processing unit (GPU) partition, use the "-p gpu" flag. You will also likely need the "--gres" flag, which is explained more below.
 
 ```
 [user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu bash
