@@ -66,10 +66,10 @@ Press Ctrl+D to exit the high memory partition and return to the login node.
 
 #### Graphics Processing Unit (GPU) Partition
 
-To use the graphics processing unit (GPU) partition, use the "-p gpu" flag.
+To use the graphics processing unit (GPU) partition, use the "-p gpu" flag.  You will also likely need the "--gres" flag, which is explained more below.
 
 ```
-[user.name@usd.local@login ~]$ srun --pty -p gpu bash
+[user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu bash
 [user.name@usd.local@gpu ~]
 ```
 
@@ -115,6 +115,13 @@ For interactive jobs on the Lawrence himem nodes, use the srun command as follow
 When requesting a new GPU node, the access to a GPU device must be explicitly requested using the "--gres" parameter. The format for requesting a generic resource (gres) is TYPE:LABEL:NUMBER. On Lawrence, type will always be "gpu", and label will be either "pascal" or "volta".
 
 NUMBER is the number of GPUs being requested per node. On Lawrence there are six GPU nodes: GPU01, which has two pascal GPUs, and GPU02 through GPU06, which have one volta GPU each. The number of GPUs per node is what this NUMBER is requesting. So for the GPU01 pascal node, "1" or "2" can be used depending on how many GPUs your workflow requires, but for GPU02 through GPU06, "1" is needed.\\
+
+#### A simple example command to request a GPU:
+
+```
+[user.name@usd.local@login ~]$ srun --pty -p gpu --gres=gpu bash
+[user.name@usd.local@gpu01 ~]$
+```
 
 {% hint style="warning" %}
 If **requesting one pascal GPU**, please request **half the cores** as well. If all the cores are requested in one pascal GPU, the other pascal GPU will be **held idle**.
